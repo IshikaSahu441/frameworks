@@ -1,0 +1,48 @@
+.env
+.env.*
+.python-version
+.vscode/
+.idea/
+*.log
+*.tmp
+*.lock
+*.sqlite
+*.db
+Thumbs.db
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.coverage
+.nox/
+.tox/
+.ruff_cache/
+.venv/
+venv/
+env/
+*.egg-info/
+build/
+dist/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Project-specific large artifacts
+GPT-2+Pydantic/backend/gpt2-storyteller/
+GPT-2+Pydantic/backend/gpt2-storyteller/**
+*.pt
+*.safetensors
+
+# OS artifacts
+ehthumbs.db
+Desktop.ini
+
