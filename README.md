@@ -1,4 +1,4 @@
-# Frameworks
+# Pydantic_and_LLM_basics
 
 A combined branch that collects reference implementations and study notes for different Pydantic- and LLM-focused exercises i implemented through their documentation and reference articles. Also includes detailed obsidian pdf notes i created using these references and documentation for Ray, Pydantic, Pydantic AI and the Basics of LLMs 
 
