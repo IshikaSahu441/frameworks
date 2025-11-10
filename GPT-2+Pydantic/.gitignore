@@ -1,0 +1,71 @@
+# IDE & tooling
+.idea/
+.vscode/
+*.iml
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage*
+.nox/
+.tox/
+pip-wheel-metadata/
+*.egg-info/
+build/
+dist/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Node / frontend
+node_modules/
+frontend/node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.parcel-cache/
+coverage/
+frontend/.vite/
+frontend/dist/
+
+# Environment & secrets
+.env
+.env.*
+.python-version
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Model artifacts (large)
+backend/gpt2-storyteller/
+backend/gpt2-storyteller/**
+*.pt
+*.bin
+*.safetensors
+*.ckpt
+
+# Misc cache
+__pypackages__/
+.cache/
+.gradle/
+.tmp/
+
