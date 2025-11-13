@@ -1,17 +1,28 @@
-# Frameworks
+Temporal – Workflow Orchestration Framework
 
-This repository is a collection of projects and examples built with different frameworks and technologies, such as:
-- Ray
-- Daft
-- Pydantic
-- Temporal
-- PyArrow and iceberg
-  
-This repository serves as a learning lab and reference hub for exploring how various frameworks work and interact together
+Temporal is a powerful open-source workflow orchestration engine that allows you to write reliable, fault-tolerant, and long-running applications using simple code. Instead of handling retries, state management, or failure recovery manually, Temporal takes care of it automatically — letting developers focus on business logic.
 
----
+✨ Why Temporal?
 
-## Repository Structure
+Durable, stateful workflows
 
-Different branches contain experiments and examples done on the frameworks mentioned above.
+Automatic retries & error handling
 
+Scalable distributed system
+
+Code-based workflows (Java, TypeScript, Go, Python)
+
+Guarantees workflow correctness even after crashes, restarts, or network failures
+
+
+📚 Sources & Useful References
+
+Temporal Official Docs — https://docs.temporal.io
+
+TypeScript SDK Guide — https://docs.temporal.io/typescript
+
+Temporal GitHub — https://github.com/temporalio
+
+Intro to Workflows — https://docs.temporal.io/workflows
+
+Intro to Activities — https://docs.temporal.io/activities
