@@ -1,17 +1,14 @@
-# Frameworks
+# Apache Iceberg Pipeline
 
-This repository is a collection of projects and examples built with different frameworks and technologies, such as:
-- Ray
-- Daft
-- Pydantic
-- Temporal
-- PyArrow and iceberg
-  
-This repository serves as a learning lab and reference hub for exploring how various frameworks work and interact together
+This project demonstrates building an Apache Iceberg table from Parquet using Daft, PyIceberg, SQLite catalog, and DuckDB.
 
----
+## Steps
+1. Create virtual environment
+2. Install dependencies (`pip install -r requirements.txt`)
+3. Run the pipeline (`python main.py`)
+4. Query history and data (`python read_history.py`, `python query_iceberg_duckdb.py`)
 
-## Repository Structure
-
-Different branches contain experiments and examples done on the frameworks mentioned above.
-
+## Project Structure
+main.py — builds Iceberg table
+read_history.py — displays snapshot history
+query_iceberg_duckdb.py — queries Iceberg table with DuckDB
