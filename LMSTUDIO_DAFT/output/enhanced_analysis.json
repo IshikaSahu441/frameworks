@@ -1,0 +1,34 @@
+{
+  "runner": "local",
+  "similar_pairs": [],
+  "analyses": {
+    "sample1.py": {
+      "what": "This code defines a function called 'add' that takes two arguments and returns their sum.",
+      "key_functions": [
+        "function definition",
+        "argument passing"
+      ],
+      "improvements": "Add type hints to the function definition for better readability and maintainability.",
+      "complexity": "Function has no complexity concerns."
+    },
+    "sample2.py": {
+      "what": "This code processes a list of data and returns the squared values of unique positive numbers.",
+      "key_functions": [
+        "sorted",
+        "set",
+        "list comprehension"
+      ],
+      "improvements": "Consider using a dictionary instead of a list to store the unique positive numbers. Also, consider adding a check for negative numbers.",
+      "complexity": "The code is O(n log n) in time and space complexity."
+    },
+    "sample3.py": {
+      "what": "This code computes the nth Fibonacci number using a recursive approach.",
+      "key_functions": [
+        "recursion",
+        "memoization"
+      ],
+      "improvements": "Consider using dynamic programming to improve performance and memory usage.",
+      "complexity": "The algorithm's time complexity is O(2^n) and space complexity is O(n)."
+    }
+  }
+}
