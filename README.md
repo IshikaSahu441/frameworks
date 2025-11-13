@@ -9,6 +9,6 @@ It serves as a starting point to experiment with Daft’s core features like laz
 **Focus Areas**
 - Setting up and running Daft locally  
 - Exploring DataFrame creation and transformations  
-- Comparing Daft’s performance and design with other data frameworks  
+- Running a pilot project
 
 This branch is part of the larger repository exploring multiple frameworks for data processing and orchestration.
