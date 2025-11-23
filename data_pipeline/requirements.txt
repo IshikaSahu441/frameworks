@@ -1,0 +1,5 @@
+temporalio==1.4.0
+pyarrow
+pydantic
+ray
+daft
