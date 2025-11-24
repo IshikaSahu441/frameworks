@@ -1,0 +1,4 @@
+[
+{"user_id": 1, "name": "Alice", "age": 17, "income": 25000.0},
+{"user_id": 2, "name": "Bob", "age": 40, "income": 80000.0}
+]
