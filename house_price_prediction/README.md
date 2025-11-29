@@ -22,7 +22,7 @@ The Temporal worker defines the pipeline logic, the activities involved, and exe
 A separate client triggers the workflow by sending a request to Temporal. This client does not contain computation logic; it simply initiates and monitors the pipeline execution handled by the worker.
 
 ## Intsallation and Setup
-
+First run `pip install -r requirements.txt`. Then make sure following frameworks are setup and started properly.
 1. **Temporal**  
    Download the latest Temporal CLI release from:  
 
