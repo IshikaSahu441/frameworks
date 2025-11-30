@@ -1,0 +1,1222 @@
+[
+  {
+    "resourceType": "Encounter",
+    "id": "9c4ef2ae-dd61-5efe-885d-2a2f0816646f",
+    "meta": {
+      "profile": [
+        "http://mimic.mit.edu/fhir/mimic/StructureDefinition/mimic-encounter"
+      ]
+    },
+    "status": "finished",
+    "encounter_class": {
+      "code": "AMB",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "display": "ambulatory"
+    },
+    "type": [
+      {
+        "coding": [
+          {
+            "code": "308335008",
+            "system": "http://snomed.info/sct",
+            "display": "Patient encounter procedure"
+          }
+        ],
+        "text": null
+      }
+    ],
+    "priority": {
+      "coding": [
+        {
+          "code": "UR",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+          "display": "urgent"
+        }
+      ],
+      "text": null
+    },
+    "subject": {
+      "reference": "Patient/0a8eebfd-a352-522e-89f0-1d4a13abdebc",
+      "display": null
+    },
+    "period": {
+      "start": "2180-05-06T22:23:00-04:00",
+      "end": "2180-05-07T17:15:00-04:00"
+    },
+    "location": [
+      {
+        "location": {
+          "reference": "Location/501cd59a-cd8a-5f98-8298-2ca9c897d59f",
+          "display": null
+        },
+        "period": {
+          "start": "2180-05-06T19:17:00-04:00",
+          "end": "2180-05-06T23:30:00-04:00"
+        }
+      },
+      {
+        "location": {
+          "reference": "Location/9152585d-31b9-50ca-9476-a4db49030917",
+          "display": null
+        },
+        "period": {
+          "start": "2180-05-06T23:30:00-04:00",
+          "end": "2180-05-07T17:21:27-04:00"
+        }
+      }
+    ],
+    "serviceType": {
+      "coding": [
+        {
+          "code": "MED",
+          "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-services",
+          "display": null
+        }
+      ],
+      "text": null
+    },
+    "identifier": [
+      {
+        "use": "usual",
+        "value": "22595853",
+        "system": "http://mimic.mit.edu/fhir/mimic/identifier/encounter-hosp",
+        "assigner": {
+          "reference": "Organization/ee172322-118b-5716-abbc-18e4c5437e15",
+          "display": null
+        }
+      }
+    ],
+    "hospitalization": {
+      "admitSource": {
+        "coding": [
+          {
+            "code": "TRANSFER FROM HOSPITAL",
+            "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-admit-source",
+            "display": null
+          }
+        ],
+        "text": null
+      },
+      "dischargeDisposition": {
+        "coding": [
+          {
+            "code": "HOME",
+            "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-discharge-disposition",
+            "display": null
+          }
+        ],
+        "text": null
+      }
+    },
+    "serviceProvider": {
+      "reference": "Organization/ee172322-118b-5716-abbc-18e4c5437e15",
+      "display": null
+    }
+  },
+  {
+    "resourceType": "Encounter",
+    "id": "89ec6d79-e48d-5694-8a8e-152e5e5dafe6",
+    "meta": {
+      "profile": [
+        "http://mimic.mit.edu/fhir/mimic/StructureDefinition/mimic-encounter"
+      ]
+    },
+    "status": "finished",
+    "encounter_class": {
+      "code": "EMER",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "display": "emergency"
+    },
+    "type": [
+      {
+        "coding": [
+          {
+            "code": "308335008",
+            "system": "http://snomed.info/sct",
+            "display": "Patient encounter procedure"
+          }
+        ],
+        "text": null
+      }
+    ],
+    "priority": {
+      "coding": [
+        {
+          "code": "EM",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+          "display": "emergency"
+        }
+      ],
+      "text": null
+    },
+    "subject": {
+      "reference": "Patient/0a8eebfd-a352-522e-89f0-1d4a13abdebc",
+      "display": null
+    },
+    "period": {
+      "start": "2180-06-26T18:27:00-04:00",
+      "end": "2180-06-27T18:49:00-04:00"
+    },
+    "location": [
+      {
+        "location": {
+          "reference": "Location/501cd59a-cd8a-5f98-8298-2ca9c897d59f",
+          "display": null
+        },
+        "period": {
+          "start": "2180-06-26T15:54:00-04:00",
+          "end": "2180-06-26T21:31:00-04:00"
+        }
+      },
+      {
+        "location": {
+          "reference": "Location/9152585d-31b9-50ca-9476-a4db49030917",
+          "display": null
+        },
+        "period": {
+          "start": "2180-06-26T21:31:00-04:00",
+          "end": "2180-06-27T18:49:12-04:00"
+        }
+      }
+    ],
+    "serviceType": {
+      "coding": [
+        {
+          "code": "MED",
+          "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-services",
+          "display": null
+        }
+      ],
+      "text": null
+    },
+    "identifier": [
+      {
+        "use": "usual",
+        "value": "22841357",
+        "system": "http://mimic.mit.edu/fhir/mimic/identifier/encounter-hosp",
+        "assigner": {
+          "reference": "Organization/ee172322-118b-5716-abbc-18e4c5437e15",
+          "display": null
+        }
+      }
+    ],
+    "hospitalization": {
+      "admitSource": {
+        "coding": [
+          {
+            "code": "EMERGENCY ROOM",
+            "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-admit-source",
+            "display": null
+          }
+        ],
+        "text": null
+      },
+      "dischargeDisposition": {
+        "coding": [
+          {
+            "code": "HOME",
+            "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-discharge-disposition",
+            "display": null
+          }
+        ],
+        "text": null
+      }
+    },
+    "serviceProvider": {
+      "reference": "Organization/ee172322-118b-5716-abbc-18e4c5437e15",
+      "display": null
+    }
+  },
+  {
+    "resourceType": "Encounter",
+    "id": "8f0d2759-331b-5ef2-9175-5fa3d7b4abf9",
+    "meta": {
+      "profile": [
+        "http://mimic.mit.edu/fhir/mimic/StructureDefinition/mimic-encounter"
+      ]
+    },
+    "status": "finished",
+    "encounter_class": {
+      "code": "EMER",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "display": "emergency"
+    },
+    "type": [
+      {
+        "coding": [
+          {
+            "code": "308335008",
+            "system": "http://snomed.info/sct",
+            "display": "Patient encounter procedure"
+          }
+        ],
+        "text": null
+      }
+    ],
+    "priority": {
+      "coding": [
+        {
+          "code": "EM",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+          "display": "emergency"
+        }
+      ],
+      "text": null
+    },
+    "subject": {
+      "reference": "Patient/0a8eebfd-a352-522e-89f0-1d4a13abdebc",
+      "display": null
+    },
+    "period": {
+      "start": "2180-08-05T23:44:00-04:00",
+      "end": "2180-08-07T17:50:00-04:00"
+    },
+    "location": [
+      {
+        "location": {
+          "reference": "Location/501cd59a-cd8a-5f98-8298-2ca9c897d59f",
+          "display": null
+        },
+        "period": {
+          "start": "2180-08-05T20:58:00-04:00",
+          "end": "2180-08-06T01:44:00-04:00"
+        }
+      },
+      {
+        "location": {
+          "reference": "Location/9152585d-31b9-50ca-9476-a4db49030917",
+          "display": null
+        },
+        "period": {
+          "start": "2180-08-06T01:44:00-04:00",
+          "end": "2180-08-07T17:50:44-04:00"
+        }
+      }
+    ],
+    "serviceType": {
+      "coding": [
+        {
+          "code": "MED",
+          "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-services",
+          "display": null
+        }
+      ],
+      "text": null
+    },
+    "identifier": [
+      {
+        "use": "usual",
+        "value": "25742920",
+        "system": "http://mimic.mit.edu/fhir/mimic/identifier/encounter-hosp",
+        "assigner": {
+          "reference": "Organization/ee172322-118b-5716-abbc-18e4c5437e15",
+          "display": null
+        }
+      }
+    ],
+    "hospitalization": {
+      "admitSource": {
+        "coding": [
+          {
+            "code": "EMERGENCY ROOM",
+            "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-admit-source",
+            "display": null
+          }
+        ],
+        "text": null
+      },
+      "dischargeDisposition": {
+        "coding": [
+          {
+            "code": "HOSPICE",
+            "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-discharge-disposition",
+            "display": null
+          }
+        ],
+        "text": null
+      }
+    },
+    "serviceProvider": {
+      "reference": "Organization/ee172322-118b-5716-abbc-18e4c5437e15",
+      "display": null
+    }
+  },
+  {
+    "resourceType": "Encounter",
+    "id": "8a5be724-d9d4-5a47-8a39-4a274662f766",
+    "meta": {
+      "profile": [
+        "http://mimic.mit.edu/fhir/mimic/StructureDefinition/mimic-encounter"
+      ]
+    },
+    "status": "finished",
+    "encounter_class": {
+      "code": "EMER",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "display": "emergency"
+    },
+    "type": [
+      {
+        "coding": [
+          {
+            "code": "308335008",
+            "system": "http://snomed.info/sct",
+            "display": "Patient encounter procedure"
+          }
+        ],
+        "text": null
+      }
+    ],
+    "priority": {
+      "coding": [
+        {
+          "code": "EM",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+          "display": "emergency"
+        }
+      ],
+      "text": null
+    },
+    "subject": {
+      "reference": "Patient/0a8eebfd-a352-522e-89f0-1d4a13abdebc",
+      "display": null
+    },
+    "period": {
+      "start": "2180-07-23T12:35:00-04:00",
+      "end": "2180-07-25T17:55:00-04:00"
+    },
+    "location": [
+      {
+        "location": {
+          "reference": "Location/501cd59a-cd8a-5f98-8298-2ca9c897d59f",
+          "display": null
+        },
+        "period": {
+          "start": "2180-07-22T16:24:00-04:00",
+          "end": "2180-07-23T05:54:00-04:00"
+        }
+      },
+      {
+        "location": {
+          "reference": "Location/501cd59a-cd8a-5f98-8298-2ca9c897d59f",
+          "display": null
+        },
+        "period": {
+          "start": "2180-07-23T05:54:00-04:00",
+          "end": "2180-07-23T14:00:00-04:00"
+        }
+      },
+      {
+        "location": {
+          "reference": "Location/77b3f959-fa2c-5599-8713-a86815b29a4a",
+          "display": null
+        },
+        "period": {
+          "start": "2180-07-23T14:00:00-04:00",
+          "end": "2180-07-23T23:50:47-04:00"
+        }
+      },
+      {
+        "location": {
+          "reference": "Location/9152585d-31b9-50ca-9476-a4db49030917",
+          "display": null
+        },
+        "period": {
+          "start": "2180-07-23T23:50:47-04:00",
+          "end": "2180-07-24T19:52:58-04:00"
+        }
+      },
+      {
+        "location": {
+          "reference": "Location/9152585d-31b9-50ca-9476-a4db49030917",
+          "display": null
+        },
+        "period": {
+          "start": "2180-07-24T19:52:58-04:00",
+          "end": "2180-07-25T17:55:43-04:00"
+        }
+      }
+    ],
+    "serviceType": {
+      "coding": [
+        {
+          "code": "MED",
+          "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-services",
+          "display": null
+        }
+      ],
+      "text": null
+    },
+    "identifier": [
+      {
+        "use": "usual",
+        "value": "29079034",
+        "system": "http://mimic.mit.edu/fhir/mimic/identifier/encounter-hosp",
+        "assigner": {
+          "reference": "Organization/ee172322-118b-5716-abbc-18e4c5437e15",
+          "display": null
+        }
+      }
+    ],
+    "hospitalization": {
+      "admitSource": {
+        "coding": [
+          {
+            "code": "EMERGENCY ROOM",
+            "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-admit-source",
+            "display": null
+          }
+        ],
+        "text": null
+      },
+      "dischargeDisposition": {
+        "coding": [
+          {
+            "code": "HOME",
+            "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-discharge-disposition",
+            "display": null
+          }
+        ],
+        "text": null
+      }
+    },
+    "serviceProvider": {
+      "reference": "Organization/ee172322-118b-5716-abbc-18e4c5437e15",
+      "display": null
+    }
+  },
+  {
+    "resourceType": "Encounter",
+    "id": "ba829745-66af-547d-9425-5d71fc2fc0ff",
+    "meta": {
+      "profile": [
+        "http://mimic.mit.edu/fhir/mimic/StructureDefinition/mimic-encounter"
+      ]
+    },
+    "status": "finished",
+    "encounter_class": {
+      "code": "OBSENC",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "display": "observation encounter"
+    },
+    "type": [
+      {
+        "coding": [
+          {
+            "code": "308335008",
+            "system": "http://snomed.info/sct",
+            "display": "Patient encounter procedure"
+          }
+        ],
+        "text": null
+      }
+    ],
+    "priority": {
+      "coding": [
+        {
+          "code": "R",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+          "display": "routine"
+        }
+      ],
+      "text": null
+    },
+    "subject": {
+      "reference": "Patient/0c2243d2-987b-5cbd-8eb1-170a80647693",
+      "display": null
+    },
+    "period": {
+      "start": "2149-10-01T18:56:00-04:00",
+      "end": "2149-10-25T18:50:00-04:00"
+    },
+    "location": [
+      {
+        "location": {
+          "reference": "Location/501cd59a-cd8a-5f98-8298-2ca9c897d59f",
+          "display": null
+        },
+        "period": {
+          "start": "2149-10-01T02:07:00-04:00",
+          "end": "2149-10-01T18:56:59-04:00"
+        }
+      },
+      {
+        "location": {
+          "reference": "Location/d4b315bc-5e39-5162-9d5c-dada4294b1a9",
+          "display": null
+        },
+        "period": {
+          "start": "2149-10-01T18:56:59-04:00",
+          "end": "2149-10-02T12:48:08-04:00"
+        }
+      },
+      {
+        "location": {
+          "reference": "Location/00e4b7f2-1d93-5521-9dd9-cba8fa9461af",
+          "display": null
+        },
+        "period": {
+          "start": "2149-10-02T12:48:08-04:00",
+          "end": "2149-10-03T16:44:58-04:00"
+        }
+      },
+      {
+        "location": {
+          "reference": "Location/dcde0b27-37b5-5ef1-8d7e-85d608901e2b",
+          "display": null
+        },
+        "period": {
+          "start": "2149-10-03T16:44:58-04:00",
+          "end": "2149-10-03T20:16:10-04:00"
+        }
+      },
+      {
+        "location": {
+          "reference": "Location/dbba2bef-57a7-582f-8d86-a7a6d7fea258",
+          "display": null
+        },
+        "period": {
+          "start": "2149-10-03T20:16:10-04:00",
+          "end": "2149-10-04T17:48:36-04:00"
+        }
+      },
+      {
+        "location": {
+          "reference": "Location/9152585d-31b9-50ca-9476-a4db49030917",
+          "display": null
+        },
+        "period": {
+          "start": "2149-10-04T17:48:36-04:00",
+          "end": "2149-10-25T18:53:29-04:00"
+        }
+      }
+    ],
+    "serviceType": {
+      "coding": [
+        {
+          "code": "SURG",
+          "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-services",
+          "display": null
+        }
+      ],
+      "text": null
+    },
+    "identifier": [
+      {
+        "use": "usual",
+        "value": "20364112",
+        "system": "http://mimic.mit.edu/fhir/mimic/identifier/encounter-hosp",
+        "assigner": {
+          "reference": "Organization/ee172322-118b-5716-abbc-18e4c5437e15",
+          "display": null
+        }
+      }
+    ],
+    "hospitalization": {
+      "admitSource": {
+        "coding": [
+          {
+            "code": "PHYSICIAN REFERRAL",
+            "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-admit-source",
+            "display": null
+          }
+        ],
+        "text": null
+      },
+      "dischargeDisposition": {
+        "coding": [
+          {
+            "code": "SKILLED NURSING FACILITY",
+            "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-discharge-disposition",
+            "display": null
+          }
+        ],
+        "text": null
+      }
+    },
+    "serviceProvider": {
+      "reference": "Organization/ee172322-118b-5716-abbc-18e4c5437e15",
+      "display": null
+    }
+  },
+  {
+    "resourceType": "Encounter",
+    "id": "47f1f4fc-e2be-5e4d-922a-de9ba718e703",
+    "meta": {
+      "profile": [
+        "http://mimic.mit.edu/fhir/mimic/StructureDefinition/mimic-encounter"
+      ]
+    },
+    "status": "finished",
+    "encounter_class": {
+      "code": "OBSENC",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "display": "observation encounter"
+    },
+    "type": [
+      {
+        "coding": [
+          {
+            "code": "308335008",
+            "system": "http://snomed.info/sct",
+            "display": "Patient encounter procedure"
+          }
+        ],
+        "text": null
+      }
+    ],
+    "priority": {
+      "coding": [
+        {
+          "code": "R",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+          "display": "routine"
+        }
+      ],
+      "text": null
+    },
+    "subject": {
+      "reference": "Patient/0c2243d2-987b-5cbd-8eb1-170a80647693",
+      "display": null
+    },
+    "period": {
+      "start": "2149-09-20T14:30:00-04:00",
+      "end": "2149-09-26T15:05:00-04:00"
+    },
+    "location": [
+      {
+        "location": {
+          "reference": "Location/501cd59a-cd8a-5f98-8298-2ca9c897d59f",
+          "display": null
+        },
+        "period": {
+          "start": "2149-09-20T05:50:00-04:00",
+          "end": "2149-09-20T15:53:00-04:00"
+        }
+      },
+      {
+        "location": {
+          "reference": "Location/9152585d-31b9-50ca-9476-a4db49030917",
+          "display": null
+        },
+        "period": {
+          "start": "2149-09-20T15:53:00-04:00",
+          "end": "2149-09-26T15:07:34-04:00"
+        }
+      }
+    ],
+    "serviceType": {
+      "coding": [
+        {
+          "code": "SURG",
+          "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-services",
+          "display": null
+        }
+      ],
+      "text": null
+    },
+    "identifier": [
+      {
+        "use": "usual",
+        "value": "21636229",
+        "system": "http://mimic.mit.edu/fhir/mimic/identifier/encounter-hosp",
+        "assigner": {
+          "reference": "Organization/ee172322-118b-5716-abbc-18e4c5437e15",
+          "display": null
+        }
+      }
+    ],
+    "hospitalization": {
+      "admitSource": {
+        "coding": [
+          {
+            "code": "EMERGENCY ROOM",
+            "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-admit-source",
+            "display": null
+          }
+        ],
+        "text": null
+      },
+      "dischargeDisposition": {
+        "coding": [
+          {
+            "code": "HOME",
+            "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-discharge-disposition",
+            "display": null
+          }
+        ],
+        "text": null
+      }
+    },
+    "serviceProvider": {
+      "reference": "Organization/ee172322-118b-5716-abbc-18e4c5437e15",
+      "display": null
+    }
+  },
+  {
+    "resourceType": "Encounter",
+    "id": "ae04a78b-4073-5c58-8903-d90c803c0422",
+    "meta": {
+      "profile": [
+        "http://mimic.mit.edu/fhir/mimic/StructureDefinition/mimic-encounter"
+      ]
+    },
+    "status": "finished",
+    "encounter_class": {
+      "code": "EMER",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "display": "emergency"
+    },
+    "type": [
+      {
+        "coding": [
+          {
+            "code": "308335008",
+            "system": "http://snomed.info/sct",
+            "display": "Patient encounter procedure"
+          }
+        ],
+        "text": null
+      }
+    ],
+    "priority": {
+      "coding": [
+        {
+          "code": "EM",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+          "display": "emergency"
+        }
+      ],
+      "text": null
+    },
+    "subject": {
+      "reference": "Patient/0c2243d2-987b-5cbd-8eb1-170a80647693",
+      "display": null
+    },
+    "period": {
+      "start": "2146-06-06T00:50:00-04:00",
+      "end": "2146-06-09T16:45:00-04:00"
+    },
+    "location": [
+      {
+        "location": {
+          "reference": "Location/501cd59a-cd8a-5f98-8298-2ca9c897d59f",
+          "display": null
+        },
+        "period": {
+          "start": "2146-06-05T22:26:00-04:00",
+          "end": "2146-06-06T01:45:00-04:00"
+        }
+      },
+      {
+        "location": {
+          "reference": "Location/9152585d-31b9-50ca-9476-a4db49030917",
+          "display": null
+        },
+        "period": {
+          "start": "2146-06-06T01:45:00-04:00",
+          "end": "2146-06-08T06:54:08-04:00"
+        }
+      },
+      {
+        "location": {
+          "reference": "Location/9152585d-31b9-50ca-9476-a4db49030917",
+          "display": null
+        },
+        "period": {
+          "start": "2146-06-08T06:54:08-04:00",
+          "end": "2146-06-09T16:56:16-04:00"
+        }
+      }
+    ],
+    "serviceType": {
+      "coding": [
+        {
+          "code": "SURG",
+          "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-services",
+          "display": null
+        }
+      ],
+      "text": null
+    },
+    "identifier": [
+      {
+        "use": "usual",
+        "value": "26158160",
+        "system": "http://mimic.mit.edu/fhir/mimic/identifier/encounter-hosp",
+        "assigner": {
+          "reference": "Organization/ee172322-118b-5716-abbc-18e4c5437e15",
+          "display": null
+        }
+      }
+    ],
+    "hospitalization": {
+      "admitSource": {
+        "coding": [
+          {
+            "code": "EMERGENCY ROOM",
+            "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-admit-source",
+            "display": null
+          }
+        ],
+        "text": null
+      },
+      "dischargeDisposition": {
+        "coding": [
+          {
+            "code": "HOME",
+            "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-discharge-disposition",
+            "display": null
+          }
+        ],
+        "text": null
+      }
+    },
+    "serviceProvider": {
+      "reference": "Organization/ee172322-118b-5716-abbc-18e4c5437e15",
+      "display": null
+    }
+  },
+  {
+    "resourceType": "Encounter",
+    "id": "43ee2231-4dab-55e0-a3bb-467fae76686a",
+    "meta": {
+      "profile": [
+        "http://mimic.mit.edu/fhir/mimic/StructureDefinition/mimic-encounter"
+      ]
+    },
+    "status": "finished",
+    "encounter_class": {
+      "code": "EMER",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "display": "emergency"
+    },
+    "type": [
+      {
+        "coding": [
+          {
+            "code": "308335008",
+            "system": "http://snomed.info/sct",
+            "display": "Patient encounter procedure"
+          }
+        ],
+        "text": null
+      }
+    ],
+    "priority": {
+      "coding": [
+        {
+          "code": "EM",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+          "display": "emergency"
+        }
+      ],
+      "text": null
+    },
+    "subject": {
+      "reference": "Patient/0c2243d2-987b-5cbd-8eb1-170a80647693",
+      "display": null
+    },
+    "period": {
+      "start": "2149-09-13T07:36:00-04:00",
+      "end": "2149-09-19T18:00:00-04:00"
+    },
+    "location": [
+      {
+        "location": {
+          "reference": "Location/501cd59a-cd8a-5f98-8298-2ca9c897d59f",
+          "display": null
+        },
+        "period": {
+          "start": "2149-09-12T15:31:00-04:00",
+          "end": "2149-09-13T09:02:00-04:00"
+        }
+      },
+      {
+        "location": {
+          "reference": "Location/9152585d-31b9-50ca-9476-a4db49030917",
+          "display": null
+        },
+        "period": {
+          "start": "2149-09-13T09:02:00-04:00",
+          "end": "2149-09-19T18:01:02-04:00"
+        }
+      }
+    ],
+    "serviceType": {
+      "coding": [
+        {
+          "code": "SURG",
+          "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-services",
+          "display": null
+        }
+      ],
+      "text": null
+    },
+    "identifier": [
+      {
+        "use": "usual",
+        "value": "26134779",
+        "system": "http://mimic.mit.edu/fhir/mimic/identifier/encounter-hosp",
+        "assigner": {
+          "reference": "Organization/ee172322-118b-5716-abbc-18e4c5437e15",
+          "display": null
+        }
+      }
+    ],
+    "hospitalization": {
+      "admitSource": {
+        "coding": [
+          {
+            "code": "EMERGENCY ROOM",
+            "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-admit-source",
+            "display": null
+          }
+        ],
+        "text": null
+      },
+      "dischargeDisposition": {
+        "coding": [
+          {
+            "code": "HOME",
+            "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-discharge-disposition",
+            "display": null
+          }
+        ],
+        "text": null
+      }
+    },
+    "serviceProvider": {
+      "reference": "Organization/ee172322-118b-5716-abbc-18e4c5437e15",
+      "display": null
+    }
+  },
+  {
+    "resourceType": "Encounter",
+    "id": "dd6b8e83-b6a4-5228-ac36-e291923008ea",
+    "meta": {
+      "profile": [
+        "http://mimic.mit.edu/fhir/mimic/StructureDefinition/mimic-encounter"
+      ]
+    },
+    "status": "finished",
+    "encounter_class": {
+      "code": "OBSENC",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "display": "observation encounter"
+    },
+    "type": [
+      {
+        "coding": [
+          {
+            "code": "308335008",
+            "system": "http://snomed.info/sct",
+            "display": "Patient encounter procedure"
+          }
+        ],
+        "text": null
+      }
+    ],
+    "priority": {
+      "coding": [
+        {
+          "code": "R",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+          "display": "routine"
+        }
+      ],
+      "text": null
+    },
+    "subject": {
+      "reference": "Patient/0c2243d2-987b-5cbd-8eb1-170a80647693",
+      "display": null
+    },
+    "period": {
+      "start": "2149-02-11T21:49:00-05:00",
+      "end": "2149-02-14T16:45:00-05:00"
+    },
+    "location": [
+      {
+        "location": {
+          "reference": "Location/501cd59a-cd8a-5f98-8298-2ca9c897d59f",
+          "display": null
+        },
+        "period": {
+          "start": "2149-02-11T08:52:00-05:00",
+          "end": "2149-02-11T23:09:00-05:00"
+        }
+      },
+      {
+        "location": {
+          "reference": "Location/9152585d-31b9-50ca-9476-a4db49030917",
+          "display": null
+        },
+        "period": {
+          "start": "2149-02-11T23:09:00-05:00",
+          "end": "2149-02-14T16:54:48-05:00"
+        }
+      }
+    ],
+    "serviceType": {
+      "coding": [
+        {
+          "code": "MED",
+          "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-services",
+          "display": null
+        }
+      ],
+      "text": null
+    },
+    "identifier": [
+      {
+        "use": "usual",
+        "value": "22589518",
+        "system": "http://mimic.mit.edu/fhir/mimic/identifier/encounter-hosp",
+        "assigner": {
+          "reference": "Organization/ee172322-118b-5716-abbc-18e4c5437e15",
+          "display": null
+        }
+      }
+    ],
+    "hospitalization": {
+      "admitSource": {
+        "coding": [
+          {
+            "code": "EMERGENCY ROOM",
+            "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-admit-source",
+            "display": null
+          }
+        ],
+        "text": null
+      },
+      "dischargeDisposition": {
+        "coding": [
+          {
+            "code": "HOME",
+            "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-discharge-disposition",
+            "display": null
+          }
+        ],
+        "text": null
+      }
+    },
+    "serviceProvider": {
+      "reference": "Organization/ee172322-118b-5716-abbc-18e4c5437e15",
+      "display": null
+    }
+  },
+  {
+    "resourceType": "Encounter",
+    "id": "4afcb117-13da-5991-af56-6aef21df58c9",
+    "meta": {
+      "profile": [
+        "http://mimic.mit.edu/fhir/mimic/StructureDefinition/mimic-encounter"
+      ]
+    },
+    "status": "finished",
+    "encounter_class": {
+      "code": "OBSENC",
+      "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "display": "observation encounter"
+    },
+    "type": [
+      {
+        "coding": [
+          {
+            "code": "308335008",
+            "system": "http://snomed.info/sct",
+            "display": "Patient encounter procedure"
+          }
+        ],
+        "text": null
+      }
+    ],
+    "priority": {
+      "coding": [
+        {
+          "code": "R",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+          "display": "routine"
+        }
+      ],
+      "text": null
+    },
+    "subject": {
+      "reference": "Patient/0c2243d2-987b-5cbd-8eb1-170a80647693",
+      "display": null
+    },
+    "period": {
+      "start": "2149-06-20T19:27:00-04:00",
+      "end": "2149-06-25T15:55:00-04:00"
+    },
+    "location": [
+      {
+        "location": {
+          "reference": "Location/501cd59a-cd8a-5f98-8298-2ca9c897d59f",
+          "display": null
+        },
+        "period": {
+          "start": "2149-06-20T10:20:00-04:00",
+          "end": "2149-06-20T20:59:00-04:00"
+        }
+      },
+      {
+        "location": {
+          "reference": "Location/9152585d-31b9-50ca-9476-a4db49030917",
+          "display": null
+        },
+        "period": {
+          "start": "2149-06-20T20:59:00-04:00",
+          "end": "2149-06-25T15:57:58-04:00"
+        }
+      }
+    ],
+    "serviceType": {
+      "coding": [
+        {
+          "code": "SURG",
+          "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-services",
+          "display": null
+        }
+      ],
+      "text": null
+    },
+    "identifier": [
+      {
+        "use": "usual",
+        "value": "23514107",
+        "system": "http://mimic.mit.edu/fhir/mimic/identifier/encounter-hosp",
+        "assigner": {
+          "reference": "Organization/ee172322-118b-5716-abbc-18e4c5437e15",
+          "display": null
+        }
+      }
+    ],
+    "hospitalization": {
+      "admitSource": {
+        "coding": [
+          {
+            "code": "EMERGENCY ROOM",
+            "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-admit-source",
+            "display": null
+          }
+        ],
+        "text": null
+      },
+      "dischargeDisposition": {
+        "coding": [
+          {
+            "code": "HOME",
+            "system": "http://mimic.mit.edu/fhir/mimic/CodeSystem/mimic-discharge-disposition",
+            "display": null
+          }
+        ],
+        "text": null
+      }
+    },
+    "serviceProvider": {
+      "reference": "Organization/ee172322-118b-5716-abbc-18e4c5437e15",
+      "display": null
+    }
+  }
+]
