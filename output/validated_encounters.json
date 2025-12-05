@@ -5,7 +5,12 @@
     "meta": {
       "profile": [
         "http://mimic.mit.edu/fhir/mimic/StructureDefinition/mimic-encounter"
-      ]
+      ],
+      "versionId": null,
+      "lastUpdated": null,
+      "source": null,
+      "tag": null,
+      "security": null
     },
     "status": "finished",
     "encounter_class": {
@@ -119,7 +124,12 @@
     "meta": {
       "profile": [
         "http://mimic.mit.edu/fhir/mimic/StructureDefinition/mimic-encounter"
-      ]
+      ],
+      "versionId": null,
+      "lastUpdated": null,
+      "source": null,
+      "tag": null,
+      "security": null
     },
     "status": "finished",
     "encounter_class": {
@@ -233,7 +243,12 @@
     "meta": {
       "profile": [
         "http://mimic.mit.edu/fhir/mimic/StructureDefinition/mimic-encounter"
-      ]
+      ],
+      "versionId": null,
+      "lastUpdated": null,
+      "source": null,
+      "tag": null,
+      "security": null
     },
     "status": "finished",
     "encounter_class": {
@@ -347,7 +362,12 @@
     "meta": {
       "profile": [
         "http://mimic.mit.edu/fhir/mimic/StructureDefinition/mimic-encounter"
-      ]
+      ],
+      "versionId": null,
+      "lastUpdated": null,
+      "source": null,
+      "tag": null,
+      "security": null
     },
     "status": "finished",
     "encounter_class": {
@@ -491,7 +511,12 @@
     "meta": {
       "profile": [
         "http://mimic.mit.edu/fhir/mimic/StructureDefinition/mimic-encounter"
-      ]
+      ],
+      "versionId": null,
+      "lastUpdated": null,
+      "source": null,
+      "tag": null,
+      "security": null
     },
     "status": "finished",
     "encounter_class": {
@@ -645,7 +670,12 @@
     "meta": {
       "profile": [
         "http://mimic.mit.edu/fhir/mimic/StructureDefinition/mimic-encounter"
-      ]
+      ],
+      "versionId": null,
+      "lastUpdated": null,
+      "source": null,
+      "tag": null,
+      "security": null
     },
     "status": "finished",
     "encounter_class": {
@@ -759,7 +789,12 @@
     "meta": {
       "profile": [
         "http://mimic.mit.edu/fhir/mimic/StructureDefinition/mimic-encounter"
-      ]
+      ],
+      "versionId": null,
+      "lastUpdated": null,
+      "source": null,
+      "tag": null,
+      "security": null
     },
     "status": "finished",
     "encounter_class": {
@@ -883,7 +918,12 @@
     "meta": {
       "profile": [
         "http://mimic.mit.edu/fhir/mimic/StructureDefinition/mimic-encounter"
-      ]
+      ],
+      "versionId": null,
+      "lastUpdated": null,
+      "source": null,
+      "tag": null,
+      "security": null
     },
     "status": "finished",
     "encounter_class": {
@@ -997,7 +1037,12 @@
     "meta": {
       "profile": [
         "http://mimic.mit.edu/fhir/mimic/StructureDefinition/mimic-encounter"
-      ]
+      ],
+      "versionId": null,
+      "lastUpdated": null,
+      "source": null,
+      "tag": null,
+      "security": null
     },
     "status": "finished",
     "encounter_class": {
@@ -1111,7 +1156,12 @@
     "meta": {
       "profile": [
         "http://mimic.mit.edu/fhir/mimic/StructureDefinition/mimic-encounter"
-      ]
+      ],
+      "versionId": null,
+      "lastUpdated": null,
+      "source": null,
+      "tag": null,
+      "security": null
     },
     "status": "finished",
     "encounter_class": {

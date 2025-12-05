@@ -121,14 +121,34 @@ df = df.with_column(
 print("✓ Data extraction complete")
 
 # Validate processed records using ProcessedEncounter model
-print("\n[4/6] Validating processed records with sample...")
+print("\n[4/6] Validating processed records with metadata tracking...")
 validated_processed = []
 processing_errors = []
+meta_stats = {'with_profile': 0, 'with_version': 0, 'total': 0}
 
 # Validate using the original validated encounters (which we already have)
 # This avoids the timezone parsing issue in DAFT's to_pydict()
 for encounter in validated_encounters[:10]:  # Validate a sample
     try:
+        meta_stats['total'] += 1
+        
+        # Extract meta fields if present
+        version_id = None
+        last_updated = None
+        source_system = None
+        profile = None
+        
+        if encounter.meta:
+            version_id = encounter.meta.versionId
+            last_updated = encounter.meta.lastUpdated
+            source_system = encounter.meta.source
+            profile = encounter.meta.profile
+            
+            if profile:
+                meta_stats['with_profile'] += 1
+            if version_id:
+                meta_stats['with_version'] += 1
+        
         # Extract processed data from validated encounter
         record = {
             'encounter_id': encounter.id,
@@ -148,10 +168,15 @@ for encounter in validated_encounters[:10]:  # Validate a sample
             'encounter_identifier': encounter.identifier[0].value if encounter.identifier else None,
             'location_count': encounter.get_location_count(),
             'encounter_duration_hours': encounter.get_encounter_duration_hours(),
+            # Include metadata fields (for audit tracking)
+            'version_id': version_id,
+            'last_updated': last_updated,
+            'source_system': source_system,
+            'profile': profile,
         }
         
         validated = ProcessedEncounter(**record)
-        validated_processed.append(validated.model_dump())
+        validated_processed.append(validated.model_dump(mode='json'))
     except ValidationError as e:
         processing_errors.append({
             'encounter_id': encounter.id,
@@ -159,6 +184,8 @@ for encounter in validated_encounters[:10]:  # Validate a sample
         })
 
 print(f"✓ Validated {len(validated_processed)} processed record samples")
+print(f"  → Records with FHIR profile: {meta_stats['with_profile']}/{meta_stats['total']}")
+print(f"  → Records with version tracking: {meta_stats['with_version']}/{meta_stats['total']}")
 if processing_errors:
     print(f"⚠ Found {len(processing_errors)} processing validation errors")
     with open("output/processing_validation_errors.json", "w") as f:

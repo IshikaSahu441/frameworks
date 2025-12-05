@@ -121,11 +121,92 @@ class EncounterClass(BaseModel):
 
 
 class Meta(BaseModel):
-    """FHIR Meta data type"""
-    profile: Optional[List[str]] = Field(None, description="Profiles this resource claims to conform to")
+    """
+    FHIR Meta element for resource metadata and version tracking.
+    
+    In MIMIC-IV demo data, only 'profile' is present.
+    Version tracking fields (versionId, lastUpdated, source) are optional
+    and available for hospital-wide audit tracking when implemented.
+    """
+    profile: Optional[List[str]] = Field(
+        None, 
+        description="Profiles this resource claims to conform to"
+    )
+    versionId: Optional[str] = Field(
+        None,
+        description="Version-specific identifier (for audit tracking)"
+    )
+    lastUpdated: Optional[datetime] = Field(
+        None,
+        description="When this version was last updated (for audit tracking)"
+    )
+    source: Optional[str] = Field(
+        None,
+        description="Source system URI (for audit tracking)"
+    )
+    tag: Optional[List[dict]] = Field(
+        None,
+        description="Tags applied to this resource"
+    )
+    security: Optional[List[dict]] = Field(
+        None,
+        description="Security labels applied to this resource"
+    )
 
     class Config:
         extra = "allow"
+
+    @field_validator('versionId')
+    @classmethod
+    def validate_version_format(cls, v: Optional[str]) -> Optional[str]:
+        """Validate version ID format - must be numeric or semantic version."""
+        if v is not None and v.strip():
+            import re
+            # Accept numeric versions (e.g., "1", "2", "123")
+            if v.isdigit():
+                return v
+            # Accept semantic versions (e.g., "1.0.0", "2.1.3")
+            if re.match(r'^\d+\.\d+\.\d+$', v):
+                return v
+            raise ValueError(
+                f"versionId must be numeric (e.g., '1') or semantic version (e.g., '1.0.0'), got: {v}"
+            )
+        return v
+
+    @field_validator('lastUpdated')
+    @classmethod
+    def validate_last_updated(cls, v: Optional[datetime]) -> Optional[datetime]:
+        """Validate lastUpdated is not in the future."""
+        if v is not None:
+            # Handle both timezone-aware and naive datetimes
+            import pytz
+            now = datetime.now(pytz.UTC) if v.tzinfo else datetime.now()
+            if v > now:
+                raise ValueError(
+                    f"lastUpdated cannot be in the future: {v}"
+                )
+        return v
+
+    @field_validator('source')
+    @classmethod
+    def validate_source_uri(cls, v: Optional[str]) -> Optional[str]:
+        """Validate source is a valid URI."""
+        if v is not None and v.strip():
+            # Basic URI validation
+            if not (v.startswith('http://') or v.startswith('https://') or v.startswith('urn:')):
+                raise ValueError(
+                    f"source must be a valid URI (http://, https://, or urn:), got: {v}"
+                )
+        return v
+
+    @model_validator(mode='after')
+    def validate_version_consistency(self):
+        """Ensure versionId and lastUpdated are consistent when both present."""
+        if self.versionId is not None and self.versionId.strip() and self.lastUpdated is None:
+            raise ValueError(
+                "If versionId is provided, lastUpdated should also be provided for audit tracking"
+            )
+        return self
 
 
 class Identifier(BaseModel):
@@ -195,7 +276,14 @@ class MimicEncounter(BaseModel):
 
     @model_validator(mode='after')
     def validate_encounter_data(self):
-        """Additional business logic validation"""
+        """
+        Additional business logic validation including version consistency.
+        
+        Validates:
+        - Finished encounters have end times
+        - Locations have periods
+        - Version metadata consistency (when present)
+        """
         # If status is finished, period end should be present
         if self.status == EncounterStatus.FINISHED and self.period and not self.period.end:
             raise ValueError("Finished encounters must have a period end time")
@@ -205,6 +293,22 @@ class MimicEncounter(BaseModel):
             for loc in self.location:
                 if not loc.period:
                     raise ValueError("All locations must have a period")
+        
+        # Validate version metadata consistency (when present)
+        if self.meta and self.meta.lastUpdated and self.period and self.period.start:
+            try:
+                last_updated = self.meta.lastUpdated
+                period_start = datetime.fromisoformat(self.period.start.replace('Z', '+00:00'))
+                
+                # Ensure lastUpdated is not before encounter start
+                if last_updated < period_start:
+                    raise ValueError(
+                        f"meta.lastUpdated ({last_updated}) cannot be before period.start ({period_start})"
+                    )
+            except (ValueError, AttributeError) as e:
+                # If datetime parsing fails, skip version validation
+                if "cannot be before" in str(e):
+                    raise
         
         return self
 
@@ -243,7 +347,8 @@ class ProcessedEncounter(BaseModel):
     Flattened and processed encounter model for downstream analytics.
     
     This model represents the extracted and validated data after
-    processing the raw FHIR encounter data.
+    processing the raw FHIR encounter data. Includes optional version
+    tracking fields for hospital-wide audit tracking.
     """
     encounter_id: str = Field(..., description="Unique encounter identifier")
     resourceType: str = Field(..., description="Resource type (Encounter)")
@@ -262,6 +367,12 @@ class ProcessedEncounter(BaseModel):
     encounter_identifier: Optional[str] = Field(None, description="Primary encounter identifier value")
     location_count: int = Field(..., description="Number of locations", ge=0)
     encounter_duration_hours: Optional[float] = Field(None, description="Encounter duration in hours", ge=0)
+    
+    # Version tracking fields (optional, for audit tracking)
+    version_id: Optional[str] = Field(None, description="Version identifier from meta.versionId")
+    last_updated: Optional[datetime] = Field(None, description="Last update timestamp from meta.lastUpdated")
+    source_system: Optional[str] = Field(None, description="Source system from meta.source")
+    profile: Optional[List[str]] = Field(None, description="FHIR profiles from meta.profile")
 
     class Config:
         extra = "forbid"
@@ -273,3 +384,38 @@ class ProcessedEncounter(BaseModel):
         if not v or len(v) < 10:
             raise ValueError("Patient ID must be a valid identifier")
         return v
+
+    @model_validator(mode='after')
+    def validate_processed_consistency(self):
+        """
+        Validate processed encounter data consistency including version metadata.
+        """
+        # Version metadata consistency
+        if self.version_id and not self.last_updated:
+            raise ValueError(
+                "If version_id is present, last_updated must also be present for audit tracking"
+            )
+        
+        # Temporal consistency between last_updated and period_start
+        if self.last_updated and self.period_start:
+            try:
+                last_updated = self.last_updated
+                period_start = datetime.fromisoformat(self.period_start.replace('Z', '+00:00'))
+                
+                # Ensure both datetimes are comparable (add timezone if needed)
+                if last_updated.tzinfo is None and period_start.tzinfo is not None:
+                    import pytz
+                    last_updated = last_updated.replace(tzinfo=pytz.UTC)
+                elif last_updated.tzinfo is not None and period_start.tzinfo is None:
+                    import pytz
+                    period_start = period_start.replace(tzinfo=pytz.UTC)
+                
+                if last_updated < period_start:
+                    raise ValueError(
+                        f"last_updated ({last_updated}) cannot be before period_start ({period_start})"
+                    )
+            except (ValueError, AttributeError) as e:
+                if "cannot be before" in str(e):
+                    raise
+        
+        return self
