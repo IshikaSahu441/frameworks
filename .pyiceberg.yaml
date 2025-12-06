@@ -1,0 +1,5 @@
+catalog:
+  local:
+    type: sql
+    uri: sqlite:///iceberg_catalog/catalog.db
+    warehouse: file:///iceberg_warehouse
