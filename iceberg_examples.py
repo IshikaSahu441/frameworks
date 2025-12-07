@@ -21,7 +21,7 @@ def example_basic_integration():
     integration.setup_tables(overwrite=False)
     integration.ingest_data("output/daft_processed")
     
-    print("\n✓ Integration complete. Tables created and data loaded.")
+    print("\nIntegration complete. Tables created and data loaded.")
 
 
 def example_schema_evolution():
@@ -53,7 +53,7 @@ def example_schema_evolution():
             description=description,
             applied_by="ml_pipeline"
         )
-        print(f"  ✓ Added {col_name}: {result.get('status', 'UNKNOWN')}")
+        print(f"  Added {col_name}: {result.get('status', 'UNKNOWN')}")
     
     # Get evolution summary
     summary = schema_mgr.get_summary()
@@ -87,7 +87,7 @@ def example_audit_trail():
         user="data_quality_team",
         where_clause="quality_score < 0.5"
     )
-    print("  ✓ Logged data correction")
+    print("  Logged data correction")
     
     # Log schema migration
     audit_mgr.log_schema_change(
@@ -100,7 +100,7 @@ def example_audit_trail():
             "mapping": "EMERGENCY->1, URGENT->2, ELECTIVE->3, NEWBORN->4"
         }
     )
-    print("  ✓ Logged schema change")
+    print("  Logged schema change")
     
     # Create backup snapshot
     audit_mgr.log_snapshot(
@@ -111,7 +111,7 @@ def example_audit_trail():
             "reason": "Data migration checkpoint"
         }
     )
-    print("  ✓ Logged snapshot")
+    print("  Logged snapshot")
     
     # Get audit history
     history = audit_mgr.get_table_audit_history("admissions")
@@ -275,7 +275,7 @@ def main():
         print("=" * 80)
         
     except Exception as e:
-        print(f"\n✗ Error running examples: {e}")
+        print(f"\n[ERROR] Error running examples: {e}")
         import traceback
         traceback.print_exc()
 

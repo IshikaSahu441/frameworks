@@ -80,13 +80,13 @@ class SchemaEvolutionManager:
                 
                 # Add column using Iceberg's schema evolution API
                 # This is a placeholder - actual implementation depends on pyiceberg version
-                print(f"✓ Added column '{column_name}' ({column_type}) to {table_name}")
+                print(f"Added column '{column_name}' ({column_type}) to {table_name}")
                 evolution_record["status"] = "APPLIED"
                 
             except Exception as e:
                 evolution_record["status"] = "FAILED"
                 evolution_record["error"] = str(e)
-                print(f"✗ Failed to add column: {e}")
+                print(f"[ERROR] Failed to add column: {e}")
         else:
             evolution_record["status"] = "PENDING"
         
@@ -130,13 +130,13 @@ class SchemaEvolutionManager:
                 table_id = self.ingestor.config.get_table_identifier(table_name)
                 iceberg_table = self.ingestor.catalog.load_table(table_id)
                 
-                print(f"✓ Renamed column '{old_name}' to '{new_name}' in {table_name}")
+                print(f"Renamed column '{old_name}' to '{new_name}' in {table_name}")
                 evolution_record["status"] = "APPLIED"
                 
             except Exception as e:
                 evolution_record["status"] = "FAILED"
                 evolution_record["error"] = str(e)
-                print(f"✗ Failed to rename column: {e}")
+                print(f"[ERROR] Failed to rename column: {e}")
         else:
             evolution_record["status"] = "PENDING"
         
@@ -200,13 +200,13 @@ class SchemaEvolutionManager:
                 table_id = self.ingestor.config.get_table_identifier(table_name)
                 iceberg_table = self.ingestor.catalog.load_table(table_id)
                 
-                print(f"✓ Changed column '{column_name}' type from {old_type} to {new_type}")
+                print(f"Changed column '{column_name}' type from {old_type} to {new_type}")
                 evolution_record["status"] = "APPLIED"
                 
             except Exception as e:
                 evolution_record["status"] = "FAILED"
                 evolution_record["error"] = str(e)
-                print(f"✗ Failed to change column type: {e}")
+                print(f"[ERROR] Failed to change column type: {e}")
         else:
             evolution_record["status"] = "PENDING"
         
@@ -267,10 +267,10 @@ class SchemaEvolutionManager:
         try:
             with open(output_path, 'w') as f:
                 json.dump(self.evolution_log, f, indent=2)
-            print(f"✓ Exported evolution log to {output_path}")
+            print(f"Exported evolution log to {output_path}")
             return True
         except Exception as e:
-            print(f"✗ Error exporting evolution log: {e}")
+            print(f"[ERROR] Error exporting evolution log: {e}")
             return False
     
     def get_summary(self) -> Dict[str, Any]:

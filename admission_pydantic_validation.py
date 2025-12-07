@@ -102,18 +102,18 @@ with open("Dataset/ADMISSIONS.csv", "r", encoding="utf-8") as f:
         if line_num % 10000 == 0:
             print(f"  Processed {line_num:,} records... ({len(validated_records):,} valid, {len(validation_errors):,} errors)")
 
-print(f"\n✓ Validation complete!")
+print(f"\nValidation complete!")
 print(f"  Total records processed: {len(raw_admissions) + len(validation_errors):,}")
 print(f"  Successfully validated: {len(validated_records):,}")
 print(f"  Validation errors: {len(validation_errors):,}")
 
 if validation_errors:
-    print(f"\n⚠ Found {len(validation_errors):,} validation errors")
+    print(f"\n[WARNING] Found {len(validation_errors):,} validation errors")
     # Save first 100 errors for review
     os.makedirs("output/pydantic_validation", exist_ok=True)
     with open("output/pydantic_validation/validation_errors.json", "w") as f:
         json.dump(validation_errors[:100], f, indent=2, default=str)
-    print(f"  → Sample errors saved to: output/pydantic_validation/validation_errors.json")
+    print(f"  Sample errors saved to: output/pydantic_validation/validation_errors.json")
 
 # Stage 2: Create validated batch and get summary
 print("\n[Stage 2/5] Creating validated admission batch...")
@@ -128,7 +128,7 @@ try:
     )
     
     summary = batch.get_validation_summary()
-    print("✓ Batch validation successful!")
+    print("Batch validation successful!")
     print(f"\nBatch Summary:")
     print(f"  Total records: {summary['total_records']:,}")
     print(f"  Emergency admissions: {summary['emergency_count']:,} ({summary['emergency_count']/summary['total_records']*100:.1f}%)")
@@ -137,7 +137,7 @@ try:
     print(f"  Validation timestamp: {summary['validation_timestamp']}")
     
 except Exception as e:
-    print(f"✗ Batch validation failed: {e}")
+    print(f"[ERROR] Batch validation failed: {e}")
 
 # Stage 3: Transform validated data into processed format
 print("\n[Stage 3/5] Creating processed admission records with derived features...")
@@ -187,14 +187,14 @@ for admission in validated_records[:1000]:  # Process sample for demo
             "error": str(e)
         })
 
-print(f"✓ Processing complete!")
+print(f"Processing complete!")
 print(f"  Successfully processed: {len(processed_records):,}")
 print(f"  Processing errors: {len(processing_errors):,}")
 
 if processing_errors:
     with open("output/pydantic_validation/processing_errors.json", "w") as f:
         json.dump(processing_errors[:50], f, indent=2)
-    print(f"  → Errors saved to: output/pydantic_validation/processing_errors.json")
+    print(f"  Errors saved to: output/pydantic_validation/processing_errors.json")
 
 # Stage 4: Analyze validated data
 print("\n[Stage 4/5] Analyzing validated admission patterns...")
@@ -222,16 +222,16 @@ for a in validated_records:
     admission_type_dist[a.admission_type] = admission_type_dist.get(a.admission_type, 0) + 1
 
 print("Data Quality Metrics:")
-print(f"  ✓ Total validated records: {total_records:,}")
-print(f"  ✓ Data completeness: {(total_records/(total_records+len(validation_errors)))*100:.2f}%")
-print(f"  ✓ Records with ED data: {has_ed_count:,} ({has_ed_count/total_records*100:.1f}%)")
-print(f"  ✓ Records with chart events: {sum(1 for a in validated_records if a.has_chartevents_data == 1):,}")
+print(f"  Total validated records: {total_records:,}")
+print(f"  Data completeness: {(total_records/(total_records+len(validation_errors)))*100:.2f}%")
+print(f"  Records with ED data: {has_ed_count:,} ({has_ed_count/total_records*100:.1f}%)")
+print(f"  Records with chart events: {sum(1 for a in validated_records if a.has_chartevents_data == 1):,}")
 
 print("\nClinical Metrics:")
-print(f"  • Emergency admissions: {emergency_count:,} ({emergency_count/total_records*100:.1f}%)")
-print(f"  • Patient deaths: {death_count:,} ({death_count/total_records*100:.1f}%)")
-print(f"  • Average length of stay: {avg_los:.2f} days")
-print(f"  • Average ED wait time: {avg_ed_wait:.2f} hours")
+print(f"  - Emergency admissions: {emergency_count:,} ({emergency_count/total_records*100:.1f}%)")
+print(f"  - Patient deaths: {death_count:,} ({death_count/total_records*100:.1f}%)")
+print(f"  - Average length of stay: {avg_los:.2f} days")
+print(f"  - Average ED wait time: {avg_ed_wait:.2f} hours")
 
 print("\nAdmission Type Distribution:")
 for adm_type, count in sorted(admission_type_dist.items(), key=lambda x: x[1], reverse=True):
@@ -252,14 +252,14 @@ print("Exporting sample validated records...")
 sample_records = [a.model_dump(mode='json') for a in validated_records[:100]]
 with open("output/pydantic_validation/validated_admissions_sample.json", "w") as f:
     json.dump(sample_records, f, indent=2, default=str)
-print("✓ Saved: output/pydantic_validation/validated_admissions_sample.json")
+print("Saved: output/pydantic_validation/validated_admissions_sample.json")
 
 # Export processed records (first 100) as JSON
 print("Exporting processed records with features...")
 processed_sample = [p.model_dump(mode='json') for p in processed_records[:100]]
 with open("output/pydantic_validation/processed_admissions_sample.json", "w") as f:
     json.dump(processed_sample, f, indent=2, default=str)
-print("✓ Saved: output/pydantic_validation/processed_admissions_sample.json")
+print("Saved: output/pydantic_validation/processed_admissions_sample.json")
 
 # Export validation summary
 print("Exporting validation summary...")
@@ -290,19 +290,19 @@ summary_data = {
 
 with open("output/pydantic_validation/validation_summary.json", "w") as f:
     json.dump(summary_data, f, indent=2, default=str)
-print("✓ Saved: output/pydantic_validation/validation_summary.json")
+print("Saved: output/pydantic_validation/validation_summary.json")
 
 # Final summary
 print("\n" + "=" * 80)
 print("PYDANTIC VALIDATION COMPLETE")
 print("=" * 80)
-print(f"\n✓ Successfully validated {len(validated_records):,} admission records")
-print(f"✓ Created {len(processed_records):,} processed records with derived features")
-print(f"✓ Data quality: {(len(validated_records)/(len(raw_admissions)+len(validation_errors)))*100:.2f}% pass rate")
+print(f"\nSuccessfully validated {len(validated_records):,} admission records")
+print(f"Created {len(processed_records):,} processed records with derived features")
+print(f"Data quality: {(len(validated_records)/(len(raw_admissions)+len(validation_errors)))*100:.2f}% pass rate")
 print(f"\nValidated data ready for:")
-print("  → Daft: Distributed transformations ✓")
-print("  → Ray: Distributed ML training")
-print("  → Temporal: Workflow orchestration")
-print("  → Iceberg: ACID-compliant storage")
+print("  - Daft: Distributed transformations")
+print("  - Ray: Distributed ML training")
+print("  - Temporal: Workflow orchestration")
+print("  - Iceberg: ACID-compliant storage")
 print("\nOutput directory: output/pydantic_validation/")
 print("=" * 80)

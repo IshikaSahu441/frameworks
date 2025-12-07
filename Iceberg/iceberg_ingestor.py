@@ -94,11 +94,11 @@ class IcebergIngestor:
                 }
             )
             
-            print(f"✓ Created Iceberg table: {table_id}")
+            print(f"Created Iceberg table: {table_id}")
             return True
             
         except Exception as e:
-            print(f"✗ Error creating admissions table: {e}")
+            print(f"[ERROR] Error creating admissions table: {e}")
             return False
     
     def create_enriched_table(self, overwrite: bool = False) -> bool:
@@ -147,11 +147,11 @@ class IcebergIngestor:
                 }
             )
             
-            print(f"✓ Created Iceberg table: {table_id}")
+            print(f"Created Iceberg table: {table_id}")
             return True
             
         except Exception as e:
-            print(f"✗ Error creating enriched table: {e}")
+            print(f"[ERROR] Error creating enriched table: {e}")
             return False
     
     def create_audit_table(self, overwrite: bool = False) -> bool:
@@ -200,11 +200,11 @@ class IcebergIngestor:
                 }
             )
             
-            print(f"✓ Created Iceberg table: {table_id}")
+            print(f"Created Iceberg table: {table_id}")
             return True
             
         except Exception as e:
-            print(f"✗ Error creating audit table: {e}")
+            print(f"[ERROR] Error creating audit table: {e}")
             return False
     
     def create_schema_evolution_table(self, overwrite: bool = False) -> bool:
@@ -252,11 +252,11 @@ class IcebergIngestor:
                 }
             )
             
-            print(f"✓ Created Iceberg table: {table_id}")
+            print(f"Created Iceberg table: {table_id}")
             return True
             
         except Exception as e:
-            print(f"✗ Error creating schema evolution table: {e}")
+            print(f"[ERROR] Error creating schema evolution table: {e}")
             return False
     
     def load_parquet_file(

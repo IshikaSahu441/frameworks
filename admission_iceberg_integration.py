@@ -54,7 +54,7 @@ class AdmissionIcebergIntegration:
         }
         
         success_count = sum(1 for v in results.values() if v)
-        print(f"\n✓ Created {success_count}/{len(results)} tables")
+        print(f"\nCreated {success_count}/{len(results)} tables")
         
         return results
     
@@ -98,9 +98,9 @@ class AdmissionIcebergIntegration:
                     user="daft_pipeline",
                     details={"source": parquet_path}
                 )
-                print(f"  ✓ Loaded {result['records_loaded']} records")
+                print(f"  Loaded {result['records_loaded']} records")
             else:
-                print(f"  ✗ Failed: {result['errors']}")
+                print(f"  [ERROR] Failed: {result['errors']}")
         
         # Ingest enriched data
         enriched_path = os.path.join(daft_output_path, "admissions_enriched.parquet")
@@ -121,9 +121,9 @@ class AdmissionIcebergIntegration:
                     details={"source": enriched_path},
                     source_tables=[self.config.ADMISSIONS_TABLE]
                 )
-                print(f"  ✓ Loaded {result['records_loaded']} records")
+                print(f"  Loaded {result['records_loaded']} records")
             else:
-                print(f"  ✗ Failed: {result['errors']}")
+                print(f"  [ERROR] Failed: {result['errors']}")
         
         return results
     
@@ -201,7 +201,7 @@ class AdmissionIcebergIntegration:
             details={"batch_id": "batch_001", "source": "MIMIC-III"}
         )
         examples["insert"] = result
-        print(f"  ✓ Logged INSERT: {result['audit_id']}")
+        print(f"  Logged INSERT: {result['audit_id']}")
         
         # Schema change operation
         result = self.audit_manager.log_schema_change(
@@ -215,7 +215,7 @@ class AdmissionIcebergIntegration:
             }
         )
         examples["schema_change"] = result
-        print(f"  ✓ Logged SCHEMA_CHANGE: {result['audit_id']}")
+        print(f"  Logged SCHEMA_CHANGE: {result['audit_id']}")
         
         # Snapshot operation
         result = self.audit_manager.log_snapshot(
@@ -227,7 +227,7 @@ class AdmissionIcebergIntegration:
             }
         )
         examples["snapshot"] = result
-        print(f"  ✓ Logged SNAPSHOT: {result['audit_id']}")
+        print(f"  Logged SNAPSHOT: {result['audit_id']}")
         
         # Data export operation
         result = self.audit_manager.log_data_export(
@@ -238,7 +238,7 @@ class AdmissionIcebergIntegration:
             user="data_scientist"
         )
         examples["export"] = result
-        print(f"  ✓ Logged DATA_EXPORT: {result['audit_id']}")
+        print(f"  Logged DATA_EXPORT: {result['audit_id']}")
         
         return examples
     
@@ -281,7 +281,7 @@ class AdmissionIcebergIntegration:
                 f.write(f"  {table}: v{version}\n")
         
         reports["schema_evolution"] = schema_path
-        print(f"  ✓ Generated: {schema_path}")
+        print(f"  Generated: {schema_path}")
         
         # Audit trail summary
         print("\nGenerating audit trail report...")
@@ -304,7 +304,7 @@ class AdmissionIcebergIntegration:
                 f.write(f"  {op_type}: {count}\n")
         
         reports["audit_trail"] = audit_path
-        print(f"  ✓ Generated: {audit_path}")
+        print(f"  Generated: {audit_path}")
         
         # Export detailed logs
         print("\nExporting detailed logs...")
@@ -344,13 +344,13 @@ class AdmissionIcebergIntegration:
             print("\n" + "=" * 80)
             print("ICEBERG INTEGRATION COMPLETE")
             print("=" * 80)
-            print("\n✓ All Iceberg tables created and configured")
-            print("✓ Data ingestion pipeline established")
-            print("✓ Schema evolution tracking enabled")
-            print("✓ Comprehensive audit trail in place")
+            print("\nAll Iceberg tables created and configured")
+            print("Data ingestion pipeline established")
+            print("Schema evolution tracking enabled")
+            print("Comprehensive audit trail in place")
             
         except Exception as e:
-            print(f"\n✗ Integration failed: {e}")
+            print(f"\n[ERROR] Integration failed: {e}")
             import traceback
             traceback.print_exc()
 
