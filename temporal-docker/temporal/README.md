@@ -43,3 +43,5 @@ If you'd like, I can:
 - Update the repository `requirements.txt` to include `temporalio` directly.
 - Add a Dockerfile to package the worker and run it alongside Temporal.
 - Extend activities to write outputs to Iceberg using `pyiceberg`.
+
+Note: imported from `origin/temporal` branch into `project2.0` for local testing.
