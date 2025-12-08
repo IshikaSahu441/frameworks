@@ -1,0 +1,5 @@
+system:
+  - key: frontend.enableServerVersionCheck
+    value: false
+  - key: history.enableParentClosePolicy
+    value: true

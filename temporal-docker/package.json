@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@temporalio/client": "^1.13.1",
+    "@temporalio/worker": "^1.13.1"
+  }
+}

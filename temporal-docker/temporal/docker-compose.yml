@@ -1,0 +1,36 @@
+version: '3.7'
+services:
+  temporal:
+    image: temporalio/auto-setup:1.21.0
+    container_name: temporal_auto
+    ports:
+      - "7233:7233"   # Temporal GRPC
+      - "8088:8088"   # Temporal Web UI
+    environment:
+      - TEMPORAL_DB=sqlite
+    restart: unless-stopped
+  worker:
+    build:
+      context: ../../
+      dockerfile: temporal/worker.Dockerfile
+    container_name: temporal_worker
+    depends_on:
+      - temporal
+    restart: on-failure
+    environment:
+      - PYTHONUNBUFFERED=1
+    working_dir: /app/temporal-docker/temporal
+    command: ["python", "worker.py"]
+
+  starter:
+    build:
+      context: ../../
+      dockerfile: temporal/worker.Dockerfile
+    container_name: temporal_starter
+    depends_on:
+      - temporal
+      - worker
+    restart: 'no'
+    working_dir: /app/temporal-docker/temporal
+    # wait a little for worker to start, then trigger workflow
+    command: ["sh", "-c", "sleep 8; python start_workflow.py Dataset/ADMISSIONS.csv"]

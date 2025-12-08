@@ -1,0 +1,42 @@
+services:
+  temporal-postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: temporal
+      POSTGRES_PASSWORD: temporal
+      POSTGRES_DB: temporal
+    ports:
+      # Using 5433 on host to avoid conflict with any local Postgres
+      - "5433:5432"
+    volumes:
+      - temporal_pgdata:/var/lib/postgresql/data
+
+  temporal-server:
+    image: temporalio/auto-setup:latest
+    depends_on:
+      - temporal-postgres
+    environment:
+      - DB=postgres12
+      - DB_PORT=5432
+      - POSTGRES_USER=temporal
+      - POSTGRES_PWD=temporal
+      - POSTGRES_SEEDS=temporal-postgres
+      - DYNAMIC_CONFIG_FILE_PATH=/etc/temporal/config/dynamicconfig/development.yaml
+      - TEMPORAL_ADDRESS=temporal-server:7233
+    ports:
+      - "7233:7233"
+    volumes:
+      - ./dynamicconfig:/etc/temporal/config/dynamicconfig
+
+  temporal-web:
+    image: temporalio/web:latest
+    depends_on:
+      - temporal-server
+    environment:
+      - TEMPORAL_ADDRESS=temporal-server:7233
+      - TEMPORAL_CORS_ORIGINS=http://localhost:8233
+    ports:
+      - "8233:8088"
+
+volumes:
+  temporal_pgdata:
