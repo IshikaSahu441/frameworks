@@ -1,4 +1,6 @@
+# Python virtual environments
+.venv/
+.venv312/
+env/
 __pycache__/
-/*.parquet
-*.parquet
-output/
+*.pyc
