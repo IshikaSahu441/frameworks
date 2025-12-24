@@ -1,0 +1,44 @@
+[
+  {
+    "evolution_id": "admissions_enriched_mortality_prediction_score_1766544965.044617",
+    "table_name": "admissions_enriched",
+    "change_type": "ADD_COLUMN",
+    "column_name": "mortality_prediction_score",
+    "old_type": null,
+    "new_type": "double",
+    "description": "ML model prediction score for mortality risk (0-1)",
+    "change_timestamp": "2025-12-24T08:26:05.044617",
+    "applied_by": "data_scientist",
+    "nullable": true,
+    "schema_version": 1,
+    "status": "PENDING"
+  },
+  {
+    "evolution_id": "admissions_enriched_readmission_risk_score_1766544965.044617",
+    "table_name": "admissions_enriched",
+    "change_type": "ADD_COLUMN",
+    "column_name": "readmission_risk_score",
+    "old_type": null,
+    "new_type": "double",
+    "description": "Readmission risk prediction (0-1)",
+    "change_timestamp": "2025-12-24T08:26:05.044617",
+    "applied_by": "data_scientist",
+    "nullable": true,
+    "schema_version": 2,
+    "status": "PENDING"
+  },
+  {
+    "evolution_id": "admissions_enriched_length_of_stay_hours_1766544965.044617",
+    "table_name": "admissions_enriched",
+    "change_type": "CHANGE_TYPE",
+    "column_name": "length_of_stay_hours",
+    "old_type": "double",
+    "new_type": "string",
+    "compatible": true,
+    "description": "Changed length_of_stay_hours type from double to string",
+    "change_timestamp": "2025-12-24T08:26:05.044617",
+    "applied_by": "data_engineer",
+    "schema_version": 3,
+    "status": "PENDING"
+  }
+]

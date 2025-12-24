@@ -1,0 +1,30 @@
+# Python virtual environments
+.venv/
+.venv312/
+env/
+__pycache__/
+*.pyc
+
+# Output directories
+output/
+temporal-data/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+*.tmp
+*.temp

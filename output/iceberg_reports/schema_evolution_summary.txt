@@ -1,0 +1,15 @@
+SCHEMA EVOLUTION SUMMARY
+================================================================================
+
+Total Changes: 3
+Tables Modified: 1
+Applied Changes: 0
+Pending Changes: 3
+Failed Changes: 0
+
+Change Types:
+  ADD_COLUMN: 2
+  CHANGE_TYPE: 1
+
+Schema Versions:
+  admissions_enriched: v3

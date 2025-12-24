@@ -1,0 +1,35 @@
+{
+  "validation_timestamp": "2025-12-24T13:55:23.447431",
+  "total_records_processed": 58976,
+  "successfully_validated": 58731,
+  "validation_errors": 245,
+  "validation_success_rate": 99.58457677699403,
+  "data_quality_metrics": {
+    "total_validated": 58731,
+    "emergency_admissions": 41850,
+    "emergency_percentage": 71.25708739847781,
+    "patient_deaths": 5711,
+    "mortality_rate": 9.723995845464916,
+    "records_with_ed_data": 30685,
+    "records_with_chart_events": 57162
+  },
+  "clinical_metrics": {
+    "avg_length_of_stay_days": 10.145767709273354,
+    "avg_ed_wait_time_hours": 5.777888218999511
+  },
+  "distribution_statistics": {
+    "admission_types": {
+      "EMERGENCY": 41850,
+      "ELECTIVE": 7700,
+      "NEWBORN": 7854,
+      "URGENT": 1327
+    },
+    "insurance_types": {
+      "Private": 22472,
+      "Medicare": 28116,
+      "Medicaid": 5767,
+      "Self Pay": 599,
+      "Government": 1777
+    }
+  }
+}

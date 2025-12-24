@@ -1,0 +1,5802 @@
+[
+  {
+    "line": 427,
+    "row_id": "534",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 534,
+          "subject_id": 417,
+          "hadm_id": 102633,
+          "admit_time": "2177-03-23T16:17:00",
+          "discharge_time": "2177-03-23T07:20:00",
+          "death_time": "2177-03-23T07:20:00",
+          "admission_type": "URGENT",
+          "admission_location": "PHYS REFERRAL/NORMAL DELI",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "UNOBTAINABLE",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "ORGAN DONOR ACCOUNT",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "534",
+      "SUBJECT_ID": "417",
+      "HADM_ID": "102633",
+      "ADMITTIME": "2177-03-23 16:17:00",
+      "DISCHTIME": "2177-03-23 07:20:00",
+      "DEATHTIME": "2177-03-23 07:20:00",
+      "ADMISSION_TYPE": "URGENT",
+      "ADMISSION_LOCATION": "PHYS REFERRAL/NORMAL DELI",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "ORGAN DONOR ACCOUNT",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 458,
+    "row_id": "237",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 237,
+          "subject_id": 181,
+          "hadm_id": 102631,
+          "admit_time": "2153-10-12T09:49:00",
+          "discharge_time": "2153-10-12T06:29:00",
+          "death_time": "2153-10-12T06:29:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "PROTESTANT QUAKER",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2153-10-12T06:23:00",
+          "ed_out_time": "2153-10-12T07:45:00",
+          "diagnosis": "DISSECTING ANEURYSIM",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "237",
+      "SUBJECT_ID": "181",
+      "HADM_ID": "102631",
+      "ADMITTIME": "2153-10-12 09:49:00",
+      "DISCHTIME": "2153-10-12 06:29:00",
+      "DEATHTIME": "2153-10-12 06:29:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "PROTESTANT QUAKER",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2153-10-12 06:23:00",
+      "EDOUTTIME": "2153-10-12 07:45:00",
+      "DIAGNOSIS": "DISSECTING ANEURYSIM",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 677,
+    "row_id": "1162",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, death_time cannot be after discharge_time",
+        "input": {
+          "row_id": 1162,
+          "subject_id": 937,
+          "hadm_id": 148592,
+          "admit_time": "2163-01-20T18:39:00",
+          "discharge_time": "2163-01-24T08:00:00",
+          "death_time": "2163-01-26T08:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "TRANSFER FROM HOSP/EXTRAM",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": null,
+          "ethnicity": "UNKNOWN/NOT SPECIFIED",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "INTRACRANIAL HEMORRHAGE",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "death_time cannot be after discharge_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "1162",
+      "SUBJECT_ID": "937",
+      "HADM_ID": "148592",
+      "ADMITTIME": "2163-01-20 18:39:00",
+      "DISCHTIME": "2163-01-24 08:00:00",
+      "DEATHTIME": "2163-01-26 08:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "TRANSFER FROM HOSP/EXTRAM",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "UNKNOWN/NOT SPECIFIED",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "INTRACRANIAL HEMORRHAGE",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 694,
+    "row_id": "644",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 644,
+          "subject_id": 516,
+          "hadm_id": 187482,
+          "admit_time": "2197-07-31T20:18:00",
+          "discharge_time": "2197-07-31T01:10:00",
+          "death_time": "2197-07-31T01:10:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "JEWISH",
+          "marital_status": "WIDOWED",
+          "ethnicity": "UNKNOWN/NOT SPECIFIED",
+          "ed_reg_time": "2197-07-31T11:31:00",
+          "ed_out_time": "2197-07-31T14:35:00",
+          "diagnosis": "RESPIRATORY DISTRESS",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 0
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "644",
+      "SUBJECT_ID": "516",
+      "HADM_ID": "187482",
+      "ADMITTIME": "2197-07-31 20:18:00",
+      "DISCHTIME": "2197-07-31 01:10:00",
+      "DEATHTIME": "2197-07-31 01:10:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "JEWISH",
+      "MARITAL_STATUS": "WIDOWED",
+      "ETHNICITY": "UNKNOWN/NOT SPECIFIED",
+      "EDREGTIME": "2197-07-31 11:31:00",
+      "EDOUTTIME": "2197-07-31 14:35:00",
+      "DIAGNOSIS": "RESPIRATORY DISTRESS",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "0"
+    }
+  },
+  {
+    "line": 852,
+    "row_id": "678",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_out_time must be after ed_reg_time",
+        "input": {
+          "row_id": 678,
+          "subject_id": 539,
+          "hadm_id": 124411,
+          "admit_time": "2197-03-30T07:33:00",
+          "discharge_time": "2197-04-03T14:25:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "HOME HEALTH CARE",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "PROTESTANT QUAKER",
+          "marital_status": "WIDOWED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2197-03-30T02:11:00",
+          "ed_out_time": "2197-03-29T08:25:00",
+          "diagnosis": "CHEST PAIN; USA",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_out_time must be after ed_reg_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "678",
+      "SUBJECT_ID": "539",
+      "HADM_ID": "124411",
+      "ADMITTIME": "2197-03-30 07:33:00",
+      "DISCHTIME": "2197-04-03 14:25:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "HOME HEALTH CARE",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "PROTESTANT QUAKER",
+      "MARITAL_STATUS": "WIDOWED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2197-03-30 02:11:00",
+      "EDOUTTIME": "2197-03-29 08:25:00",
+      "DIAGNOSIS": "CHEST PAIN; USA",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 903,
+    "row_id": "560",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 560,
+          "subject_id": 436,
+          "hadm_id": 114621,
+          "admit_time": "2147-06-19T00:01:00",
+          "discharge_time": "2147-06-26T17:56:00",
+          "death_time": "2147-06-26T17:56:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "JEWISH",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2147-06-19T19:32:00",
+          "ed_out_time": "2147-06-20T00:33:00",
+          "diagnosis": "HEMORRHAGIC STROKE",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "560",
+      "SUBJECT_ID": "436",
+      "HADM_ID": "114621",
+      "ADMITTIME": "2147-06-19 00:01:00",
+      "DISCHTIME": "2147-06-26 17:56:00",
+      "DEATHTIME": "2147-06-26 17:56:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "JEWISH",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2147-06-19 19:32:00",
+      "EDOUTTIME": "2147-06-20 00:33:00",
+      "DIAGNOSIS": "HEMORRHAGIC STROKE",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 1201,
+    "row_id": "930",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_out_time must be after ed_reg_time",
+        "input": {
+          "row_id": 930,
+          "subject_id": 755,
+          "hadm_id": 123796,
+          "admit_time": "2197-07-07T18:33:00",
+          "discharge_time": "2197-09-01T11:58:00",
+          "death_time": null,
+          "admission_type": "URGENT",
+          "admission_location": "PHYS REFERRAL/NORMAL DELI",
+          "discharge_location": "DISC-TRAN CANCER/CHLDRN H",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2197-07-07T14:16:00",
+          "ed_out_time": "2197-07-07T14:00:00",
+          "diagnosis": "SUBDURAL HEMATOMA",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 0
+        },
+        "ctx": {
+          "error": "ed_out_time must be after ed_reg_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "930",
+      "SUBJECT_ID": "755",
+      "HADM_ID": "123796",
+      "ADMITTIME": "2197-07-07 18:33:00",
+      "DISCHTIME": "2197-09-01 11:58:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "URGENT",
+      "ADMISSION_LOCATION": "PHYS REFERRAL/NORMAL DELI",
+      "DISCHARGE_LOCATION": "DISC-TRAN CANCER/CHLDRN H",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2197-07-07 14:16:00",
+      "EDOUTTIME": "2197-07-07 14:00:00",
+      "DIAGNOSIS": "SUBDURAL HEMATOMA",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "0"
+    }
+  },
+  {
+    "line": 1314,
+    "row_id": "1465",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 1465,
+          "subject_id": 1183,
+          "hadm_id": 145559,
+          "admit_time": "2101-11-16T01:31:00",
+          "discharge_time": "2101-11-18T10:33:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "SNF",
+          "insurance": "Private",
+          "language": null,
+          "religion": "OTHER",
+          "marital_status": "WIDOWED",
+          "ethnicity": "BLACK/AFRICAN AMERICAN",
+          "ed_reg_time": "2101-11-16T12:01:00",
+          "ed_out_time": "2101-11-16T15:00:00",
+          "diagnosis": "SUBDURAL BLEED",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "1465",
+      "SUBJECT_ID": "1183",
+      "HADM_ID": "145559",
+      "ADMITTIME": "2101-11-16 01:31:00",
+      "DISCHTIME": "2101-11-18 10:33:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "SNF",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "OTHER",
+      "MARITAL_STATUS": "WIDOWED",
+      "ETHNICITY": "BLACK/AFRICAN AMERICAN",
+      "EDREGTIME": "2101-11-16 12:01:00",
+      "EDOUTTIME": "2101-11-16 15:00:00",
+      "DIAGNOSIS": "SUBDURAL BLEED",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 1913,
+    "row_id": "1640",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 1640,
+          "subject_id": 1334,
+          "hadm_id": 138015,
+          "admit_time": "2137-09-02T14:43:00",
+          "discharge_time": "2137-09-02T12:00:00",
+          "death_time": "2137-09-02T12:00:00",
+          "admission_type": "NEWBORN",
+          "admission_location": "CLINIC REFERRAL/PREMATURE",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "PROTESTANT QUAKER",
+          "marital_status": null,
+          "ethnicity": "WHITE",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "NEWBORN",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "1640",
+      "SUBJECT_ID": "1334",
+      "HADM_ID": "138015",
+      "ADMITTIME": "2137-09-02 14:43:00",
+      "DISCHTIME": "2137-09-02 12:00:00",
+      "DEATHTIME": "2137-09-02 12:00:00",
+      "ADMISSION_TYPE": "NEWBORN",
+      "ADMISSION_LOCATION": "CLINIC REFERRAL/PREMATURE",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "PROTESTANT QUAKER",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "NEWBORN",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 1972,
+    "row_id": "1699",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 1699,
+          "subject_id": 1381,
+          "hadm_id": 181430,
+          "admit_time": "2189-01-02T14:25:00",
+          "discharge_time": "2189-01-02T12:00:00",
+          "death_time": "2189-01-02T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "UNOBTAINABLE",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2189-01-02T10:31:00",
+          "ed_out_time": "2189-01-02T15:56:00",
+          "diagnosis": "STROKE;TELEMETRY",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "1699",
+      "SUBJECT_ID": "1381",
+      "HADM_ID": "181430",
+      "ADMITTIME": "2189-01-02 14:25:00",
+      "DISCHTIME": "2189-01-02 12:00:00",
+      "DEATHTIME": "2189-01-02 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2189-01-02 10:31:00",
+      "EDOUTTIME": "2189-01-02 15:56:00",
+      "DIAGNOSIS": "STROKE;TELEMETRY",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 2083,
+    "row_id": "2232",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 2232,
+          "subject_id": 1853,
+          "hadm_id": 119890,
+          "admit_time": "2166-04-07T12:00:00",
+          "discharge_time": "2166-04-12T13:02:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "HOME",
+          "insurance": "Private",
+          "language": null,
+          "religion": "UNOBTAINABLE",
+          "marital_status": "SINGLE",
+          "ethnicity": "UNKNOWN/NOT SPECIFIED",
+          "ed_reg_time": "2166-04-07T23:33:00",
+          "ed_out_time": "2166-04-08T03:00:00",
+          "diagnosis": "MOTORCYCLE ACCIDENT SPLENIC LACERATION",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "2232",
+      "SUBJECT_ID": "1853",
+      "HADM_ID": "119890",
+      "ADMITTIME": "2166-04-07 12:00:00",
+      "DISCHTIME": "2166-04-12 13:02:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "HOME",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "UNKNOWN/NOT SPECIFIED",
+      "EDREGTIME": "2166-04-07 23:33:00",
+      "EDOUTTIME": "2166-04-08 03:00:00",
+      "DIAGNOSIS": "MOTORCYCLE ACCIDENT SPLENIC LACERATION",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 2786,
+    "row_id": "2935",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 2935,
+          "subject_id": 2420,
+          "hadm_id": 135098,
+          "admit_time": "2184-12-01T19:28:00",
+          "discharge_time": "2184-12-01T16:50:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "HOME HEALTH CARE",
+          "insurance": "Medicaid",
+          "language": "ENGL",
+          "religion": "CATHOLIC",
+          "marital_status": "SINGLE",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2184-11-30T11:14:00",
+          "ed_out_time": "2184-12-01T03:00:00",
+          "diagnosis": "ALTERED MENTAL STATUS",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "2935",
+      "SUBJECT_ID": "2420",
+      "HADM_ID": "135098",
+      "ADMITTIME": "2184-12-01 19:28:00",
+      "DISCHTIME": "2184-12-01 16:50:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "HOME HEALTH CARE",
+      "INSURANCE": "Medicaid",
+      "LANGUAGE": "ENGL",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2184-11-30 11:14:00",
+      "EDOUTTIME": "2184-12-01 03:00:00",
+      "DIAGNOSIS": "ALTERED MENTAL STATUS",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 3344,
+    "row_id": "3244",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 3244,
+          "subject_id": 2677,
+          "hadm_id": 108011,
+          "admit_time": "2128-04-16T12:28:00",
+          "discharge_time": "2128-04-16T12:00:00",
+          "death_time": "2128-04-16T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "NOT SPECIFIED",
+          "marital_status": "WIDOWED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2128-04-16T03:23:00",
+          "ed_out_time": "2128-04-16T14:35:00",
+          "diagnosis": "PANCREATITIS",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "3244",
+      "SUBJECT_ID": "2677",
+      "HADM_ID": "108011",
+      "ADMITTIME": "2128-04-16 12:28:00",
+      "DISCHTIME": "2128-04-16 12:00:00",
+      "DEATHTIME": "2128-04-16 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "NOT SPECIFIED",
+      "MARITAL_STATUS": "WIDOWED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2128-04-16 03:23:00",
+      "EDOUTTIME": "2128-04-16 14:35:00",
+      "DIAGNOSIS": "PANCREATITIS",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 3624,
+    "row_id": "3447",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 3447,
+          "subject_id": 2858,
+          "hadm_id": 190088,
+          "admit_time": "2108-09-25T15:29:00",
+          "discharge_time": "2108-09-25T12:00:00",
+          "death_time": "2108-09-25T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "TRANSFER FROM HOSP/EXTRAM",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": "WIDOWED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "MYOCARDIAL INFARCTION\\CATH",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "3447",
+      "SUBJECT_ID": "2858",
+      "HADM_ID": "190088",
+      "ADMITTIME": "2108-09-25 15:29:00",
+      "DISCHTIME": "2108-09-25 12:00:00",
+      "DEATHTIME": "2108-09-25 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "TRANSFER FROM HOSP/EXTRAM",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "WIDOWED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "MYOCARDIAL INFARCTION\\CATH",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 3998,
+    "row_id": "3894",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 3894,
+          "subject_id": 3229,
+          "hadm_id": 161198,
+          "admit_time": "2134-11-30T18:19:00",
+          "discharge_time": "2134-11-30T12:00:00",
+          "death_time": "2134-11-30T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "UNOBTAINABLE",
+          "marital_status": null,
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2134-11-30T16:40:00",
+          "ed_out_time": "2134-11-30T19:07:00",
+          "diagnosis": "HEAD BLEED",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "3894",
+      "SUBJECT_ID": "3229",
+      "HADM_ID": "161198",
+      "ADMITTIME": "2134-11-30 18:19:00",
+      "DISCHTIME": "2134-11-30 12:00:00",
+      "DEATHTIME": "2134-11-30 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2134-11-30 16:40:00",
+      "EDOUTTIME": "2134-11-30 19:07:00",
+      "DIAGNOSIS": "HEAD BLEED",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 4447,
+    "row_id": "4879",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 4879,
+          "subject_id": 4023,
+          "hadm_id": 170307,
+          "admit_time": "2153-05-27T11:14:00",
+          "discharge_time": "2153-05-27T09:45:00",
+          "death_time": "2153-05-27T09:45:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "PHYS REFERRAL/NORMAL DELI",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "UNOBTAINABLE",
+          "marital_status": "SINGLE",
+          "ethnicity": "BLACK/AFRICAN AMERICAN",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "ORGAN DONOR ACCOUNT",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "4879",
+      "SUBJECT_ID": "4023",
+      "HADM_ID": "170307",
+      "ADMITTIME": "2153-05-27 11:14:00",
+      "DISCHTIME": "2153-05-27 09:45:00",
+      "DEATHTIME": "2153-05-27 09:45:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "PHYS REFERRAL/NORMAL DELI",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "BLACK/AFRICAN AMERICAN",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "ORGAN DONOR ACCOUNT",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 4606,
+    "row_id": "4709",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 4709,
+          "subject_id": 3915,
+          "hadm_id": 198555,
+          "admit_time": "2178-04-07T16:31:00",
+          "discharge_time": "2178-04-07T12:00:00",
+          "death_time": "2178-04-07T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "UNOBTAINABLE",
+          "marital_status": "SINGLE",
+          "ethnicity": "BLACK/AFRICAN AMERICAN",
+          "ed_reg_time": "2178-04-07T11:41:00",
+          "ed_out_time": "2178-04-07T17:45:00",
+          "diagnosis": "HYPOTENSION",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "4709",
+      "SUBJECT_ID": "3915",
+      "HADM_ID": "198555",
+      "ADMITTIME": "2178-04-07 16:31:00",
+      "DISCHTIME": "2178-04-07 12:00:00",
+      "DEATHTIME": "2178-04-07 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "BLACK/AFRICAN AMERICAN",
+      "EDREGTIME": "2178-04-07 11:41:00",
+      "EDOUTTIME": "2178-04-07 17:45:00",
+      "DIAGNOSIS": "HYPOTENSION",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 5124,
+    "row_id": "6628",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 6628,
+          "subject_id": 5452,
+          "hadm_id": 133470,
+          "admit_time": "2142-02-20T13:40:00",
+          "discharge_time": "2142-02-20T12:00:00",
+          "death_time": "2142-02-20T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "NOT SPECIFIED",
+          "marital_status": "WIDOWED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2142-02-20T06:25:00",
+          "ed_out_time": "2142-02-20T14:53:00",
+          "diagnosis": "HYPERKALEMIA",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "6628",
+      "SUBJECT_ID": "5452",
+      "HADM_ID": "133470",
+      "ADMITTIME": "2142-02-20 13:40:00",
+      "DISCHTIME": "2142-02-20 12:00:00",
+      "DEATHTIME": "2142-02-20 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "NOT SPECIFIED",
+      "MARITAL_STATUS": "WIDOWED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2142-02-20 06:25:00",
+      "EDOUTTIME": "2142-02-20 14:53:00",
+      "DIAGNOSIS": "HYPERKALEMIA",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 5213,
+    "row_id": "7363",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 7363,
+          "subject_id": 6020,
+          "hadm_id": 127735,
+          "admit_time": "2117-07-16T00:00:00",
+          "discharge_time": "2117-08-09T18:25:00",
+          "death_time": "2117-08-09T18:25:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": "DIVORCED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2117-07-16T21:51:00",
+          "ed_out_time": "2117-07-17T01:20:00",
+          "diagnosis": "FEVER-MANTLE CELL LYMPHOMA",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "7363",
+      "SUBJECT_ID": "6020",
+      "HADM_ID": "127735",
+      "ADMITTIME": "2117-07-16 00:00:00",
+      "DISCHTIME": "2117-08-09 18:25:00",
+      "DEATHTIME": "2117-08-09 18:25:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "DIVORCED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2117-07-16 21:51:00",
+      "EDOUTTIME": "2117-07-17 01:20:00",
+      "DIAGNOSIS": "FEVER-MANTLE CELL LYMPHOMA",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 6363,
+    "row_id": "6427",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, death_time cannot be after discharge_time",
+        "input": {
+          "row_id": 6427,
+          "subject_id": 5282,
+          "hadm_id": 165508,
+          "admit_time": "2110-02-24T11:34:00",
+          "discharge_time": "2110-04-01T08:00:00",
+          "death_time": "2110-04-04T08:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "TRANSFER FROM SKILLED NUR",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "JEWISH",
+          "marital_status": "SINGLE",
+          "ethnicity": "WHITE",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "SMALL BOWEL OBSTRUCTION",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "death_time cannot be after discharge_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "6427",
+      "SUBJECT_ID": "5282",
+      "HADM_ID": "165508",
+      "ADMITTIME": "2110-02-24 11:34:00",
+      "DISCHTIME": "2110-04-01 08:00:00",
+      "DEATHTIME": "2110-04-04 08:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "TRANSFER FROM SKILLED NUR",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "JEWISH",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "SMALL BOWEL OBSTRUCTION",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 6461,
+    "row_id": "8798",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 8798,
+          "subject_id": 7211,
+          "hadm_id": 183590,
+          "admit_time": "2146-03-25T21:14:00",
+          "discharge_time": "2146-03-25T12:00:00",
+          "death_time": null,
+          "admission_type": "NEWBORN",
+          "admission_location": "CLINIC REFERRAL/PREMATURE",
+          "discharge_location": "SHORT TERM HOSPITAL",
+          "insurance": "Private",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": null,
+          "ethnicity": "WHITE",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "NEWBORN",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "8798",
+      "SUBJECT_ID": "7211",
+      "HADM_ID": "183590",
+      "ADMITTIME": "2146-03-25 21:14:00",
+      "DISCHTIME": "2146-03-25 12:00:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "NEWBORN",
+      "ADMISSION_LOCATION": "CLINIC REFERRAL/PREMATURE",
+      "DISCHARGE_LOCATION": "SHORT TERM HOSPITAL",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "NEWBORN",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 6612,
+    "row_id": "8609",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 8609,
+          "subject_id": 7066,
+          "hadm_id": 110925,
+          "admit_time": "2114-04-17T12:00:00",
+          "discharge_time": "2114-04-26T18:16:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "HOME HEALTH CARE",
+          "insurance": "Private",
+          "language": "ENGL",
+          "religion": "CATHOLIC",
+          "marital_status": "SINGLE",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2114-04-17T21:56:00",
+          "ed_out_time": "2114-04-18T06:35:00",
+          "diagnosis": "ACUTE CORONARY SYNDROME",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "8609",
+      "SUBJECT_ID": "7066",
+      "HADM_ID": "110925",
+      "ADMITTIME": "2114-04-17 12:00:00",
+      "DISCHTIME": "2114-04-26 18:16:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "HOME HEALTH CARE",
+      "INSURANCE": "Private",
+      "LANGUAGE": "ENGL",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2114-04-17 21:56:00",
+      "EDOUTTIME": "2114-04-18 06:35:00",
+      "DIAGNOSIS": "ACUTE CORONARY SYNDROME",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 6815,
+    "row_id": "5440",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 5440,
+          "subject_id": 4499,
+          "hadm_id": 120260,
+          "admit_time": "2197-09-18T00:00:00",
+          "discharge_time": "2197-09-27T12:50:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "REHAB/DISTINCT PART HOSP",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": "WIDOWED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2197-09-18T21:02:00",
+          "ed_out_time": "2197-09-18T23:38:00",
+          "diagnosis": "S/P CHOCKING,PERFORATED BOWEL",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "5440",
+      "SUBJECT_ID": "4499",
+      "HADM_ID": "120260",
+      "ADMITTIME": "2197-09-18 00:00:00",
+      "DISCHTIME": "2197-09-27 12:50:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "REHAB/DISTINCT PART HOSP",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "WIDOWED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2197-09-18 21:02:00",
+      "EDOUTTIME": "2197-09-18 23:38:00",
+      "DIAGNOSIS": "S/P CHOCKING,PERFORATED BOWEL",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 6830,
+    "row_id": "6084",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 6084,
+          "subject_id": 5018,
+          "hadm_id": 114327,
+          "admit_time": "2173-05-31T00:11:00",
+          "discharge_time": "2173-06-18T14:49:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "HOME",
+          "insurance": "Government",
+          "language": "CAPE",
+          "religion": "PROTESTANT QUAKER",
+          "marital_status": "WIDOWED",
+          "ethnicity": "OTHER",
+          "ed_reg_time": "2173-05-31T18:37:00",
+          "ed_out_time": "2173-06-01T03:49:00",
+          "diagnosis": "FEVER",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "6084",
+      "SUBJECT_ID": "5018",
+      "HADM_ID": "114327",
+      "ADMITTIME": "2173-05-31 00:11:00",
+      "DISCHTIME": "2173-06-18 14:49:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "HOME",
+      "INSURANCE": "Government",
+      "LANGUAGE": "CAPE",
+      "RELIGION": "PROTESTANT QUAKER",
+      "MARITAL_STATUS": "WIDOWED",
+      "ETHNICITY": "OTHER",
+      "EDREGTIME": "2173-05-31 18:37:00",
+      "EDOUTTIME": "2173-06-01 03:49:00",
+      "DIAGNOSIS": "FEVER",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 6866,
+    "row_id": "6945",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, death_time cannot be after discharge_time",
+        "input": {
+          "row_id": 6945,
+          "subject_id": 5707,
+          "hadm_id": 168443,
+          "admit_time": "2196-09-27T14:40:00",
+          "discharge_time": "2196-09-28T12:00:00",
+          "death_time": "2196-09-29T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "UNOBTAINABLE",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "S/P BICYCLE/CAR CRASH",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "death_time cannot be after discharge_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "6945",
+      "SUBJECT_ID": "5707",
+      "HADM_ID": "168443",
+      "ADMITTIME": "2196-09-27 14:40:00",
+      "DISCHTIME": "2196-09-28 12:00:00",
+      "DEATHTIME": "2196-09-29 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "S/P BICYCLE/CAR CRASH",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 6915,
+    "row_id": "5809",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 5809,
+          "subject_id": 4791,
+          "hadm_id": 159800,
+          "admit_time": "2157-02-27T10:59:00",
+          "discharge_time": "2157-02-27T05:18:00",
+          "death_time": "2157-02-27T05:18:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "PHYS REFERRAL/NORMAL DELI",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "NOT SPECIFIED",
+          "marital_status": null,
+          "ethnicity": "WHITE",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "ORGAN DONOR ACCOUNT",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 0
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "5809",
+      "SUBJECT_ID": "4791",
+      "HADM_ID": "159800",
+      "ADMITTIME": "2157-02-27 10:59:00",
+      "DISCHTIME": "2157-02-27 05:18:00",
+      "DEATHTIME": "2157-02-27 05:18:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "PHYS REFERRAL/NORMAL DELI",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "NOT SPECIFIED",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "ORGAN DONOR ACCOUNT",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "0"
+    }
+  },
+  {
+    "line": 7026,
+    "row_id": "6772",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 6772,
+          "subject_id": 5567,
+          "hadm_id": 182804,
+          "admit_time": "2181-07-09T15:31:00",
+          "discharge_time": "2181-07-09T12:00:00",
+          "death_time": "2181-07-09T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "TRANSFER FROM HOSP/EXTRAM",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": "MARRIED",
+          "ethnicity": "BLACK/AFRICAN AMERICAN",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "SEPSIS",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "6772",
+      "SUBJECT_ID": "5567",
+      "HADM_ID": "182804",
+      "ADMITTIME": "2181-07-09 15:31:00",
+      "DISCHTIME": "2181-07-09 12:00:00",
+      "DEATHTIME": "2181-07-09 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "TRANSFER FROM HOSP/EXTRAM",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "BLACK/AFRICAN AMERICAN",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "SEPSIS",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 7058,
+    "row_id": "5027",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, death_time cannot be after discharge_time",
+        "input": {
+          "row_id": 5027,
+          "subject_id": 4139,
+          "hadm_id": 107944,
+          "admit_time": "2175-11-29T17:11:00",
+          "discharge_time": "2175-11-30T14:00:00",
+          "death_time": "2175-12-01T14:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "OTHER",
+          "marital_status": null,
+          "ethnicity": "WHITE",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "SEVER HEAD INJURY",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "death_time cannot be after discharge_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "5027",
+      "SUBJECT_ID": "4139",
+      "HADM_ID": "107944",
+      "ADMITTIME": "2175-11-29 17:11:00",
+      "DISCHTIME": "2175-11-30 14:00:00",
+      "DEATHTIME": "2175-12-01 14:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "OTHER",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "SEVER HEAD INJURY",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 7322,
+    "row_id": "8639",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 8639,
+          "subject_id": 7094,
+          "hadm_id": 180859,
+          "admit_time": "2182-08-19T16:35:00",
+          "discharge_time": "2182-08-19T12:00:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "HOME",
+          "insurance": "Self Pay",
+          "language": "ENGL",
+          "religion": "PROTESTANT QUAKER",
+          "marital_status": "SINGLE",
+          "ethnicity": "BLACK/AFRICAN AMERICAN",
+          "ed_reg_time": "2182-08-19T10:54:00",
+          "ed_out_time": "2182-08-19T18:17:00",
+          "diagnosis": "ABDOMINAL PAIN",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 0
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "8639",
+      "SUBJECT_ID": "7094",
+      "HADM_ID": "180859",
+      "ADMITTIME": "2182-08-19 16:35:00",
+      "DISCHTIME": "2182-08-19 12:00:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "HOME",
+      "INSURANCE": "Self Pay",
+      "LANGUAGE": "ENGL",
+      "RELIGION": "PROTESTANT QUAKER",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "BLACK/AFRICAN AMERICAN",
+      "EDREGTIME": "2182-08-19 10:54:00",
+      "EDOUTTIME": "2182-08-19 18:17:00",
+      "DIAGNOSIS": "ABDOMINAL PAIN",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "0"
+    }
+  },
+  {
+    "line": 7365,
+    "row_id": "7536",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 7536,
+          "subject_id": 6171,
+          "hadm_id": 130760,
+          "admit_time": "2140-10-05T00:02:00",
+          "discharge_time": "2140-10-08T01:21:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "CLINIC REFERRAL/PREMATURE",
+          "discharge_location": "HOME",
+          "insurance": "Medicare",
+          "language": "ENGL",
+          "religion": "NOT SPECIFIED",
+          "marital_status": "SINGLE",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2140-10-05T21:24:00",
+          "ed_out_time": "2140-10-05T22:02:00",
+          "diagnosis": "ST ELEVATED MYOCARDIAL INFARCTION",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "7536",
+      "SUBJECT_ID": "6171",
+      "HADM_ID": "130760",
+      "ADMITTIME": "2140-10-05 00:02:00",
+      "DISCHTIME": "2140-10-08 01:21:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "CLINIC REFERRAL/PREMATURE",
+      "DISCHARGE_LOCATION": "HOME",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "ENGL",
+      "RELIGION": "NOT SPECIFIED",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2140-10-05 21:24:00",
+      "EDOUTTIME": "2140-10-05 22:02:00",
+      "DIAGNOSIS": "ST ELEVATED MYOCARDIAL INFARCTION",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 7760,
+    "row_id": "6826",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 6826,
+          "subject_id": 5612,
+          "hadm_id": 139222,
+          "admit_time": "2107-06-07T20:38:00",
+          "discharge_time": "2107-06-10T14:39:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "TRANSFER FROM HOSP/EXTRAM",
+          "discharge_location": "HOME",
+          "insurance": "Private",
+          "language": "ENGL",
+          "religion": "PROTESTANT QUAKER",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2107-06-07T20:55:00",
+          "ed_out_time": "2107-06-07T21:30:00",
+          "diagnosis": "CORONARY ARTERY DISEASE\\CARDIAC CATH",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "6826",
+      "SUBJECT_ID": "5612",
+      "HADM_ID": "139222",
+      "ADMITTIME": "2107-06-07 20:38:00",
+      "DISCHTIME": "2107-06-10 14:39:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "TRANSFER FROM HOSP/EXTRAM",
+      "DISCHARGE_LOCATION": "HOME",
+      "INSURANCE": "Private",
+      "LANGUAGE": "ENGL",
+      "RELIGION": "PROTESTANT QUAKER",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2107-06-07 20:55:00",
+      "EDOUTTIME": "2107-06-07 21:30:00",
+      "DIAGNOSIS": "CORONARY ARTERY DISEASE\\CARDIAC CATH",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 8580,
+    "row_id": "8410",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, death_time cannot be after discharge_time",
+        "input": {
+          "row_id": 8410,
+          "subject_id": 6912,
+          "hadm_id": 143307,
+          "admit_time": "2196-08-31T21:50:00",
+          "discharge_time": "2196-09-08T08:00:00",
+          "death_time": "2196-09-09T08:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicaid",
+          "language": null,
+          "religion": "NOT SPECIFIED",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2196-08-31T18:24:00",
+          "ed_out_time": "2196-08-31T21:58:00",
+          "diagnosis": "CARDIAC ARREST",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "death_time cannot be after discharge_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "8410",
+      "SUBJECT_ID": "6912",
+      "HADM_ID": "143307",
+      "ADMITTIME": "2196-08-31 21:50:00",
+      "DISCHTIME": "2196-09-08 08:00:00",
+      "DEATHTIME": "2196-09-09 08:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicaid",
+      "LANGUAGE": "",
+      "RELIGION": "NOT SPECIFIED",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2196-08-31 18:24:00",
+      "EDOUTTIME": "2196-08-31 21:58:00",
+      "DIAGNOSIS": "CARDIAC ARREST",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 9005,
+    "row_id": "10631",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, death_time cannot be before admit_time",
+        "input": {
+          "row_id": 10631,
+          "subject_id": 8697,
+          "hadm_id": 117100,
+          "admit_time": "2119-06-08T15:23:00",
+          "discharge_time": "2119-06-11T14:14:00",
+          "death_time": "2119-06-08T14:14:00",
+          "admission_type": "URGENT",
+          "admission_location": "PHYS REFERRAL/NORMAL DELI",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "NOT SPECIFIED",
+          "marital_status": "SINGLE",
+          "ethnicity": "WHITE",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "DONOR ACCOUNT",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "death_time cannot be before admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "10631",
+      "SUBJECT_ID": "8697",
+      "HADM_ID": "117100",
+      "ADMITTIME": "2119-06-08 15:23:00",
+      "DISCHTIME": "2119-06-11 14:14:00",
+      "DEATHTIME": "2119-06-08 14:14:00",
+      "ADMISSION_TYPE": "URGENT",
+      "ADMISSION_LOCATION": "PHYS REFERRAL/NORMAL DELI",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "NOT SPECIFIED",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "DONOR ACCOUNT",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 9027,
+    "row_id": "11274",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 11274,
+          "subject_id": 9230,
+          "hadm_id": 145065,
+          "admit_time": "2148-04-24T12:00:00",
+          "discharge_time": "2148-04-24T02:35:00",
+          "death_time": null,
+          "admission_type": "NEWBORN",
+          "admission_location": "PHYS REFERRAL/NORMAL DELI",
+          "discharge_location": "SHORT TERM HOSPITAL",
+          "insurance": "Private",
+          "language": null,
+          "religion": "EPISCOPALIAN",
+          "marital_status": null,
+          "ethnicity": "WHITE",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "NEWBORN",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "11274",
+      "SUBJECT_ID": "9230",
+      "HADM_ID": "145065",
+      "ADMITTIME": "2148-04-24 12:00:00",
+      "DISCHTIME": "2148-04-24 02:35:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "NEWBORN",
+      "ADMISSION_LOCATION": "PHYS REFERRAL/NORMAL DELI",
+      "DISCHARGE_LOCATION": "SHORT TERM HOSPITAL",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "EPISCOPALIAN",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "NEWBORN",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 9043,
+    "row_id": "12103",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 12103,
+          "subject_id": 9891,
+          "hadm_id": 183052,
+          "admit_time": "2134-09-24T19:36:00",
+          "discharge_time": "2134-09-24T12:00:00",
+          "death_time": null,
+          "admission_type": "ELECTIVE",
+          "admission_location": "PHYS REFERRAL/NORMAL DELI",
+          "discharge_location": "HOME",
+          "insurance": "Medicare",
+          "language": "ENGL",
+          "religion": "CATHOLIC",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "VERTEBRAL ARTERY STENOSIS",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 0
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "12103",
+      "SUBJECT_ID": "9891",
+      "HADM_ID": "183052",
+      "ADMITTIME": "2134-09-24 19:36:00",
+      "DISCHTIME": "2134-09-24 12:00:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "ELECTIVE",
+      "ADMISSION_LOCATION": "PHYS REFERRAL/NORMAL DELI",
+      "DISCHARGE_LOCATION": "HOME",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "ENGL",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "VERTEBRAL ARTERY STENOSIS",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "0"
+    }
+  },
+  {
+    "line": 9050,
+    "row_id": "12110",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, death_time cannot be after discharge_time",
+        "input": {
+          "row_id": 12110,
+          "subject_id": 9896,
+          "hadm_id": 165450,
+          "admit_time": "2131-02-10T00:09:00",
+          "discharge_time": "2131-02-11T14:45:00",
+          "death_time": "2131-02-12T14:45:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": null,
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2131-02-09T16:52:00",
+          "ed_out_time": "2131-02-10T02:00:00",
+          "diagnosis": "INTRACRANIAL HEMORRHAGE",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "death_time cannot be after discharge_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "12110",
+      "SUBJECT_ID": "9896",
+      "HADM_ID": "165450",
+      "ADMITTIME": "2131-02-10 00:09:00",
+      "DISCHTIME": "2131-02-11 14:45:00",
+      "DEATHTIME": "2131-02-12 14:45:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2131-02-09 16:52:00",
+      "EDOUTTIME": "2131-02-10 02:00:00",
+      "DIAGNOSIS": "INTRACRANIAL HEMORRHAGE",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 9637,
+    "row_id": "8265",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, death_time cannot be before admit_time",
+        "input": {
+          "row_id": 8265,
+          "subject_id": 6800,
+          "hadm_id": 142356,
+          "admit_time": "2177-12-29T21:33:00",
+          "discharge_time": "2178-01-01T19:41:00",
+          "death_time": "2177-12-01T19:41:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "NOT SPECIFIED",
+          "marital_status": "DIVORCED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2177-12-29T15:57:00",
+          "ed_out_time": "2177-12-30T02:36:00",
+          "diagnosis": "HEPATIC ENCEPHALOPATHY",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "death_time cannot be before admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "8265",
+      "SUBJECT_ID": "6800",
+      "HADM_ID": "142356",
+      "ADMITTIME": "2177-12-29 21:33:00",
+      "DISCHTIME": "2178-01-01 19:41:00",
+      "DEATHTIME": "2177-12-01 19:41:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "NOT SPECIFIED",
+      "MARITAL_STATUS": "DIVORCED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2177-12-29 15:57:00",
+      "EDOUTTIME": "2177-12-30 02:36:00",
+      "DIAGNOSIS": "HEPATIC ENCEPHALOPATHY",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 9822,
+    "row_id": "8981",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 8981,
+          "subject_id": 7343,
+          "hadm_id": 105061,
+          "admit_time": "2116-10-09T22:26:00",
+          "discharge_time": "2116-10-09T12:00:00",
+          "death_time": "2116-10-09T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "UNOBTAINABLE",
+          "marital_status": null,
+          "ethnicity": "UNKNOWN/NOT SPECIFIED",
+          "ed_reg_time": "2116-10-09T20:39:00",
+          "ed_out_time": "2116-10-09T23:21:00",
+          "diagnosis": "HEAD INJURY;S/P BICYCLIST ACCIDENT",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "8981",
+      "SUBJECT_ID": "7343",
+      "HADM_ID": "105061",
+      "ADMITTIME": "2116-10-09 22:26:00",
+      "DISCHTIME": "2116-10-09 12:00:00",
+      "DEATHTIME": "2116-10-09 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "UNKNOWN/NOT SPECIFIED",
+      "EDREGTIME": "2116-10-09 20:39:00",
+      "EDOUTTIME": "2116-10-09 23:21:00",
+      "DIAGNOSIS": "HEAD INJURY;S/P BICYCLIST ACCIDENT",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 10119,
+    "row_id": "12643",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, death_time cannot be before admit_time",
+        "input": {
+          "row_id": 12643,
+          "subject_id": 10339,
+          "hadm_id": 144796,
+          "admit_time": "2181-11-25T07:49:00",
+          "discharge_time": "2181-12-01T10:05:00",
+          "death_time": "2181-11-22T10:05:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": "CAPE",
+          "religion": "CATHOLIC",
+          "marital_status": "MARRIED",
+          "ethnicity": "BLACK/AFRICAN AMERICAN",
+          "ed_reg_time": "2181-11-25T01:16:00",
+          "ed_out_time": "2181-11-25T09:30:00",
+          "diagnosis": "VAGINAL BLEED",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "death_time cannot be before admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "12643",
+      "SUBJECT_ID": "10339",
+      "HADM_ID": "144796",
+      "ADMITTIME": "2181-11-25 07:49:00",
+      "DISCHTIME": "2181-12-01 10:05:00",
+      "DEATHTIME": "2181-11-22 10:05:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "CAPE",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "BLACK/AFRICAN AMERICAN",
+      "EDREGTIME": "2181-11-25 01:16:00",
+      "EDOUTTIME": "2181-11-25 09:30:00",
+      "DIAGNOSIS": "VAGINAL BLEED",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 10139,
+    "row_id": "12663",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 12663,
+          "subject_id": 10358,
+          "hadm_id": 135827,
+          "admit_time": "2195-05-11T17:39:00",
+          "discharge_time": "2195-05-11T12:00:00",
+          "death_time": "2195-05-11T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicaid",
+          "language": null,
+          "religion": "UNOBTAINABLE",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2195-05-11T14:48:00",
+          "ed_out_time": "2195-05-11T19:02:00",
+          "diagnosis": "INTRACRANIAL HEMORRHAGE",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "12663",
+      "SUBJECT_ID": "10358",
+      "HADM_ID": "135827",
+      "ADMITTIME": "2195-05-11 17:39:00",
+      "DISCHTIME": "2195-05-11 12:00:00",
+      "DEATHTIME": "2195-05-11 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicaid",
+      "LANGUAGE": "",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2195-05-11 14:48:00",
+      "EDOUTTIME": "2195-05-11 19:02:00",
+      "DIAGNOSIS": "INTRACRANIAL HEMORRHAGE",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 10227,
+    "row_id": "8310",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 8310,
+          "subject_id": 6832,
+          "hadm_id": 164068,
+          "admit_time": "2142-05-23T13:20:00",
+          "discharge_time": "2142-05-23T12:00:00",
+          "death_time": "2142-05-23T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "JEWISH",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2142-05-23T09:48:00",
+          "ed_out_time": "2142-05-23T11:49:00",
+          "diagnosis": "S/P MI",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "8310",
+      "SUBJECT_ID": "6832",
+      "HADM_ID": "164068",
+      "ADMITTIME": "2142-05-23 13:20:00",
+      "DISCHTIME": "2142-05-23 12:00:00",
+      "DEATHTIME": "2142-05-23 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "JEWISH",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2142-05-23 09:48:00",
+      "EDOUTTIME": "2142-05-23 11:49:00",
+      "DIAGNOSIS": "S/P MI",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 10309,
+    "row_id": "10704",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 10704,
+          "subject_id": 8754,
+          "hadm_id": 171918,
+          "admit_time": "2169-05-15T16:58:00",
+          "discharge_time": "2169-05-15T02:03:00",
+          "death_time": "2169-05-15T02:03:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "PHYS REFERRAL/NORMAL DELI",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": null,
+          "marital_status": null,
+          "ethnicity": "UNKNOWN/NOT SPECIFIED",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "S/P NON Q MI\\CATH",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 0
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "10704",
+      "SUBJECT_ID": "8754",
+      "HADM_ID": "171918",
+      "ADMITTIME": "2169-05-15 16:58:00",
+      "DISCHTIME": "2169-05-15 02:03:00",
+      "DEATHTIME": "2169-05-15 02:03:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "PHYS REFERRAL/NORMAL DELI",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "UNKNOWN/NOT SPECIFIED",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "S/P NON Q MI\\CATH",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "0"
+    }
+  },
+  {
+    "line": 10362,
+    "row_id": "10112",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 10112,
+          "subject_id": 8267,
+          "hadm_id": 155570,
+          "admit_time": "2163-04-28T20:02:00",
+          "discharge_time": "2163-04-28T04:38:00",
+          "death_time": "2163-04-28T04:38:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "JEWISH",
+          "marital_status": "WIDOWED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2163-04-28T14:51:00",
+          "ed_out_time": "2163-04-28T19:49:00",
+          "diagnosis": "GASTROINTESTINAL BLEED",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 0
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "10112",
+      "SUBJECT_ID": "8267",
+      "HADM_ID": "155570",
+      "ADMITTIME": "2163-04-28 20:02:00",
+      "DISCHTIME": "2163-04-28 04:38:00",
+      "DEATHTIME": "2163-04-28 04:38:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "JEWISH",
+      "MARITAL_STATUS": "WIDOWED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2163-04-28 14:51:00",
+      "EDOUTTIME": "2163-04-28 19:49:00",
+      "DIAGNOSIS": "GASTROINTESTINAL BLEED",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "0"
+    }
+  },
+  {
+    "line": 10642,
+    "row_id": "11191",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 11191,
+          "subject_id": 9155,
+          "hadm_id": 179303,
+          "admit_time": "2179-12-28T12:30:00",
+          "discharge_time": "2179-12-28T12:00:00",
+          "death_time": null,
+          "admission_type": "ELECTIVE",
+          "admission_location": "PHYS REFERRAL/NORMAL DELI",
+          "discharge_location": "HOME",
+          "insurance": "Private",
+          "language": "ENGL",
+          "religion": "PROTESTANT QUAKER",
+          "marital_status": "MARRIED",
+          "ethnicity": "HISPANIC OR LATINO",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "RIGHT HAND 3RD DIGIT PROXIMAL INTERPHALANGEAL ARTHRITIS AND DEFORMITY; RIGHT HAND 3RD DIGIT STIFFNES/SDA",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 0
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "11191",
+      "SUBJECT_ID": "9155",
+      "HADM_ID": "179303",
+      "ADMITTIME": "2179-12-28 12:30:00",
+      "DISCHTIME": "2179-12-28 12:00:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "ELECTIVE",
+      "ADMISSION_LOCATION": "PHYS REFERRAL/NORMAL DELI",
+      "DISCHARGE_LOCATION": "HOME",
+      "INSURANCE": "Private",
+      "LANGUAGE": "ENGL",
+      "RELIGION": "PROTESTANT QUAKER",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "HISPANIC OR LATINO",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "RIGHT HAND 3RD DIGIT PROXIMAL INTERPHALANGEAL ARTHRITIS AND DEFORMITY; RIGHT HAND 3RD DIGIT STIFFNES/SDA",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "0"
+    }
+  },
+  {
+    "line": 11452,
+    "row_id": "12440",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_out_time must be after ed_reg_time",
+        "input": {
+          "row_id": 12440,
+          "subject_id": 10173,
+          "hadm_id": 103470,
+          "admit_time": "2200-01-14T14:06:00",
+          "discharge_time": "2200-01-15T22:50:00",
+          "death_time": "2200-01-15T22:50:00",
+          "admission_type": "URGENT",
+          "admission_location": "TRANSFER FROM HOSP/EXTRAM",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": null,
+          "marital_status": "SINGLE",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2200-01-14T10:44:00",
+          "ed_out_time": "2200-01-14T06:43:00",
+          "diagnosis": "SUBARACHNOID HEMORRHAGE",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_out_time must be after ed_reg_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "12440",
+      "SUBJECT_ID": "10173",
+      "HADM_ID": "103470",
+      "ADMITTIME": "2200-01-14 14:06:00",
+      "DISCHTIME": "2200-01-15 22:50:00",
+      "DEATHTIME": "2200-01-15 22:50:00",
+      "ADMISSION_TYPE": "URGENT",
+      "ADMISSION_LOCATION": "TRANSFER FROM HOSP/EXTRAM",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2200-01-14 10:44:00",
+      "EDOUTTIME": "2200-01-14 06:43:00",
+      "DIAGNOSIS": "SUBARACHNOID HEMORRHAGE",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 11481,
+    "row_id": "10524",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 10524,
+          "subject_id": 8604,
+          "hadm_id": 102784,
+          "admit_time": "2110-01-06T15:15:00",
+          "discharge_time": "2110-01-06T12:00:00",
+          "death_time": "2110-01-06T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "CLINIC REFERRAL/PREMATURE",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": "MARRIED",
+          "ethnicity": "UNKNOWN/NOT SPECIFIED",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "ACUTE MYOCARDIAL INFARCTION\\CATH",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "10524",
+      "SUBJECT_ID": "8604",
+      "HADM_ID": "102784",
+      "ADMITTIME": "2110-01-06 15:15:00",
+      "DISCHTIME": "2110-01-06 12:00:00",
+      "DEATHTIME": "2110-01-06 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "CLINIC REFERRAL/PREMATURE",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "UNKNOWN/NOT SPECIFIED",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "ACUTE MYOCARDIAL INFARCTION\\CATH",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 11935,
+    "row_id": "14153",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, death_time cannot be after discharge_time",
+        "input": {
+          "row_id": 14153,
+          "subject_id": 11552,
+          "hadm_id": 191556,
+          "admit_time": "2186-07-12T02:33:00",
+          "discharge_time": "2186-07-17T08:00:00",
+          "death_time": "2186-07-18T08:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "PROTESTANT QUAKER",
+          "marital_status": "DIVORCED",
+          "ethnicity": "BLACK/AFRICAN AMERICAN",
+          "ed_reg_time": "2186-07-12T02:05:00",
+          "ed_out_time": "2186-07-12T04:04:00",
+          "diagnosis": "CARDIAC ARREST",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "death_time cannot be after discharge_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "14153",
+      "SUBJECT_ID": "11552",
+      "HADM_ID": "191556",
+      "ADMITTIME": "2186-07-12 02:33:00",
+      "DISCHTIME": "2186-07-17 08:00:00",
+      "DEATHTIME": "2186-07-18 08:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "PROTESTANT QUAKER",
+      "MARITAL_STATUS": "DIVORCED",
+      "ETHNICITY": "BLACK/AFRICAN AMERICAN",
+      "EDREGTIME": "2186-07-12 02:05:00",
+      "EDOUTTIME": "2186-07-12 04:04:00",
+      "DIAGNOSIS": "CARDIAC ARREST",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 12035,
+    "row_id": "12481",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 12481,
+          "subject_id": 10206,
+          "hadm_id": 163365,
+          "admit_time": "2154-03-13T12:00:00",
+          "discharge_time": "2154-04-05T14:37:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "HOME HEALTH CARE",
+          "insurance": "Private",
+          "language": "ENGL",
+          "religion": "JEWISH",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2154-03-22T20:15:00",
+          "ed_out_time": "2154-03-23T03:42:00",
+          "diagnosis": "DIVERTICULITIS",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "12481",
+      "SUBJECT_ID": "10206",
+      "HADM_ID": "163365",
+      "ADMITTIME": "2154-03-13 12:00:00",
+      "DISCHTIME": "2154-04-05 14:37:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "HOME HEALTH CARE",
+      "INSURANCE": "Private",
+      "LANGUAGE": "ENGL",
+      "RELIGION": "JEWISH",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2154-03-22 20:15:00",
+      "EDOUTTIME": "2154-03-23 03:42:00",
+      "DIAGNOSIS": "DIVERTICULITIS",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 12135,
+    "row_id": "11007",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 11007,
+          "subject_id": 9002,
+          "hadm_id": 174885,
+          "admit_time": "2176-02-26T09:30:00",
+          "discharge_time": "2176-03-01T10:45:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "HOME",
+          "insurance": "Medicare",
+          "language": "ENGL",
+          "religion": "CATHOLIC",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2176-02-26T10:55:00",
+          "ed_out_time": "2176-02-26T17:23:00",
+          "diagnosis": "ABDOMINAL PAIN;MALFUCNTION STENT GRAFT",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "11007",
+      "SUBJECT_ID": "9002",
+      "HADM_ID": "174885",
+      "ADMITTIME": "2176-02-26 09:30:00",
+      "DISCHTIME": "2176-03-01 10:45:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "HOME",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "ENGL",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2176-02-26 10:55:00",
+      "EDOUTTIME": "2176-02-26 17:23:00",
+      "DIAGNOSIS": "ABDOMINAL PAIN;MALFUCNTION STENT GRAFT",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 12275,
+    "row_id": "10224",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 10224,
+          "subject_id": 8370,
+          "hadm_id": 127673,
+          "admit_time": "2171-08-08T18:24:00",
+          "discharge_time": "2171-09-11T16:00:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "TRANSFER FROM HOSP/EXTRAM",
+          "discharge_location": "REHAB/DISTINCT PART HOSP",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": "SINGLE",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2171-08-08T19:22:00",
+          "ed_out_time": "2171-08-08T20:55:00",
+          "diagnosis": "STATUS POST MOTORVEHICLE ACCIDENT",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "10224",
+      "SUBJECT_ID": "8370",
+      "HADM_ID": "127673",
+      "ADMITTIME": "2171-08-08 18:24:00",
+      "DISCHTIME": "2171-09-11 16:00:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "TRANSFER FROM HOSP/EXTRAM",
+      "DISCHARGE_LOCATION": "REHAB/DISTINCT PART HOSP",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2171-08-08 19:22:00",
+      "EDOUTTIME": "2171-08-08 20:55:00",
+      "DIAGNOSIS": "STATUS POST MOTORVEHICLE ACCIDENT",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 12413,
+    "row_id": "14636",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 14636,
+          "subject_id": 11903,
+          "hadm_id": 137399,
+          "admit_time": "2157-08-25T19:50:00",
+          "discharge_time": "2157-08-25T07:26:00",
+          "death_time": "2157-08-25T07:26:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": null,
+          "marital_status": null,
+          "ethnicity": "UNKNOWN/NOT SPECIFIED",
+          "ed_reg_time": "2157-08-25T18:12:00",
+          "ed_out_time": "2157-08-25T19:44:00",
+          "diagnosis": "S/P FALL",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "14636",
+      "SUBJECT_ID": "11903",
+      "HADM_ID": "137399",
+      "ADMITTIME": "2157-08-25 19:50:00",
+      "DISCHTIME": "2157-08-25 07:26:00",
+      "DEATHTIME": "2157-08-25 07:26:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "UNKNOWN/NOT SPECIFIED",
+      "EDREGTIME": "2157-08-25 18:12:00",
+      "EDOUTTIME": "2157-08-25 19:44:00",
+      "DIAGNOSIS": "S/P FALL",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 12472,
+    "row_id": "11491",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 11491,
+          "subject_id": 9390,
+          "hadm_id": 162694,
+          "admit_time": "2172-11-28T12:55:00",
+          "discharge_time": "2172-11-28T01:25:00",
+          "death_time": null,
+          "admission_type": "NEWBORN",
+          "admission_location": "CLINIC REFERRAL/PREMATURE",
+          "discharge_location": "SHORT TERM HOSPITAL",
+          "insurance": "Private",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": null,
+          "ethnicity": "WHITE",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "NEWBORN",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "11491",
+      "SUBJECT_ID": "9390",
+      "HADM_ID": "162694",
+      "ADMITTIME": "2172-11-28 12:55:00",
+      "DISCHTIME": "2172-11-28 01:25:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "NEWBORN",
+      "ADMISSION_LOCATION": "CLINIC REFERRAL/PREMATURE",
+      "DISCHARGE_LOCATION": "SHORT TERM HOSPITAL",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "NEWBORN",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 12550,
+    "row_id": "11018",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 11018,
+          "subject_id": 9010,
+          "hadm_id": 129762,
+          "admit_time": "2117-11-26T17:27:00",
+          "discharge_time": "2117-11-26T12:00:00",
+          "death_time": "2117-11-26T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "TRANSFER FROM HOSP/EXTRAM",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "JEWISH",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "MASSIVE CEREBRAL HEMORRHAGE",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "11018",
+      "SUBJECT_ID": "9010",
+      "HADM_ID": "129762",
+      "ADMITTIME": "2117-11-26 17:27:00",
+      "DISCHTIME": "2117-11-26 12:00:00",
+      "DEATHTIME": "2117-11-26 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "TRANSFER FROM HOSP/EXTRAM",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "JEWISH",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "MASSIVE CEREBRAL HEMORRHAGE",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 12603,
+    "row_id": "15308",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 15308,
+          "subject_id": 12469,
+          "hadm_id": 171570,
+          "admit_time": "2153-01-30T20:04:00",
+          "discharge_time": "2153-01-30T12:00:00",
+          "death_time": "2153-01-30T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Self Pay",
+          "language": null,
+          "religion": "UNOBTAINABLE",
+          "marital_status": null,
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2153-01-30T19:02:00",
+          "ed_out_time": "2153-01-30T19:48:00",
+          "diagnosis": "STATUS POST MOTOR VEHICLE ACCIDENT WITH INJURIES",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "15308",
+      "SUBJECT_ID": "12469",
+      "HADM_ID": "171570",
+      "ADMITTIME": "2153-01-30 20:04:00",
+      "DISCHTIME": "2153-01-30 12:00:00",
+      "DEATHTIME": "2153-01-30 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Self Pay",
+      "LANGUAGE": "",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2153-01-30 19:02:00",
+      "EDOUTTIME": "2153-01-30 19:48:00",
+      "DIAGNOSIS": "STATUS POST MOTOR VEHICLE ACCIDENT WITH INJURIES",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 12886,
+    "row_id": "11697",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 11697,
+          "subject_id": 9555,
+          "hadm_id": 131399,
+          "admit_time": "2156-06-29T12:00:00",
+          "discharge_time": "2156-07-03T16:35:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "HOME WITH HOME IV PROVIDR",
+          "insurance": "Private",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2156-06-29T23:20:00",
+          "ed_out_time": "2156-06-30T05:15:00",
+          "diagnosis": "PULMONARY SEPTIC EMBOLI",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "11697",
+      "SUBJECT_ID": "9555",
+      "HADM_ID": "131399",
+      "ADMITTIME": "2156-06-29 12:00:00",
+      "DISCHTIME": "2156-07-03 16:35:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "HOME WITH HOME IV PROVIDR",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2156-06-29 23:20:00",
+      "EDOUTTIME": "2156-06-30 05:15:00",
+      "DIAGNOSIS": "PULMONARY SEPTIC EMBOLI",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 12906,
+    "row_id": "12337",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 12337,
+          "subject_id": 10088,
+          "hadm_id": 169938,
+          "admit_time": "2107-01-04T11:59:00",
+          "discharge_time": "2107-01-11T15:45:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "SNF",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "UNOBTAINABLE",
+          "marital_status": "UNKNOWN (DEFAULT)",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2107-01-04T21:47:00",
+          "ed_out_time": "2107-01-05T01:38:00",
+          "diagnosis": "SEPSIS;PNEUMONIA;TELEMETRY",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "12337",
+      "SUBJECT_ID": "10088",
+      "HADM_ID": "169938",
+      "ADMITTIME": "2107-01-04 11:59:00",
+      "DISCHTIME": "2107-01-11 15:45:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "SNF",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "UNKNOWN (DEFAULT)",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2107-01-04 21:47:00",
+      "EDOUTTIME": "2107-01-05 01:38:00",
+      "DIAGNOSIS": "SEPSIS;PNEUMONIA;TELEMETRY",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 13267,
+    "row_id": "11053",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 11053,
+          "subject_id": 9035,
+          "hadm_id": 188023,
+          "admit_time": "2110-04-25T11:18:00",
+          "discharge_time": "2110-04-25T07:09:00",
+          "death_time": "2110-04-25T07:09:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "PHYS REFERRAL/NORMAL DELI",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "NOT SPECIFIED",
+          "marital_status": "SINGLE",
+          "ethnicity": "WHITE",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "ORGAN DONOR ACCOUNT",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 0
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "11053",
+      "SUBJECT_ID": "9035",
+      "HADM_ID": "188023",
+      "ADMITTIME": "2110-04-25 11:18:00",
+      "DISCHTIME": "2110-04-25 07:09:00",
+      "DEATHTIME": "2110-04-25 07:09:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "PHYS REFERRAL/NORMAL DELI",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "NOT SPECIFIED",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "ORGAN DONOR ACCOUNT",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "0"
+    }
+  },
+  {
+    "line": 13278,
+    "row_id": "11064",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 11064,
+          "subject_id": 9044,
+          "hadm_id": 191061,
+          "admit_time": "2133-07-30T12:00:00",
+          "discharge_time": "2133-09-10T17:00:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "REHAB/DISTINCT PART HOSP",
+          "insurance": "Private",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2133-08-13T16:53:00",
+          "ed_out_time": "2133-08-13T21:24:00",
+          "diagnosis": "RHABDOMYOLYSIS",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "11064",
+      "SUBJECT_ID": "9044",
+      "HADM_ID": "191061",
+      "ADMITTIME": "2133-07-30 12:00:00",
+      "DISCHTIME": "2133-09-10 17:00:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "REHAB/DISTINCT PART HOSP",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2133-08-13 16:53:00",
+      "EDOUTTIME": "2133-08-13 21:24:00",
+      "DIAGNOSIS": "RHABDOMYOLYSIS",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 13343,
+    "row_id": "13338",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_out_time must be after ed_reg_time",
+        "input": {
+          "row_id": 13338,
+          "subject_id": 10904,
+          "hadm_id": 169678,
+          "admit_time": "2152-09-15T07:27:00",
+          "discharge_time": "2152-09-22T17:01:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "HOME",
+          "insurance": "Private",
+          "language": null,
+          "religion": null,
+          "marital_status": "SINGLE",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2152-09-15T05:07:00",
+          "ed_out_time": "2152-09-15T05:00:00",
+          "diagnosis": "CHEST TRAUMA",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_out_time must be after ed_reg_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "13338",
+      "SUBJECT_ID": "10904",
+      "HADM_ID": "169678",
+      "ADMITTIME": "2152-09-15 07:27:00",
+      "DISCHTIME": "2152-09-22 17:01:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "HOME",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2152-09-15 05:07:00",
+      "EDOUTTIME": "2152-09-15 05:00:00",
+      "DIAGNOSIS": "CHEST TRAUMA",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 13621,
+    "row_id": "11753",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_out_time must be after ed_reg_time",
+        "input": {
+          "row_id": 11753,
+          "subject_id": 9604,
+          "hadm_id": 124738,
+          "admit_time": "2160-08-04T05:26:00",
+          "discharge_time": "2160-08-15T13:25:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "REHAB/DISTINCT PART HOSP",
+          "insurance": "Medicaid",
+          "language": "ITAL",
+          "religion": "OTHER",
+          "marital_status": null,
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2160-08-04T05:25:00",
+          "ed_out_time": "2160-08-04T05:00:00",
+          "diagnosis": "MYOCARDIAL INFARCTION",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_out_time must be after ed_reg_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "11753",
+      "SUBJECT_ID": "9604",
+      "HADM_ID": "124738",
+      "ADMITTIME": "2160-08-04 05:26:00",
+      "DISCHTIME": "2160-08-15 13:25:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "REHAB/DISTINCT PART HOSP",
+      "INSURANCE": "Medicaid",
+      "LANGUAGE": "ITAL",
+      "RELIGION": "OTHER",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2160-08-04 05:25:00",
+      "EDOUTTIME": "2160-08-04 05:00:00",
+      "DIAGNOSIS": "MYOCARDIAL INFARCTION",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 13675,
+    "row_id": "13908",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, death_time cannot be before admit_time",
+        "input": {
+          "row_id": 13908,
+          "subject_id": 11347,
+          "hadm_id": 125606,
+          "admit_time": "2164-03-09T10:56:00",
+          "discharge_time": "2164-03-15T15:30:00",
+          "death_time": "2164-03-08T15:30:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": "SINGLE",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2164-03-09T04:51:00",
+          "ed_out_time": "2164-03-09T11:00:00",
+          "diagnosis": "S/P FALL,SDH,SAH",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "death_time cannot be before admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "13908",
+      "SUBJECT_ID": "11347",
+      "HADM_ID": "125606",
+      "ADMITTIME": "2164-03-09 10:56:00",
+      "DISCHTIME": "2164-03-15 15:30:00",
+      "DEATHTIME": "2164-03-08 15:30:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2164-03-09 04:51:00",
+      "EDOUTTIME": "2164-03-09 11:00:00",
+      "DIAGNOSIS": "S/P FALL,SDH,SAH",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 13726,
+    "row_id": "14732",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 14732,
+          "subject_id": 11983,
+          "hadm_id": 129454,
+          "admit_time": "2138-08-14T14:12:00",
+          "discharge_time": "2138-08-14T12:00:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "TRANSFER FROM HOSP/EXTRAM",
+          "discharge_location": "LEFT AGAINST MEDICAL ADVI",
+          "insurance": "Private",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "NECROTIZING FASCITITIS",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "14732",
+      "SUBJECT_ID": "11983",
+      "HADM_ID": "129454",
+      "ADMITTIME": "2138-08-14 14:12:00",
+      "DISCHTIME": "2138-08-14 12:00:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "TRANSFER FROM HOSP/EXTRAM",
+      "DISCHARGE_LOCATION": "LEFT AGAINST MEDICAL ADVI",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "NECROTIZING FASCITITIS",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 13921,
+    "row_id": "15366",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 15366,
+          "subject_id": 12527,
+          "hadm_id": 111324,
+          "admit_time": "2157-05-19T18:11:00",
+          "discharge_time": "2157-05-19T12:00:00",
+          "death_time": "2157-05-19T12:00:00",
+          "admission_type": "NEWBORN",
+          "admission_location": "PHYS REFERRAL/NORMAL DELI",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "UNOBTAINABLE",
+          "marital_status": null,
+          "ethnicity": "OTHER",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "NEWBORN",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "15366",
+      "SUBJECT_ID": "12527",
+      "HADM_ID": "111324",
+      "ADMITTIME": "2157-05-19 18:11:00",
+      "DISCHTIME": "2157-05-19 12:00:00",
+      "DEATHTIME": "2157-05-19 12:00:00",
+      "ADMISSION_TYPE": "NEWBORN",
+      "ADMISSION_LOCATION": "PHYS REFERRAL/NORMAL DELI",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "OTHER",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "NEWBORN",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 13963,
+    "row_id": "12248",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, death_time cannot be after discharge_time",
+        "input": {
+          "row_id": 12248,
+          "subject_id": 9998,
+          "hadm_id": 144947,
+          "admit_time": "2173-06-11T11:39:00",
+          "discharge_time": "2173-06-14T22:00:00",
+          "death_time": "2173-06-15T22:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "JEWISH",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2173-06-11T09:27:00",
+          "ed_out_time": "2173-06-11T11:05:00",
+          "diagnosis": "TRAUMA;LEFT SUBDURAL HEMATOMA",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "death_time cannot be after discharge_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "12248",
+      "SUBJECT_ID": "9998",
+      "HADM_ID": "144947",
+      "ADMITTIME": "2173-06-11 11:39:00",
+      "DISCHTIME": "2173-06-14 22:00:00",
+      "DEATHTIME": "2173-06-15 22:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "JEWISH",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2173-06-11 09:27:00",
+      "EDOUTTIME": "2173-06-11 11:05:00",
+      "DIAGNOSIS": "TRAUMA;LEFT SUBDURAL HEMATOMA",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 14239,
+    "row_id": "16440",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_out_time must be after ed_reg_time",
+        "input": {
+          "row_id": 16440,
+          "subject_id": 13403,
+          "hadm_id": 106842,
+          "admit_time": "2144-01-17T03:45:00",
+          "discharge_time": "2144-01-20T17:08:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "HOME",
+          "insurance": "Private",
+          "language": null,
+          "religion": "JEWISH",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2144-01-17T01:24:00",
+          "ed_out_time": "2144-01-16T04:38:00",
+          "diagnosis": "CHEST PAIN",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_out_time must be after ed_reg_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "16440",
+      "SUBJECT_ID": "13403",
+      "HADM_ID": "106842",
+      "ADMITTIME": "2144-01-17 03:45:00",
+      "DISCHTIME": "2144-01-20 17:08:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "HOME",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "JEWISH",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2144-01-17 01:24:00",
+      "EDOUTTIME": "2144-01-16 04:38:00",
+      "DIAGNOSIS": "CHEST PAIN",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 14534,
+    "row_id": "17471",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, death_time cannot be after discharge_time",
+        "input": {
+          "row_id": 17471,
+          "subject_id": 14263,
+          "hadm_id": 168302,
+          "admit_time": "2177-08-09T13:47:00",
+          "discharge_time": "2177-08-15T19:16:00",
+          "death_time": "2177-09-04T19:16:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Government",
+          "language": null,
+          "religion": "PROTESTANT QUAKER",
+          "marital_status": "DIVORCED",
+          "ethnicity": "UNKNOWN/NOT SPECIFIED",
+          "ed_reg_time": "2177-08-09T04:47:00",
+          "ed_out_time": "2177-08-09T16:01:00",
+          "diagnosis": "PROSTATITIS;FEVER",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "death_time cannot be after discharge_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "17471",
+      "SUBJECT_ID": "14263",
+      "HADM_ID": "168302",
+      "ADMITTIME": "2177-08-09 13:47:00",
+      "DISCHTIME": "2177-08-15 19:16:00",
+      "DEATHTIME": "2177-09-04 19:16:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Government",
+      "LANGUAGE": "",
+      "RELIGION": "PROTESTANT QUAKER",
+      "MARITAL_STATUS": "DIVORCED",
+      "ETHNICITY": "UNKNOWN/NOT SPECIFIED",
+      "EDREGTIME": "2177-08-09 04:47:00",
+      "EDOUTTIME": "2177-08-09 16:01:00",
+      "DIAGNOSIS": "PROSTATITIS;FEVER",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 14643,
+    "row_id": "16630",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 16630,
+          "subject_id": 13567,
+          "hadm_id": 110220,
+          "admit_time": "2180-12-14T19:23:00",
+          "discharge_time": "2180-12-14T12:00:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "PHYS REFERRAL/NORMAL DELI",
+          "discharge_location": "HOME",
+          "insurance": "Private",
+          "language": null,
+          "religion": "UNOBTAINABLE",
+          "marital_status": null,
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2180-12-14T01:39:00",
+          "ed_out_time": "2180-12-14T04:13:00",
+          "diagnosis": "ORGAN DONOR",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "16630",
+      "SUBJECT_ID": "13567",
+      "HADM_ID": "110220",
+      "ADMITTIME": "2180-12-14 19:23:00",
+      "DISCHTIME": "2180-12-14 12:00:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "PHYS REFERRAL/NORMAL DELI",
+      "DISCHARGE_LOCATION": "HOME",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2180-12-14 01:39:00",
+      "EDOUTTIME": "2180-12-14 04:13:00",
+      "DIAGNOSIS": "ORGAN DONOR",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 14703,
+    "row_id": "15557",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 15557,
+          "subject_id": 12691,
+          "hadm_id": 161657,
+          "admit_time": "2168-07-23T21:31:00",
+          "discharge_time": "2168-07-23T09:54:00",
+          "death_time": "2168-07-23T09:54:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Self Pay",
+          "language": null,
+          "religion": "UNOBTAINABLE",
+          "marital_status": null,
+          "ethnicity": "UNKNOWN/NOT SPECIFIED",
+          "ed_reg_time": "2168-07-23T19:40:00",
+          "ed_out_time": "2168-07-23T22:06:00",
+          "diagnosis": "TRAUMA",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "15557",
+      "SUBJECT_ID": "12691",
+      "HADM_ID": "161657",
+      "ADMITTIME": "2168-07-23 21:31:00",
+      "DISCHTIME": "2168-07-23 09:54:00",
+      "DEATHTIME": "2168-07-23 09:54:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Self Pay",
+      "LANGUAGE": "",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "UNKNOWN/NOT SPECIFIED",
+      "EDREGTIME": "2168-07-23 19:40:00",
+      "EDOUTTIME": "2168-07-23 22:06:00",
+      "DIAGNOSIS": "TRAUMA",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 15361,
+    "row_id": "16673",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 16673,
+          "subject_id": 13599,
+          "hadm_id": 166852,
+          "admit_time": "2184-01-11T12:00:00",
+          "discharge_time": "2184-02-05T18:15:00",
+          "death_time": "2184-02-05T18:15:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": "ENGL",
+          "religion": "UNOBTAINABLE",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2184-01-16T18:41:00",
+          "ed_out_time": "2184-01-16T23:37:00",
+          "diagnosis": "PNEUMONIA;HYPOXIA",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "16673",
+      "SUBJECT_ID": "13599",
+      "HADM_ID": "166852",
+      "ADMITTIME": "2184-01-11 12:00:00",
+      "DISCHTIME": "2184-02-05 18:15:00",
+      "DEATHTIME": "2184-02-05 18:15:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "ENGL",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2184-01-16 18:41:00",
+      "EDOUTTIME": "2184-01-16 23:37:00",
+      "DIAGNOSIS": "PNEUMONIA;HYPOXIA",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 15423,
+    "row_id": "13482",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 13482,
+          "subject_id": 11019,
+          "hadm_id": 174765,
+          "admit_time": "2125-04-14T00:01:00",
+          "discharge_time": "2125-04-24T12:09:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "SNF",
+          "insurance": "Private",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": "SEPARATED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2125-04-14T22:23:00",
+          "ed_out_time": "2125-04-15T01:27:00",
+          "diagnosis": "S/P AV GRAFT",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "13482",
+      "SUBJECT_ID": "11019",
+      "HADM_ID": "174765",
+      "ADMITTIME": "2125-04-14 00:01:00",
+      "DISCHTIME": "2125-04-24 12:09:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "SNF",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "SEPARATED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2125-04-14 22:23:00",
+      "EDOUTTIME": "2125-04-15 01:27:00",
+      "DIAGNOSIS": "S/P AV GRAFT",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 15474,
+    "row_id": "15011",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 15011,
+          "subject_id": 12212,
+          "hadm_id": 172169,
+          "admit_time": "2101-07-31T16:34:00",
+          "discharge_time": "2101-07-31T12:00:00",
+          "death_time": "2101-07-31T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": "SINGLE",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2101-07-31T12:55:00",
+          "ed_out_time": "2101-07-31T18:00:00",
+          "diagnosis": "SUBDURAL HEMATOMA;GI BLEED",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "15011",
+      "SUBJECT_ID": "12212",
+      "HADM_ID": "172169",
+      "ADMITTIME": "2101-07-31 16:34:00",
+      "DISCHTIME": "2101-07-31 12:00:00",
+      "DEATHTIME": "2101-07-31 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2101-07-31 12:55:00",
+      "EDOUTTIME": "2101-07-31 18:00:00",
+      "DIAGNOSIS": "SUBDURAL HEMATOMA;GI BLEED",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 15529,
+    "row_id": "16516",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, death_time cannot be after discharge_time",
+        "input": {
+          "row_id": 16516,
+          "subject_id": 13470,
+          "hadm_id": 106132,
+          "admit_time": "2156-12-21T01:58:00",
+          "discharge_time": "2156-12-30T12:00:00",
+          "death_time": "2156-12-31T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": "SINGLE",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2156-12-20T20:02:00",
+          "ed_out_time": "2156-12-21T02:58:00",
+          "diagnosis": "COPD FLARE",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "death_time cannot be after discharge_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "16516",
+      "SUBJECT_ID": "13470",
+      "HADM_ID": "106132",
+      "ADMITTIME": "2156-12-21 01:58:00",
+      "DISCHTIME": "2156-12-30 12:00:00",
+      "DEATHTIME": "2156-12-31 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2156-12-20 20:02:00",
+      "EDOUTTIME": "2156-12-21 02:58:00",
+      "DIAGNOSIS": "COPD FLARE",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 15967,
+    "row_id": "12860",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, death_time cannot be before admit_time",
+        "input": {
+          "row_id": 12860,
+          "subject_id": 10518,
+          "hadm_id": 140994,
+          "admit_time": "2189-10-22T18:02:00",
+          "discharge_time": "2189-10-25T10:20:00",
+          "death_time": "2189-10-21T10:20:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "OTHER",
+          "marital_status": "SINGLE",
+          "ethnicity": "BLACK/AFRICAN AMERICAN",
+          "ed_reg_time": "2189-10-22T11:45:00",
+          "ed_out_time": "2189-10-22T20:17:00",
+          "diagnosis": "SEIZURES",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "death_time cannot be before admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "12860",
+      "SUBJECT_ID": "10518",
+      "HADM_ID": "140994",
+      "ADMITTIME": "2189-10-22 18:02:00",
+      "DISCHTIME": "2189-10-25 10:20:00",
+      "DEATHTIME": "2189-10-21 10:20:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "OTHER",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "BLACK/AFRICAN AMERICAN",
+      "EDREGTIME": "2189-10-22 11:45:00",
+      "EDOUTTIME": "2189-10-22 20:17:00",
+      "DIAGNOSIS": "SEIZURES",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 16113,
+    "row_id": "17364",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 17364,
+          "subject_id": 14183,
+          "hadm_id": 180999,
+          "admit_time": "2178-10-18T19:24:00",
+          "discharge_time": "2178-10-24T15:02:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "TRANSFER FROM HOSP/EXTRAM",
+          "discharge_location": "HOME",
+          "insurance": "Medicaid",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2178-10-18T20:11:00",
+          "ed_out_time": "2178-10-19T00:21:00",
+          "diagnosis": "HEADACHE",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "17364",
+      "SUBJECT_ID": "14183",
+      "HADM_ID": "180999",
+      "ADMITTIME": "2178-10-18 19:24:00",
+      "DISCHTIME": "2178-10-24 15:02:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "TRANSFER FROM HOSP/EXTRAM",
+      "DISCHARGE_LOCATION": "HOME",
+      "INSURANCE": "Medicaid",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2178-10-18 20:11:00",
+      "EDOUTTIME": "2178-10-19 00:21:00",
+      "DIAGNOSIS": "HEADACHE",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 16243,
+    "row_id": "16550",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_out_time must be after ed_reg_time",
+        "input": {
+          "row_id": 16550,
+          "subject_id": 13500,
+          "hadm_id": 117078,
+          "admit_time": "2110-12-02T06:16:00",
+          "discharge_time": "2110-12-08T03:06:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "LEFT AGAINST MEDICAL ADVI",
+          "insurance": "Private",
+          "language": null,
+          "religion": "NOT SPECIFIED",
+          "marital_status": "SINGLE",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2110-12-02T00:19:00",
+          "ed_out_time": "2110-12-01T12:07:00",
+          "diagnosis": "ACUTE RENAL FAILURE,HYPONATREMIA",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_out_time must be after ed_reg_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "16550",
+      "SUBJECT_ID": "13500",
+      "HADM_ID": "117078",
+      "ADMITTIME": "2110-12-02 06:16:00",
+      "DISCHTIME": "2110-12-08 03:06:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "LEFT AGAINST MEDICAL ADVI",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "NOT SPECIFIED",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2110-12-02 00:19:00",
+      "EDOUTTIME": "2110-12-01 12:07:00",
+      "DIAGNOSIS": "ACUTE RENAL FAILURE,HYPONATREMIA",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 16284,
+    "row_id": "18021",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_out_time must be after ed_reg_time",
+        "input": {
+          "row_id": 18021,
+          "subject_id": 14735,
+          "hadm_id": 173788,
+          "admit_time": "2143-12-14T23:54:00",
+          "discharge_time": "2143-12-17T11:19:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "HOME",
+          "insurance": "Private",
+          "language": null,
+          "religion": "JEWISH",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2143-12-14T20:56:00",
+          "ed_out_time": "2143-12-14T12:35:00",
+          "diagnosis": "LOWER GI BLEED",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_out_time must be after ed_reg_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "18021",
+      "SUBJECT_ID": "14735",
+      "HADM_ID": "173788",
+      "ADMITTIME": "2143-12-14 23:54:00",
+      "DISCHTIME": "2143-12-17 11:19:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "HOME",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "JEWISH",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2143-12-14 20:56:00",
+      "EDOUTTIME": "2143-12-14 12:35:00",
+      "DIAGNOSIS": "LOWER GI BLEED",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 16722,
+    "row_id": "13561",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 13561,
+          "subject_id": 11079,
+          "hadm_id": 117938,
+          "admit_time": "2150-05-21T12:00:00",
+          "discharge_time": "2150-06-05T16:00:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DISC-TRAN CANCER/CHLDRN H",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "UNOBTAINABLE",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2150-05-21T22:12:00",
+          "ed_out_time": "2150-05-22T03:00:00",
+          "diagnosis": "RHABDOMYOLISIS",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "13561",
+      "SUBJECT_ID": "11079",
+      "HADM_ID": "117938",
+      "ADMITTIME": "2150-05-21 12:00:00",
+      "DISCHTIME": "2150-06-05 16:00:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DISC-TRAN CANCER/CHLDRN H",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2150-05-21 22:12:00",
+      "EDOUTTIME": "2150-05-22 03:00:00",
+      "DIAGNOSIS": "RHABDOMYOLISIS",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 17145,
+    "row_id": "13786",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_out_time must be after ed_reg_time",
+        "input": {
+          "row_id": 13786,
+          "subject_id": 11265,
+          "hadm_id": 146235,
+          "admit_time": "2104-11-12T04:14:00",
+          "discharge_time": "2104-11-17T09:27:00",
+          "death_time": "2104-11-17T09:27:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Government",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": "SINGLE",
+          "ethnicity": "HISPANIC OR LATINO",
+          "ed_reg_time": "2104-11-12T00:50:00",
+          "ed_out_time": "2104-11-11T08:05:00",
+          "diagnosis": "POSSIBLE PNEUMONIA,ASCITES,HYPONATREMIA",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_out_time must be after ed_reg_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "13786",
+      "SUBJECT_ID": "11265",
+      "HADM_ID": "146235",
+      "ADMITTIME": "2104-11-12 04:14:00",
+      "DISCHTIME": "2104-11-17 09:27:00",
+      "DEATHTIME": "2104-11-17 09:27:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Government",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "HISPANIC OR LATINO",
+      "EDREGTIME": "2104-11-12 00:50:00",
+      "EDOUTTIME": "2104-11-11 08:05:00",
+      "DIAGNOSIS": "POSSIBLE PNEUMONIA,ASCITES,HYPONATREMIA",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 17222,
+    "row_id": "17643",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, death_time cannot be after discharge_time",
+        "input": {
+          "row_id": 17643,
+          "subject_id": 14408,
+          "hadm_id": 141316,
+          "admit_time": "2183-08-23T17:46:00",
+          "discharge_time": "2183-08-28T13:36:00",
+          "death_time": "2183-08-29T13:36:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "UNOBTAINABLE",
+          "marital_status": null,
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2183-08-23T12:33:00",
+          "ed_out_time": "2183-08-23T15:00:00",
+          "diagnosis": "0681",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "death_time cannot be after discharge_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "17643",
+      "SUBJECT_ID": "14408",
+      "HADM_ID": "141316",
+      "ADMITTIME": "2183-08-23 17:46:00",
+      "DISCHTIME": "2183-08-28 13:36:00",
+      "DEATHTIME": "2183-08-29 13:36:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2183-08-23 12:33:00",
+      "EDOUTTIME": "2183-08-23 15:00:00",
+      "DIAGNOSIS": "0681",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 17617,
+    "row_id": "18452",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 18452,
+          "subject_id": 15080,
+          "hadm_id": 149654,
+          "admit_time": "2136-03-19T22:54:00",
+          "discharge_time": "2136-03-19T12:00:00",
+          "death_time": "2136-03-19T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "TRANSFER FROM HOSP/EXTRAM",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "ACUTE MYOCARDIAL INFARCTION\\CATH",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "18452",
+      "SUBJECT_ID": "15080",
+      "HADM_ID": "149654",
+      "ADMITTIME": "2136-03-19 22:54:00",
+      "DISCHTIME": "2136-03-19 12:00:00",
+      "DEATHTIME": "2136-03-19 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "TRANSFER FROM HOSP/EXTRAM",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "ACUTE MYOCARDIAL INFARCTION\\CATH",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 17758,
+    "row_id": "17021",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 17021,
+          "subject_id": 13890,
+          "hadm_id": 192408,
+          "admit_time": "2131-09-10T00:00:00",
+          "discharge_time": "2131-09-15T12:00:00",
+          "death_time": "2131-09-15T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicaid",
+          "language": null,
+          "religion": "UNOBTAINABLE",
+          "marital_status": "SINGLE",
+          "ethnicity": "UNKNOWN/NOT SPECIFIED",
+          "ed_reg_time": "2131-09-10T21:08:00",
+          "ed_out_time": "2131-09-11T00:14:00",
+          "diagnosis": "STRUCK BY TRAIN",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "17021",
+      "SUBJECT_ID": "13890",
+      "HADM_ID": "192408",
+      "ADMITTIME": "2131-09-10 00:00:00",
+      "DISCHTIME": "2131-09-15 12:00:00",
+      "DEATHTIME": "2131-09-15 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicaid",
+      "LANGUAGE": "",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "UNKNOWN/NOT SPECIFIED",
+      "EDREGTIME": "2131-09-10 21:08:00",
+      "EDOUTTIME": "2131-09-11 00:14:00",
+      "DIAGNOSIS": "STRUCK BY TRAIN",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 17952,
+    "row_id": "15751",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 15751,
+          "subject_id": 12844,
+          "hadm_id": 181672,
+          "admit_time": "2192-05-07T12:24:00",
+          "discharge_time": "2192-05-07T12:00:00",
+          "death_time": "2192-05-07T12:00:00",
+          "admission_type": "URGENT",
+          "admission_location": "TRANSFER FROM HOSP/EXTRAM",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "NOT SPECIFIED",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "ACUTE RESPIRATORY DISTRESS SYNDROME",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "15751",
+      "SUBJECT_ID": "12844",
+      "HADM_ID": "181672",
+      "ADMITTIME": "2192-05-07 12:24:00",
+      "DISCHTIME": "2192-05-07 12:00:00",
+      "DEATHTIME": "2192-05-07 12:00:00",
+      "ADMISSION_TYPE": "URGENT",
+      "ADMISSION_LOCATION": "TRANSFER FROM HOSP/EXTRAM",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "NOT SPECIFIED",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "ACUTE RESPIRATORY DISTRESS SYNDROME",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 18013,
+    "row_id": "20482",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, death_time cannot be after discharge_time",
+        "input": {
+          "row_id": 20482,
+          "subject_id": 16759,
+          "hadm_id": 129911,
+          "admit_time": "2160-12-15T16:55:00",
+          "discharge_time": "2160-12-16T08:00:00",
+          "death_time": "2160-12-17T08:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "OTHER",
+          "marital_status": null,
+          "ethnicity": "UNKNOWN/NOT SPECIFIED",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "GUN SHOT WOUND HEAD",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "death_time cannot be after discharge_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "20482",
+      "SUBJECT_ID": "16759",
+      "HADM_ID": "129911",
+      "ADMITTIME": "2160-12-15 16:55:00",
+      "DISCHTIME": "2160-12-16 08:00:00",
+      "DEATHTIME": "2160-12-17 08:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "OTHER",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "UNKNOWN/NOT SPECIFIED",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "GUN SHOT WOUND HEAD",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 18113,
+    "row_id": "19559",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 19559,
+          "subject_id": 16025,
+          "hadm_id": 155705,
+          "admit_time": "2149-04-12T12:00:00",
+          "discharge_time": "2149-07-17T14:45:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "REHAB/DISTINCT PART HOSP",
+          "insurance": "Private",
+          "language": "ENGL",
+          "religion": "NOT SPECIFIED",
+          "marital_status": "WIDOWED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2149-04-29T22:32:00",
+          "ed_out_time": "2149-04-30T02:01:00",
+          "diagnosis": "FEVER",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "19559",
+      "SUBJECT_ID": "16025",
+      "HADM_ID": "155705",
+      "ADMITTIME": "2149-04-12 12:00:00",
+      "DISCHTIME": "2149-07-17 14:45:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "REHAB/DISTINCT PART HOSP",
+      "INSURANCE": "Private",
+      "LANGUAGE": "ENGL",
+      "RELIGION": "NOT SPECIFIED",
+      "MARITAL_STATUS": "WIDOWED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2149-04-29 22:32:00",
+      "EDOUTTIME": "2149-04-30 02:01:00",
+      "DIAGNOSIS": "FEVER",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 18138,
+    "row_id": "16383",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 16383,
+          "subject_id": 13355,
+          "hadm_id": 143157,
+          "admit_time": "2159-06-11T12:00:00",
+          "discharge_time": "2159-07-04T15:30:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "HOME HEALTH CARE",
+          "insurance": "Medicaid",
+          "language": null,
+          "religion": "PROTESTANT QUAKER",
+          "marital_status": "SINGLE",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2159-06-13T18:03:00",
+          "ed_out_time": "2159-06-14T02:57:00",
+          "diagnosis": "FEVER OF UNKNOWN ORIGIN",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "16383",
+      "SUBJECT_ID": "13355",
+      "HADM_ID": "143157",
+      "ADMITTIME": "2159-06-11 12:00:00",
+      "DISCHTIME": "2159-07-04 15:30:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "HOME HEALTH CARE",
+      "INSURANCE": "Medicaid",
+      "LANGUAGE": "",
+      "RELIGION": "PROTESTANT QUAKER",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2159-06-13 18:03:00",
+      "EDOUTTIME": "2159-06-14 02:57:00",
+      "DIAGNOSIS": "FEVER OF UNKNOWN ORIGIN",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 18298,
+    "row_id": "16209",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 16209,
+          "subject_id": 13214,
+          "hadm_id": 164051,
+          "admit_time": "2120-10-21T00:00:00",
+          "discharge_time": "2120-11-07T17:35:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "HOME",
+          "insurance": "Medicare",
+          "language": "ENGL",
+          "religion": "CATHOLIC",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2120-10-21T20:53:00",
+          "ed_out_time": "2120-10-22T01:10:00",
+          "diagnosis": "RASH",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "16209",
+      "SUBJECT_ID": "13214",
+      "HADM_ID": "164051",
+      "ADMITTIME": "2120-10-21 00:00:00",
+      "DISCHTIME": "2120-11-07 17:35:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "HOME",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "ENGL",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2120-10-21 20:53:00",
+      "EDOUTTIME": "2120-10-22 01:10:00",
+      "DIAGNOSIS": "RASH",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 19090,
+    "row_id": "19237",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 19237,
+          "subject_id": 15759,
+          "hadm_id": 125925,
+          "admit_time": "2182-12-07T08:56:00",
+          "discharge_time": "2182-12-08T02:40:00",
+          "death_time": "2182-12-08T02:40:00",
+          "admission_type": "URGENT",
+          "admission_location": "TRANSFER FROM HOSP/EXTRAM",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "UNOBTAINABLE",
+          "marital_status": "MARRIED",
+          "ethnicity": "ASIAN",
+          "ed_reg_time": "2182-12-07T09:07:00",
+          "ed_out_time": "2182-12-07T10:16:00",
+          "diagnosis": "AV BLOCK; CARDIAC CATH",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "19237",
+      "SUBJECT_ID": "15759",
+      "HADM_ID": "125925",
+      "ADMITTIME": "2182-12-07 08:56:00",
+      "DISCHTIME": "2182-12-08 02:40:00",
+      "DEATHTIME": "2182-12-08 02:40:00",
+      "ADMISSION_TYPE": "URGENT",
+      "ADMISSION_LOCATION": "TRANSFER FROM HOSP/EXTRAM",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "ASIAN",
+      "EDREGTIME": "2182-12-07 09:07:00",
+      "EDOUTTIME": "2182-12-07 10:16:00",
+      "DIAGNOSIS": "AV BLOCK; CARDIAC CATH",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 20272,
+    "row_id": "22633",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 22633,
+          "subject_id": 18552,
+          "hadm_id": 120398,
+          "admit_time": "2161-09-11T18:40:00",
+          "discharge_time": "2161-09-11T12:00:00",
+          "death_time": "2161-09-11T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "TRANSFER FROM HOSP/EXTRAM",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": "SPAN",
+          "religion": "CATHOLIC",
+          "marital_status": "UNKNOWN (DEFAULT)",
+          "ethnicity": "UNKNOWN/NOT SPECIFIED",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "FEVER;ACUTE RESPIRATORY FAILURE",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "22633",
+      "SUBJECT_ID": "18552",
+      "HADM_ID": "120398",
+      "ADMITTIME": "2161-09-11 18:40:00",
+      "DISCHTIME": "2161-09-11 12:00:00",
+      "DEATHTIME": "2161-09-11 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "TRANSFER FROM HOSP/EXTRAM",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "SPAN",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "UNKNOWN (DEFAULT)",
+      "ETHNICITY": "UNKNOWN/NOT SPECIFIED",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "FEVER;ACUTE RESPIRATORY FAILURE",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 20428,
+    "row_id": "22651",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 22651,
+          "subject_id": 18567,
+          "hadm_id": 143379,
+          "admit_time": "2133-02-08T15:24:00",
+          "discharge_time": "2133-02-08T07:17:00",
+          "death_time": "2133-02-08T07:17:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": null,
+          "marital_status": null,
+          "ethnicity": "OTHER",
+          "ed_reg_time": "2133-02-08T14:10:00",
+          "ed_out_time": "2133-02-08T15:26:00",
+          "diagnosis": "INTERCRANIAL BLEED",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "22651",
+      "SUBJECT_ID": "18567",
+      "HADM_ID": "143379",
+      "ADMITTIME": "2133-02-08 15:24:00",
+      "DISCHTIME": "2133-02-08 07:17:00",
+      "DEATHTIME": "2133-02-08 07:17:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "OTHER",
+      "EDREGTIME": "2133-02-08 14:10:00",
+      "EDOUTTIME": "2133-02-08 15:26:00",
+      "DIAGNOSIS": "INTERCRANIAL BLEED",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 20516,
+    "row_id": "22180",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 22180,
+          "subject_id": 18157,
+          "hadm_id": 151941,
+          "admit_time": "2184-12-04T12:57:00",
+          "discharge_time": "2184-12-04T02:55:00",
+          "death_time": null,
+          "admission_type": "NEWBORN",
+          "admission_location": "CLINIC REFERRAL/PREMATURE",
+          "discharge_location": "SHORT TERM HOSPITAL",
+          "insurance": "Private",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": null,
+          "ethnicity": "WHITE",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "NEWBORN",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "22180",
+      "SUBJECT_ID": "18157",
+      "HADM_ID": "151941",
+      "ADMITTIME": "2184-12-04 12:57:00",
+      "DISCHTIME": "2184-12-04 02:55:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "NEWBORN",
+      "ADMISSION_LOCATION": "CLINIC REFERRAL/PREMATURE",
+      "DISCHARGE_LOCATION": "SHORT TERM HOSPITAL",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "NEWBORN",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 20804,
+    "row_id": "22001",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 22001,
+          "subject_id": 18006,
+          "hadm_id": 140889,
+          "admit_time": "2158-05-16T19:28:00",
+          "discharge_time": "2158-05-16T17:43:00",
+          "death_time": "2158-05-16T17:43:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "PHYS REFERRAL/NORMAL DELI",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "ORGAN DONOR ACCOUNT",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 0
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "22001",
+      "SUBJECT_ID": "18006",
+      "HADM_ID": "140889",
+      "ADMITTIME": "2158-05-16 19:28:00",
+      "DISCHTIME": "2158-05-16 17:43:00",
+      "DEATHTIME": "2158-05-16 17:43:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "PHYS REFERRAL/NORMAL DELI",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "ORGAN DONOR ACCOUNT",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "0"
+    }
+  },
+  {
+    "line": 20849,
+    "row_id": "20924",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 20924,
+          "subject_id": 17113,
+          "hadm_id": 180310,
+          "admit_time": "2115-12-30T00:22:00",
+          "discharge_time": "2116-01-04T12:21:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "TRANSFER FROM HOSP/EXTRAM",
+          "discharge_location": "HOME",
+          "insurance": "Private",
+          "language": null,
+          "religion": "NOT SPECIFIED",
+          "marital_status": "MARRIED",
+          "ethnicity": "BLACK/AFRICAN AMERICAN",
+          "ed_reg_time": "2115-12-30T00:58:00",
+          "ed_out_time": "2115-12-30T01:20:00",
+          "diagnosis": "LIVER FAILURE",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "20924",
+      "SUBJECT_ID": "17113",
+      "HADM_ID": "180310",
+      "ADMITTIME": "2115-12-30 00:22:00",
+      "DISCHTIME": "2116-01-04 12:21:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "TRANSFER FROM HOSP/EXTRAM",
+      "DISCHARGE_LOCATION": "HOME",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "NOT SPECIFIED",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "BLACK/AFRICAN AMERICAN",
+      "EDREGTIME": "2115-12-30 00:58:00",
+      "EDOUTTIME": "2115-12-30 01:20:00",
+      "DIAGNOSIS": "LIVER FAILURE",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 20983,
+    "row_id": "22673",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 22673,
+          "subject_id": 18588,
+          "hadm_id": 168548,
+          "admit_time": "2188-12-01T18:33:00",
+          "discharge_time": "2188-12-01T12:00:00",
+          "death_time": "2188-12-01T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "TRANSFER FROM HOSP/EXTRAM",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "UNOBTAINABLE",
+          "marital_status": "SINGLE",
+          "ethnicity": "UNKNOWN/NOT SPECIFIED",
+          "ed_reg_time": null,
+          "ed_out_time": null,
+          "diagnosis": "CLOSTRIDIA NECROSIS",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "22673",
+      "SUBJECT_ID": "18588",
+      "HADM_ID": "168548",
+      "ADMITTIME": "2188-12-01 18:33:00",
+      "DISCHTIME": "2188-12-01 12:00:00",
+      "DEATHTIME": "2188-12-01 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "TRANSFER FROM HOSP/EXTRAM",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "SINGLE",
+      "ETHNICITY": "UNKNOWN/NOT SPECIFIED",
+      "EDREGTIME": "",
+      "EDOUTTIME": "",
+      "DIAGNOSIS": "CLOSTRIDIA NECROSIS",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 21481,
+    "row_id": "23103",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 23103,
+          "subject_id": 18948,
+          "hadm_id": 177730,
+          "admit_time": "2175-07-14T00:03:00",
+          "discharge_time": "2175-07-27T11:18:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "REHAB/DISTINCT PART HOSP",
+          "insurance": "Private",
+          "language": "MAND",
+          "religion": "NOT SPECIFIED",
+          "marital_status": null,
+          "ethnicity": "UNKNOWN/NOT SPECIFIED",
+          "ed_reg_time": "2175-07-14T22:29:00",
+          "ed_out_time": "2175-07-15T00:01:00",
+          "diagnosis": "INTRA CRANIAL HEMORRHAGE",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "23103",
+      "SUBJECT_ID": "18948",
+      "HADM_ID": "177730",
+      "ADMITTIME": "2175-07-14 00:03:00",
+      "DISCHTIME": "2175-07-27 11:18:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "REHAB/DISTINCT PART HOSP",
+      "INSURANCE": "Private",
+      "LANGUAGE": "MAND",
+      "RELIGION": "NOT SPECIFIED",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "UNKNOWN/NOT SPECIFIED",
+      "EDREGTIME": "2175-07-14 22:29:00",
+      "EDOUTTIME": "2175-07-15 00:01:00",
+      "DIAGNOSIS": "INTRA CRANIAL HEMORRHAGE",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 21789,
+    "row_id": "20237",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, death_time cannot be after discharge_time",
+        "input": {
+          "row_id": 20237,
+          "subject_id": 16565,
+          "hadm_id": 196841,
+          "admit_time": "2137-04-17T00:37:00",
+          "discharge_time": "2137-04-27T12:45:00",
+          "death_time": "2137-07-01T12:45:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2137-04-16T22:07:00",
+          "ed_out_time": "2137-04-17T01:55:00",
+          "diagnosis": "HEMOPTYSIS",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "death_time cannot be after discharge_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "20237",
+      "SUBJECT_ID": "16565",
+      "HADM_ID": "196841",
+      "ADMITTIME": "2137-04-17 00:37:00",
+      "DISCHTIME": "2137-04-27 12:45:00",
+      "DEATHTIME": "2137-07-01 12:45:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2137-04-16 22:07:00",
+      "EDOUTTIME": "2137-04-17 01:55:00",
+      "DIAGNOSIS": "HEMOPTYSIS",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 22418,
+    "row_id": "21946",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_out_time must be after ed_reg_time",
+        "input": {
+          "row_id": 21946,
+          "subject_id": 17959,
+          "hadm_id": 142170,
+          "admit_time": "2137-10-20T03:39:00",
+          "discharge_time": "2137-10-26T11:50:00",
+          "death_time": "2137-10-26T11:50:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "CATHOLIC",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2137-10-20T05:40:00",
+          "ed_out_time": "2137-10-20T04:00:00",
+          "diagnosis": "SUBDURAL HEMATOMA",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_out_time must be after ed_reg_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "21946",
+      "SUBJECT_ID": "17959",
+      "HADM_ID": "142170",
+      "ADMITTIME": "2137-10-20 03:39:00",
+      "DISCHTIME": "2137-10-26 11:50:00",
+      "DEATHTIME": "2137-10-26 11:50:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "CATHOLIC",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2137-10-20 05:40:00",
+      "EDOUTTIME": "2137-10-20 04:00:00",
+      "DIAGNOSIS": "SUBDURAL HEMATOMA",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 22737,
+    "row_id": "21747",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, death_time cannot be after discharge_time",
+        "input": {
+          "row_id": 21747,
+          "subject_id": 17796,
+          "hadm_id": 119823,
+          "admit_time": "2172-10-03T01:15:00",
+          "discharge_time": "2172-10-07T08:00:00",
+          "death_time": "2172-10-08T08:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "NOT SPECIFIED",
+          "marital_status": null,
+          "ethnicity": "UNKNOWN/NOT SPECIFIED",
+          "ed_reg_time": "2172-10-03T00:19:00",
+          "ed_out_time": "2172-10-03T01:20:00",
+          "diagnosis": "ABDOMINAL PAIN",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "death_time cannot be after discharge_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "21747",
+      "SUBJECT_ID": "17796",
+      "HADM_ID": "119823",
+      "ADMITTIME": "2172-10-03 01:15:00",
+      "DISCHTIME": "2172-10-07 08:00:00",
+      "DEATHTIME": "2172-10-08 08:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "NOT SPECIFIED",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "UNKNOWN/NOT SPECIFIED",
+      "EDREGTIME": "2172-10-03 00:19:00",
+      "EDOUTTIME": "2172-10-03 01:20:00",
+      "DIAGNOSIS": "ABDOMINAL PAIN",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 22744,
+    "row_id": "21754",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, ed_reg_time cannot be after admit_time",
+        "input": {
+          "row_id": 21754,
+          "subject_id": 17800,
+          "hadm_id": 180874,
+          "admit_time": "2137-04-22T12:00:00",
+          "discharge_time": "2137-05-10T16:00:00",
+          "death_time": null,
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "HOME HEALTH CARE",
+          "insurance": "Private",
+          "language": "ENGL",
+          "religion": "NOT SPECIFIED",
+          "marital_status": "MARRIED",
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2137-04-28T21:51:00",
+          "ed_out_time": "2137-04-29T12:06:00",
+          "diagnosis": "FEVER",
+          "hospital_expire_flag": 0,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "ed_reg_time cannot be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "21754",
+      "SUBJECT_ID": "17800",
+      "HADM_ID": "180874",
+      "ADMITTIME": "2137-04-22 12:00:00",
+      "DISCHTIME": "2137-05-10 16:00:00",
+      "DEATHTIME": "",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "HOME HEALTH CARE",
+      "INSURANCE": "Private",
+      "LANGUAGE": "ENGL",
+      "RELIGION": "NOT SPECIFIED",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2137-04-28 21:51:00",
+      "EDOUTTIME": "2137-04-29 12:06:00",
+      "DIAGNOSIS": "FEVER",
+      "HOSPITAL_EXPIRE_FLAG": "0",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 22812,
+    "row_id": "22132",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, discharge_time must be after admit_time",
+        "input": {
+          "row_id": 22132,
+          "subject_id": 18113,
+          "hadm_id": 192642,
+          "admit_time": "2173-03-27T16:23:00",
+          "discharge_time": "2173-03-27T12:00:00",
+          "death_time": "2173-03-27T12:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Private",
+          "language": null,
+          "religion": "PROTESTANT QUAKER",
+          "marital_status": "MARRIED",
+          "ethnicity": "BLACK/AFRICAN AMERICAN",
+          "ed_reg_time": "2173-03-27T15:06:00",
+          "ed_out_time": "2173-03-27T18:46:00",
+          "diagnosis": "CIRRHOSIS",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "discharge_time must be after admit_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "22132",
+      "SUBJECT_ID": "18113",
+      "HADM_ID": "192642",
+      "ADMITTIME": "2173-03-27 16:23:00",
+      "DISCHTIME": "2173-03-27 12:00:00",
+      "DEATHTIME": "2173-03-27 12:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Private",
+      "LANGUAGE": "",
+      "RELIGION": "PROTESTANT QUAKER",
+      "MARITAL_STATUS": "MARRIED",
+      "ETHNICITY": "BLACK/AFRICAN AMERICAN",
+      "EDREGTIME": "2173-03-27 15:06:00",
+      "EDOUTTIME": "2173-03-27 18:46:00",
+      "DIAGNOSIS": "CIRRHOSIS",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  },
+  {
+    "line": 22813,
+    "row_id": "22133",
+    "error_type": "ValidationError",
+    "errors": [
+      {
+        "type": "value_error",
+        "loc": [],
+        "msg": "Value error, death_time cannot be after discharge_time",
+        "input": {
+          "row_id": 22133,
+          "subject_id": 18114,
+          "hadm_id": 163869,
+          "admit_time": "2141-07-22T08:27:00",
+          "discharge_time": "2141-07-27T11:00:00",
+          "death_time": "2141-07-28T11:00:00",
+          "admission_type": "EMERGENCY",
+          "admission_location": "EMERGENCY ROOM ADMIT",
+          "discharge_location": "DEAD/EXPIRED",
+          "insurance": "Medicare",
+          "language": null,
+          "religion": "UNOBTAINABLE",
+          "marital_status": null,
+          "ethnicity": "WHITE",
+          "ed_reg_time": "2141-07-22T06:57:00",
+          "ed_out_time": "2141-07-22T08:30:00",
+          "diagnosis": "CEREBELLER HEMORRHAGE",
+          "hospital_expire_flag": 1,
+          "has_chartevents_data": 1
+        },
+        "ctx": {
+          "error": "death_time cannot be after discharge_time"
+        },
+        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+      }
+    ],
+    "data": {
+      "ROW_ID": "22133",
+      "SUBJECT_ID": "18114",
+      "HADM_ID": "163869",
+      "ADMITTIME": "2141-07-22 08:27:00",
+      "DISCHTIME": "2141-07-27 11:00:00",
+      "DEATHTIME": "2141-07-28 11:00:00",
+      "ADMISSION_TYPE": "EMERGENCY",
+      "ADMISSION_LOCATION": "EMERGENCY ROOM ADMIT",
+      "DISCHARGE_LOCATION": "DEAD/EXPIRED",
+      "INSURANCE": "Medicare",
+      "LANGUAGE": "",
+      "RELIGION": "UNOBTAINABLE",
+      "MARITAL_STATUS": "",
+      "ETHNICITY": "WHITE",
+      "EDREGTIME": "2141-07-22 06:57:00",
+      "EDOUTTIME": "2141-07-22 08:30:00",
+      "DIAGNOSIS": "CEREBELLER HEMORRHAGE",
+      "HOSPITAL_EXPIRE_FLAG": "1",
+      "HAS_CHARTEVENTS_DATA": "1"
+    }
+  }
+]

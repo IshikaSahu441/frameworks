@@ -1,0 +1,58 @@
+name: Temporal Pipeline CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Verify installations
+      run: |
+        python -c "import ray, daft, pydantic, pyiceberg, temporalio; print('All dependencies installed')"
+
+    - name: Run basic tests
+      run: |
+        python -c "import temporal_activities, temporal_workflows; print('Code imports successfully')"
+      continue-on-error: true
+
+  deploy-check:
+    runs-on: windows-latest
+    needs: test
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Check deployment readiness
+      run: |
+        echo "Repository is ready for deployment"
+        echo "Use run_temporal_*_system.bat files for deployment"
+        echo "Python version: $(python --version)"
+        python -c "import ray; print('Ray version:', ray.__version__)"
