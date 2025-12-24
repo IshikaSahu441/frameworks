@@ -486,7 +486,7 @@ def process_admissions_distributed(df: pd.DataFrame, batch_size: int = 100):
     feature_futures = [extract_admission_features.remote(batch) for batch in batches]
     feature_results = ray.get(feature_futures)
     all_features = [f for batch in feature_results for f in batch]
-    print(f"Extracted {len(all_features)} features")
+    print(f"✓ Extracted {len(all_features)} features")
     
     # ============================================================================
     # Stage 2: Distributed Anomaly Detection
@@ -499,7 +499,7 @@ def process_admissions_distributed(df: pd.DataFrame, batch_size: int = 100):
                       for batch in feature_batches]
     anomaly_results = ray.get(anomaly_futures)
     anomaly_summary = ray.get(aggregate_anomalies.remote(anomaly_results))
-    print(f"Anomalies Detected: {anomaly_summary['summary_statistics']}")
+    print(f"✓ Anomalies Detected: {anomaly_summary['summary_statistics']}")
     
     # ============================================================================
     # Stage 3: Distributed Model Inference
@@ -509,7 +509,7 @@ def process_admissions_distributed(df: pd.DataFrame, batch_size: int = 100):
                         for batch in feature_batches]
     inference_results = ray.get(inference_futures)
     prediction_summary = ray.get(aggregate_predictions.remote(inference_results))
-    print(f"Predictions Complete")
+    print(f"✓ Predictions Complete")
     
     # ============================================================================
     # Stage 4: Priority Scoring (Individual)
@@ -518,7 +518,7 @@ def process_admissions_distributed(df: pd.DataFrame, batch_size: int = 100):
     priority_futures = [score_admission_priority.remote(feature) 
                        for feature in all_features[:10]]
     priority_scores = ray.get(priority_futures)
-    print(f"Priority Scores Calculated")
+    print(f"✓ Priority Scores Calculated")
     
     # ============================================================================
     # Results Summary

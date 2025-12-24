@@ -398,10 +398,10 @@ class AuditTrailManager:
                     writer.writeheader()
                     writer.writerows(self.audit_records)
             
-            print(f"Exported audit log to {output_path}")
+            print(f"✓ Exported audit log to {output_path}")
             return True
         except Exception as e:
-            print(f"[ERROR] Error exporting audit log: {e}")
+            print(f"✗ Error exporting audit log: {e}")
             return False
     
     def get_summary(self) -> Dict[str, Any]:
