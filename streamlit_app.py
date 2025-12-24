@@ -27,8 +27,9 @@ def load_json_file(filepath):
 
 @st.cache_data
 def load_sample_data():
-    """Load sample validated admissions data"""
-    data = load_json_file(PYDANTIC_DIR / "validated_admissions_sample.json")
+    """Load sample processed admissions data with calculated features"""
+    # Load processed data which includes calculated fields like length_of_stay_days
+    data = load_json_file(PYDANTIC_DIR / "processed_admissions_sample.json")
     if data:
         return pd.DataFrame(data[:50])  # Load first 50 records
     return None
@@ -58,6 +59,122 @@ def load_audit_summary():
     except:
         return None
 
+@st.cache_data
+def calculate_anomaly_metrics(data):
+    """Calculate anomaly detection metrics from validated data"""
+    if data is None or len(data) == 0:
+        return None
+    
+    metrics = {
+        'unusual_los_count': 0,
+        'unusual_los_percentage': 0.0,
+        'los_threshold': 0.0,
+        'off_hours_count': 0,
+        'off_hours_percentage': 0.0,
+        'high_risk_count': 0,
+        'high_risk_percentage': 0.0,
+        'readmission_risk_count': 0,
+        'readmission_risk_percentage': 0.0
+    }
+    
+    try:
+        # Calculate length of stay anomalies (using 3-sigma rule)
+        if 'length_of_stay_days' in data.columns:
+            los_values = data['length_of_stay_days'].dropna()
+            if len(los_values) > 0:
+                los_mean = los_values.mean()
+                los_std = los_values.std()
+                los_threshold = los_mean + (3 * los_std)
+                unusual_los = data[data['length_of_stay_days'] > los_threshold]
+                metrics['unusual_los_count'] = len(unusual_los)
+                metrics['unusual_los_percentage'] = (len(unusual_los) / len(data)) * 100
+                metrics['los_threshold'] = los_threshold
+        
+        # Off-hours admissions (before 6 AM or after 11 PM)
+        if 'admit_time' in data.columns:
+            admit_hours = pd.to_datetime(data['admit_time']).dt.hour
+            off_hours = data[(admit_hours < 6) | (admit_hours > 23)]
+            metrics['off_hours_count'] = len(off_hours)
+            metrics['off_hours_percentage'] = (len(off_hours) / len(data)) * 100
+        
+        # High-risk admissions (emergency + mortality flag)
+        if 'is_emergency' in data.columns and 'hospital_expire_flag' in data.columns:
+            high_risk = data[(data['is_emergency'] == True) & (data['hospital_expire_flag'] == 1)]
+            metrics['high_risk_count'] = len(high_risk)
+            metrics['high_risk_percentage'] = (len(high_risk) / len(data)) * 100
+        
+        # Readmission risk (long stay > 7 days or death)
+        if 'is_readmission_risk' in data.columns:
+            readmission_risk = data[data['is_readmission_risk'] == True]
+            metrics['readmission_risk_count'] = len(readmission_risk)
+            metrics['readmission_risk_percentage'] = (len(readmission_risk) / len(data)) * 100
+    except Exception as e:
+        st.error(f"Error calculating anomaly metrics: {e}")
+    
+    return metrics
+
+@st.cache_data
+def calculate_risk_scores(data):
+    """Calculate risk scoring metrics from validated data"""
+    if data is None or len(data) == 0:
+        return None
+    
+    risk_data = []
+    
+    try:
+        for _, row in data.iterrows():
+            risk_score = 0.0
+            
+            # Emergency admission (+40 points)
+            if row.get('is_emergency', False):
+                risk_score += 40
+            
+            # High mortality risk (+30 points)
+            if row.get('hospital_expire_flag', 0) == 1:
+                risk_score += 30
+            
+            # Long length of stay > 10 days (+20 points)
+            if row.get('length_of_stay_days', 0) > 10:
+                risk_score += 20
+            
+            # Readmission risk (+10 points)
+            if row.get('is_readmission_risk', False):
+                risk_score += 10
+            
+            # Normalize to 0-100
+            risk_score = min(100, max(0, risk_score))
+            
+            # Determine risk level
+            if risk_score >= 80:
+                risk_level = 'CRITICAL'
+            elif risk_score >= 60:
+                risk_level = 'HIGH'
+            elif risk_score >= 40:
+                risk_level = 'MEDIUM'
+            else:
+                risk_level = 'LOW'
+            
+            risk_data.append({
+                'hadm_id': row.get('hadm_id'),
+                'risk_score': risk_score,
+                'risk_level': risk_level
+            })
+        
+        risk_df = pd.DataFrame(risk_data)
+        
+        return {
+            'risk_distribution': risk_df['risk_level'].value_counts().to_dict(),
+            'average_risk_score': risk_df['risk_score'].mean(),
+            'critical_count': len(risk_df[risk_df['risk_level'] == 'CRITICAL']),
+            'high_count': len(risk_df[risk_df['risk_level'] == 'HIGH']),
+            'medium_count': len(risk_df[risk_df['risk_level'] == 'MEDIUM']),
+            'low_count': len(risk_df[risk_df['risk_level'] == 'LOW']),
+            'risk_dataframe': risk_df
+        }
+    except Exception as e:
+        st.error(f"Error calculating risk scores: {e}")
+        return None
+
 def main():
     """Main dashboard function"""
     st.title("Intelligent Real-Time Patient Flow Optimization System")
@@ -72,7 +189,7 @@ def main():
     st.sidebar.title("Dashboard Navigation")
     page = st.sidebar.radio(
         "Select View",
-        ["Overview", "Data Validation", "Processing Results", "Audit Trail", "System Architecture"]
+        ["Overview", "Anomaly & Risk Analysis", "Data Validation", "System Architecture"]
     )
 
     # Load data
@@ -99,6 +216,52 @@ def main():
             with col4:
                 st.metric("Avg Length of Stay", f"{validation_data['clinical_metrics']['avg_length_of_stay_days']:.1f} days")
             
+            # Add Anomaly and Risk Summary Metrics
+            if sample_data is not None:
+                st.markdown("---")
+                st.subheader("🔍 Anomaly & Risk Summary")
+                
+                anomaly_metrics = calculate_anomaly_metrics(sample_data)
+                risk_metrics = calculate_risk_scores(sample_data)
+                
+                col1, col2, col3, col4 = st.columns(4)
+                
+                with col1:
+                    if anomaly_metrics:
+                        st.metric(
+                            "Anomalies Detected", 
+                            f"{anomaly_metrics.get('unusual_los_count', 0):,}",
+                            delta="Unusual LOS",
+                            delta_color="inverse"
+                        )
+                
+                with col2:
+                    if anomaly_metrics:
+                        st.metric(
+                            "Off-Hours Admissions",
+                            f"{anomaly_metrics.get('off_hours_count', 0):,}",
+                            delta=f"{anomaly_metrics.get('off_hours_percentage', 0):.1f}%",
+                            delta_color="off"
+                        )
+                
+                with col3:
+                    if risk_metrics:
+                        st.metric(
+                            "Critical Risk Patients",
+                            f"{risk_metrics.get('critical_count', 0):,}",
+                            delta="High Priority",
+                            delta_color="inverse"
+                        )
+                
+                with col4:
+                    if risk_metrics:
+                        st.metric(
+                            "Avg Risk Score",
+                            f"{risk_metrics.get('average_risk_score', 0):.1f}",
+                            delta="Out of 100",
+                            delta_color="off"
+                        )
+            
             # Charts
             st.subheader("Data Distributions")
             col1, col2 = st.columns(2)
@@ -124,6 +287,177 @@ def main():
                 )
                 st.plotly_chart(fig2, use_container_width=True)
     
+    elif page == "Anomaly & Risk Analysis":
+        st.header("Anomaly Detection & Risk Calculation")
+        
+        if sample_data is not None:
+            # Calculate anomaly metrics
+            anomaly_metrics = calculate_anomaly_metrics(sample_data)
+            risk_metrics = calculate_risk_scores(sample_data)
+            
+            if anomaly_metrics:
+                st.subheader("🔍 Anomaly Detection Results")
+                
+                # Anomaly metrics display
+                col1, col2, col3, col4 = st.columns(4)
+                
+                with col1:
+                    st.metric(
+                        "Unusual Length of Stay", 
+                        f"{anomaly_metrics.get('unusual_los_count', 0):,}",
+                        f"{anomaly_metrics.get('unusual_los_percentage', 0):.1f}%"
+                    )
+                
+                with col2:
+                    st.metric(
+                        "Off-Hours Admissions", 
+                        f"{anomaly_metrics.get('off_hours_count', 0):,}",
+                        f"{anomaly_metrics.get('off_hours_percentage', 0):.1f}%"
+                    )
+                
+                with col3:
+                    st.metric(
+                        "High-Risk Cases", 
+                        f"{anomaly_metrics.get('high_risk_count', 0):,}",
+                        f"{anomaly_metrics.get('high_risk_percentage', 0):.1f}%"
+                    )
+                
+                with col4:
+                    st.metric(
+                        "Readmission Risk", 
+                        f"{anomaly_metrics.get('readmission_risk_count', 0):,}",
+                        f"{anomaly_metrics.get('readmission_risk_percentage', 0):.1f}%"
+                    )
+                
+                # Anomaly threshold information
+                st.info(f"📊 Length of Stay Threshold: {anomaly_metrics.get('los_threshold', 0):.2f} days (3-sigma rule)")
+                
+                # Visualizations
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    # Length of stay distribution with anomaly threshold
+                    st.subheader("Length of Stay Distribution")
+                    fig1 = px.histogram(
+                        sample_data, 
+                        x='length_of_stay_days',
+                        nbins=30,
+                        title="Length of Stay with Anomaly Threshold",
+                        labels={'length_of_stay_days': 'Days', 'count': 'Frequency'}
+                    )
+                    # Add vertical line for threshold
+                    threshold = anomaly_metrics.get('los_threshold', 0)
+                    fig1.add_vline(
+                        x=threshold, 
+                        line_dash="dash", 
+                        line_color="red",
+                        annotation_text=f"Threshold: {threshold:.1f} days"
+                    )
+                    st.plotly_chart(fig1, use_container_width=True)
+                
+                with col2:
+                    # Admission timing analysis
+                    st.subheader("Admission Hour Distribution")
+                    if 'admit_time' in sample_data.columns:
+                        admit_hours = pd.to_datetime(sample_data['admit_time']).dt.hour
+                        hour_data = pd.DataFrame({'hour': admit_hours})
+                        fig2 = px.histogram(
+                            hour_data,
+                            x='hour',
+                            nbins=24,
+                            title="Admissions by Hour of Day",
+                            labels={'hour': 'Hour of Day', 'count': 'Admissions'}
+                        )
+                        # Highlight off-hours (0-6, 23)
+                        fig2.add_vrect(
+                            x0=-0.5, x1=6.5, 
+                            fillcolor="red", opacity=0.2,
+                            annotation_text="Off Hours"
+                        )
+                        st.plotly_chart(fig2, use_container_width=True)
+            
+            if risk_metrics:
+                st.subheader("⚠️ Risk Calculation Results")
+                
+                # Risk metrics display
+                col1, col2, col3, col4 = st.columns(4)
+                
+                with col1:
+                    st.metric("Critical Risk", f"{risk_metrics.get('critical_count', 0):,}")
+                
+                with col2:
+                    st.metric("High Risk", f"{risk_metrics.get('high_count', 0):,}")
+                
+                with col3:
+                    st.metric("Medium Risk", f"{risk_metrics.get('medium_count', 0):,}")
+                
+                with col4:
+                    st.metric("Average Risk Score", f"{risk_metrics.get('average_risk_score', 0):.1f}/100")
+                
+                # Risk level distribution
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    st.subheader("Risk Level Distribution")
+                    risk_dist = risk_metrics.get('risk_distribution', {})
+                    fig3 = px.pie(
+                        values=list(risk_dist.values()),
+                        names=list(risk_dist.keys()),
+                        title="Patient Risk Levels",
+                        color_discrete_map={
+                            'CRITICAL': '#FF0000',
+                            'HIGH': '#FF6B6B',
+                            'MEDIUM': '#FFD93D',
+                            'LOW': '#6BCB77'
+                        }
+                    )
+                    st.plotly_chart(fig3, use_container_width=True)
+                
+                with col2:
+                    st.subheader("Risk Score Distribution")
+                    risk_df = risk_metrics.get('risk_dataframe')
+                    if risk_df is not None:
+                        fig4 = px.histogram(
+                            risk_df,
+                            x='risk_score',
+                            nbins=20,
+                            title="Risk Score Distribution",
+                            labels={'risk_score': 'Risk Score', 'count': 'Frequency'},
+                            color_discrete_sequence=['#4ECDC4']
+                        )
+                        st.plotly_chart(fig4, use_container_width=True)
+                
+                # Risk scoring methodology
+                st.subheader("📋 Risk Scoring Methodology")
+                st.markdown("""
+                **Risk Score Calculation:**
+                - Emergency Admission: +40 points
+                - Mortality Risk (Death Flag): +30 points  
+                - Long Length of Stay (>10 days): +20 points
+                - Readmission Risk: +10 points
+                
+                **Risk Levels:**
+                - 🔴 CRITICAL: Score ≥ 80
+                - 🟠 HIGH: Score 60-79
+                - 🟡 MEDIUM: Score 40-59
+                - 🟢 LOW: Score < 40
+                """)
+                
+                # Top high-risk patients
+                if risk_df is not None:
+                    st.subheader("Top 10 High-Risk Patients")
+                    top_risk = risk_df.nlargest(10, 'risk_score')
+                    # Merge with sample data to get more details
+                    detailed_risk = top_risk.merge(
+                        sample_data[['hadm_id', 'admission_type', 'length_of_stay_days', 'diagnosis']], 
+                        on='hadm_id', 
+                        how='left'
+                    )
+                    st.dataframe(detailed_risk, use_container_width=True)
+        else:
+            st.warning("⚠️ Sample data not available. Please run the Pydantic validation pipeline first.")
+            st.info("To generate data, run: `python admission_pydantic_validation.py`")
+    
     elif page == "Data Validation":
         st.header("Data Validation Results")
         if validation_data:
@@ -136,63 +470,6 @@ def main():
                 st.dataframe(sample_data.head(10))
             else:
                 st.info("Sample data not available")
-    
-    elif page == "Processing Results":
-        st.header("Distributed Processing Results")
-        
-        st.info("🔄 Processing results are generated during pipeline execution. Run the complete pipeline to see live results.")
-        
-        st.subheader("Expected Processing Outputs")
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            st.markdown("""
-            **Feature Extraction**
-            - Length of stay calculations
-            - Admission timing analysis  
-            - Risk factor identification
-            - Demographic correlations
-            """)
-        
-        with col2:
-            st.markdown("""
-            **Anomaly Detection**
-            - Outlier identification
-            - Pattern recognition
-            - Statistical analysis
-            - Risk scoring
-            """)
-        
-        # Check for output files
-        st.subheader("Generated Analytics Files")
-        if DAFT_DIR.exists():
-            parquet_files = list(DAFT_DIR.glob("*.parquet"))
-            if parquet_files:
-                st.write("Available analytics datasets:")
-                for file in parquet_files:
-                    st.write(f"- {file.name}")
-            else:
-                st.info("No parquet files found. Run the Daft processing pipeline first.")
-        else:
-            st.info("Output directory not found.")
-    
-    elif page == "Audit Trail":
-        st.header("Audit Trail & Data Lake Operations")
-        
-        if audit_data:
-            st.subheader("Audit Summary")
-            col1, col2, col3 = st.columns(3)
-            
-            with col1:
-                st.metric("Total Operations", audit_data.get('total_operations', 'N/A'))
-            
-            with col2:
-                st.metric("Tables Affected", audit_data.get('tables_affected', 'N/A'))
-            
-            with col3:
-                st.metric("Records Modified", f"{audit_data.get('records_modified', 0):,}")
-        else:
-            st.info("Audit data not available. Run the Iceberg integration first.")
     
     elif page == "System Architecture":
         st.header("System Architecture")
