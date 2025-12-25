@@ -1,0 +1,65 @@
+[
+  {
+    "audit_id": "admissions_INSERT_1766528434.354716",
+    "operation": "INSERT",
+    "table_name": "admissions",
+    "user": "data_pipeline",
+    "timestamp": "2025-12-24T03:50:34.354716",
+    "record_count": 58976,
+    "details": {
+      "batch_id": "batch_001",
+      "source": "MIMIC-III",
+      "operation_type": "bulk_insert"
+    },
+    "affected_records_count": 0,
+    "source_tables": [],
+    "status": "LOGGED"
+  },
+  {
+    "audit_id": "admissions_enriched_SCHEMA_CHANGE_1766528434.354716",
+    "operation": "SCHEMA_CHANGE",
+    "table_name": "admissions_enriched",
+    "user": "data_scientist",
+    "timestamp": "2025-12-24T03:50:34.354716",
+    "record_count": 0,
+    "details": {
+      "change_description": "Added mortality prediction feature",
+      "column": "mortality_prediction_score",
+      "type": "double",
+      "reason": "ML model integration"
+    },
+    "affected_records_count": 0,
+    "source_tables": [],
+    "status": "LOGGED"
+  },
+  {
+    "audit_id": "admissions_SNAPSHOT_1766528434.354716",
+    "operation": "SNAPSHOT",
+    "table_name": "admissions",
+    "user": "data_engineer",
+    "timestamp": "2025-12-24T03:50:34.354716",
+    "record_count": 0,
+    "details": {
+      "snapshot_name": "baseline_snapshot",
+      "description": "Initial data snapshot for ML training"
+    },
+    "affected_records_count": 0,
+    "source_tables": [],
+    "status": "LOGGED"
+  },
+  {
+    "audit_id": "admissions_enriched_DATA_EXPORT_1766528434.354716",
+    "operation": "DATA_EXPORT",
+    "table_name": "admissions_enriched",
+    "user": "data_scientist",
+    "timestamp": "2025-12-24T03:50:34.354716",
+    "record_count": 50000,
+    "details": {
+      "export_format": "parquet",
+      "destination": "s3://ml-training-bucket/admissions/"
+    },
+    "affected_records_count": 0,
+    "source_tables": [],
+    "status": "LOGGED"
+  }
+]

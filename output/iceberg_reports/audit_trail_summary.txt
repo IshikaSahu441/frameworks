@@ -1,0 +1,17 @@
+AUDIT TRAIL SUMMARY
+================================================================================
+
+Total Operations: 4
+Tables Affected: 2
+Total Records Modified: 108976
+
+Users:
+  data_pipeline
+  data_engineer
+  data_scientist
+
+Operations by Type:
+  INSERT: 1
+  SCHEMA_CHANGE: 1
+  SNAPSHOT: 1
+  DATA_EXPORT: 1
