@@ -185,9 +185,7 @@ def main():
     """Main dashboard function"""
     st.title("Intelligent Real-Time Patient Flow Optimization System")
     
-    st.markdown("""
-    **A comprehensive healthcare data pipeline demonstrating enterprise-grade data engineering practices**
-    
+    st.markdown("""    
     *Predicting patient admissions • Optimizing bed allocation • Detecting anomalies • Automating resource management*
     """)
 
@@ -195,7 +193,7 @@ def main():
     st.sidebar.title("Dashboard Navigation")
     page = st.sidebar.radio(
         "Select View",
-        ["Overview", "Ray Predictions", "Anomaly & Risk Analysis", "Data Validation", "System Architecture"]
+        ["Overview", "Anomaly & Risk Analysis", "Data Validation", "System Architecture"]
     )
 
     # Load data
@@ -293,33 +291,88 @@ def main():
                 )
                 st.plotly_chart(fig2, use_container_width=True)
     
-    elif page == "Ray Predictions":
-        st.header("Ray Distributed Processing Results")
+    elif page == "Anomaly & Risk Analysis":
+        st.header("Anomaly Detection & Risk Analysis")
+        st.markdown("*Combining Ray's distributed processing with real-time analytics*")
         
+        # Load both Ray results and sample data
         ray_results = load_ray_results()
         
+        # Show Ray processing status
         if ray_results:
-            st.success(f"✅ Ray distributed processing completed successfully")
-            
-            # Processing Summary
-            st.subheader("📊 Processing Summary")
+            st.success("✅ Ray Distributed Processing: Active")
             col1, col2, col3, col4 = st.columns(4)
-            
             with col1:
-                st.metric("Total Processed", f"{ray_results.get('total_processed', 0):,}")
+                st.metric("Total Processed (Ray)", f"{ray_results.get('total_processed', 0):,}")
             with col2:
-                st.metric("Batches Processed", f"{ray_results.get('batches_processed', 0):,}")
-            with col3:
                 st.metric("Features Extracted", f"{ray_results.get('features_extracted', 0):,}")
+            with col3:
+                st.metric("Batches Processed", f"{ray_results.get('batches_processed', 0):,}")
             with col4:
                 anomalies = ray_results.get('anomalies', {}).get('summary_statistics', {})
                 total_anomalies = sum(anomalies.values()) if anomalies else 0
-                st.metric("Total Anomalies", f"{total_anomalies:,}")
+                st.metric("Anomalies (Ray)", f"{total_anomalies:,}")
+        else:
+            st.info("ℹ️ Ray predictions not loaded. Showing calculated metrics from Pydantic data.")
+        
+        st.markdown("---")
+        
+        # ============================================================================
+        # 1. RAY DISTRIBUTED ANOMALY DETECTION
+        # ============================================================================
+        if ray_results:
+            st.subheader("🔍 Ray Distributed Anomaly Detection")
+            st.caption("Results from parallel processing across CPU cores")
+            
+            anomalies = ray_results.get('anomalies', {})
+            summary_stats = anomalies.get('summary_statistics', {})
+            
+            col1, col2, col3 = st.columns(3)
+            
+            with col1:
+                st.metric(
+                    "Unusual Length of Stay (Ray)",
+                    f"{summary_stats.get('total_unusual_los', 0):,}",
+                    delta="3-sigma outliers",
+                    delta_color="inverse"
+                )
+            
+            with col2:
+                st.metric(
+                    "High Risk Cases (Ray)",
+                    f"{summary_stats.get('total_high_risk', 0):,}",
+                    delta="Mortality >70%",
+                    delta_color="inverse"
+                )
+            
+            with col3:
+                st.metric(
+                    "Off-Hours Admissions (Ray)",
+                    f"{summary_stats.get('total_off_hours', 0):,}",
+                    delta="0-6 AM, 11 PM-12 AM",
+                    delta_color="off"
+                )
+            
+            with st.expander("🔬 Ray Anomaly Detection Methodology"):
+                st.markdown("""
+                Ray uses **distributed statistical analysis** across worker nodes:
+                
+                1. **Unusual LOS:** Identifies stays >3 standard deviations from mean
+                2. **High Risk:** Flags patients with mortality risk >70%
+                3. **Off-Hours:** Detects admissions requiring increased staffing (midnight-6 AM)
+                
+                Each worker processes batches independently, then results are aggregated.
+                """)
             
             st.markdown("---")
+        
+        # ============================================================================
+        # 2. RAY ML PREDICTIONS
+        # ============================================================================
+        if ray_results:
+            st.subheader("🏥 Ray Patient Outcome Predictions")
+            st.caption("ML-based predictions from distributed inference")
             
-            # 1. Patient Outcome Predictions
-            st.subheader("🏥 Patient Outcome Predictions")
             predictions = ray_results.get('predictions', {})
             
             col1, col2, col3, col4 = st.columns(4)
@@ -352,22 +405,25 @@ def main():
             
             # High risk patients details
             if predictions.get('high_risk_summary'):
-                st.markdown("#### Top High-Risk Patients (by Ray ML Model)")
-                high_risk_df = pd.DataFrame(predictions['high_risk_summary'][:20])
-                if not high_risk_df.empty:
-                    # Add risk level based on score
-                    high_risk_df['risk_level'] = high_risk_df['risk_score'].apply(
-                        lambda x: '🔴 CRITICAL' if x >= 0.8 else '🟠 HIGH' if x >= 0.6 else '🟡 MEDIUM'
-                    )
-                    high_risk_df['risk_score'] = high_risk_df['risk_score'].apply(lambda x: f"{x:.2%}")
-                    st.dataframe(high_risk_df, use_container_width=True)
-                    
-                    st.info("💡 **Model Logic:** Risk Score = (Emergency × 0.4) + (Mortality Risk × 0.6)")
+                with st.expander("📋 View Top 20 High-Risk Patients (Ray ML Model)"):
+                    high_risk_df = pd.DataFrame(predictions['high_risk_summary'][:20])
+                    if not high_risk_df.empty:
+                        high_risk_df['risk_level'] = high_risk_df['risk_score'].apply(
+                            lambda x: '🔴 CRITICAL' if x >= 0.8 else '🟠 HIGH' if x >= 0.6 else '🟡 MEDIUM'
+                        )
+                        high_risk_df['risk_score'] = high_risk_df['risk_score'].apply(lambda x: f"{x:.2%}")
+                        st.dataframe(high_risk_df, use_container_width=True)
+                        st.info("💡 **Model Logic:** Risk Score = (Emergency × 0.4) + (Mortality Risk × 0.6)")
             
             st.markdown("---")
+        
+        # ============================================================================
+        # 3. RAY PRIORITY SCORING
+        # ============================================================================
+        if ray_results:
+            st.subheader("⚡ Ray Admission Priority Scoring")
+            st.caption("Triage priority scores for bed allocation")
             
-            # 2. Priority Scores
-            st.subheader("⚡ Admission Priority Scoring")
             priority_scores = ray_results.get('priority_scores', [])
             
             if priority_scores:
@@ -376,8 +432,7 @@ def main():
                 col1, col2 = st.columns(2)
                 
                 with col1:
-                    st.markdown("#### Priority Score Distribution")
-                    # Count by priority level
+                    st.markdown("**Priority Level Distribution**")
                     priority_counts = priority_df['priority_level'].value_counts()
                     fig = px.pie(
                         values=priority_counts.values,
@@ -393,95 +448,32 @@ def main():
                     st.plotly_chart(fig, use_container_width=True)
                 
                 with col2:
-                    st.markdown("#### Priority Scoring Details")
+                    st.markdown("**Priority Scoring Details**")
                     st.dataframe(priority_df, use_container_width=True)
                 
-                st.markdown("""
-                **Priority Scoring Algorithm:**
-                - Emergency Admission: +40 points
-                - High Mortality Risk (>0.5): +30 points
-                - Off-Hours Admission (0-6, 22-23): +15 points
-                - **Score 80-100:** 🔴 CRITICAL
-                - **Score 60-79:** 🟠 HIGH
-                - **Score 40-59:** 🟡 MEDIUM
-                - **Score 0-39:** 🟢 LOW
-                """)
-            else:
-                st.info("Priority scores calculated for sample patients (first 10 records)")
+                with st.expander("📊 Priority Scoring Algorithm"):
+                    st.markdown("""
+                    **Scoring Rules:**
+                    - Emergency Admission: +40 points
+                    - High Mortality Risk (>0.5): +30 points
+                    - Off-Hours Admission (0-6, 22-23): +15 points
+                    
+                    **Risk Levels:**
+                    - 🔴 **CRITICAL:** Score 80-100
+                    - 🟠 **HIGH:** Score 60-79
+                    - 🟡 **MEDIUM:** Score 40-59
+                    - 🟢 **LOW:** Score 0-39
+                    """)
             
             st.markdown("---")
-            
-            # 3. Anomaly Detection Results
-            st.subheader("🔍 Distributed Anomaly Detection")
-            anomalies = ray_results.get('anomalies', {})
-            summary_stats = anomalies.get('summary_statistics', {})
-            
-            col1, col2, col3 = st.columns(3)
-            
-            with col1:
-                st.metric(
-                    "Unusual Length of Stay",
-                    f"{summary_stats.get('total_unusual_los', 0):,}",
-                    delta="3-sigma outliers",
-                    delta_color="inverse"
-                )
-            
-            with col2:
-                st.metric(
-                    "High Risk Cases",
-                    f"{summary_stats.get('total_high_risk', 0):,}",
-                    delta="Mortality >70%",
-                    delta_color="inverse"
-                )
-            
-            with col3:
-                st.metric(
-                    "Off-Hours Admissions",
-                    f"{summary_stats.get('total_off_hours', 0):,}",
-                    delta="0-6 AM, 11 PM-12 AM",
-                    delta_color="off"
-                )
-            
-            # Anomaly detection methodology
-            with st.expander("🔬 Anomaly Detection Methodology"):
-                st.markdown("""
-                Ray uses **distributed statistical analysis** across worker nodes:
-                
-                1. **Unusual LOS:** Identifies stays >3 standard deviations from mean
-                2. **High Risk:** Flags patients with mortality risk >70%
-                3. **Off-Hours:** Detects admissions requiring increased staffing (midnight-6 AM)
-                
-                Each worker processes batches independently, then results are aggregated.
-                """)
-            
-            # Bed Allocation Note
-            st.markdown("---")
-            st.subheader("🛏️ Bed Allocation Optimization")
-            st.info("""
-            **Note:** Bed allocation predictions are generated per-facility based on:
-            - Current bed utilization rates
-            - Predicted 24-hour admission volume
-            - Emergency vs. elective admission forecasts
-            
-            To see bed allocation recommendations, run Ray with facility-specific data.
-            """)
-            
-        else:
-            st.warning("⚠️ Ray prediction results not available.")
-            st.info("To generate Ray predictions, run: `python admission_ray_distributed.py`")
-            st.markdown("""
-            Ray performs:
-            - ✅ Parallel feature extraction across CPU cores
-            - ✅ Distributed anomaly detection
-            - ✅ ML-based patient outcome predictions
-            - ✅ Priority scoring for triage
-            - ✅ Bed allocation optimization
-            """)
-    
-    elif page == "Anomaly & Risk Analysis":
-        st.header("Anomaly Detection & Risk Calculation")
         
+        # ============================================================================
+        # 4. CALCULATED METRICS FROM SAMPLE DATA
+        # ============================================================================
         if sample_data is not None:
+            st.subheader("📈 Calculated Risk & Anomaly Metrics")
+            st.caption("Real-time analysis from Pydantic validated data")
+            
             # Calculate anomaly metrics
             anomaly_metrics = calculate_anomaly_metrics(sample_data)
             risk_metrics = calculate_risk_scores(sample_data)
