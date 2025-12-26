@@ -1,10 +1,10 @@
 [
   {
-    "audit_id": "admissions_INSERT_1766544965.044617",
+    "audit_id": "admissions_INSERT_1766717916.176694",
     "operation": "INSERT",
     "table_name": "admissions",
     "user": "data_pipeline",
-    "timestamp": "2025-12-24T08:26:05.044617",
+    "timestamp": "2025-12-26T08:28:36.176694",
     "record_count": 58976,
     "details": {
       "batch_id": "batch_001",
@@ -16,11 +16,11 @@
     "status": "LOGGED"
   },
   {
-    "audit_id": "admissions_enriched_SCHEMA_CHANGE_1766544965.04591",
+    "audit_id": "admissions_enriched_SCHEMA_CHANGE_1766717916.176694",
     "operation": "SCHEMA_CHANGE",
     "table_name": "admissions_enriched",
     "user": "data_scientist",
-    "timestamp": "2025-12-24T08:26:05.045910",
+    "timestamp": "2025-12-26T08:28:36.176694",
     "record_count": 0,
     "details": {
       "change_description": "Added mortality prediction feature",
@@ -33,11 +33,11 @@
     "status": "LOGGED"
   },
   {
-    "audit_id": "admissions_SNAPSHOT_1766544965.04591",
+    "audit_id": "admissions_SNAPSHOT_1766717916.177696",
     "operation": "SNAPSHOT",
     "table_name": "admissions",
     "user": "data_engineer",
-    "timestamp": "2025-12-24T08:26:05.045910",
+    "timestamp": "2025-12-26T08:28:36.177696",
     "record_count": 0,
     "details": {
       "snapshot_name": "baseline_snapshot",
@@ -48,11 +48,11 @@
     "status": "LOGGED"
   },
   {
-    "audit_id": "admissions_enriched_DATA_EXPORT_1766544965.04591",
+    "audit_id": "admissions_enriched_DATA_EXPORT_1766717916.177696",
     "operation": "DATA_EXPORT",
     "table_name": "admissions_enriched",
     "user": "data_scientist",
-    "timestamp": "2025-12-24T08:26:05.045910",
+    "timestamp": "2025-12-26T08:28:36.177696",
     "record_count": 50000,
     "details": {
       "export_format": "parquet",

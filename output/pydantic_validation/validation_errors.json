@@ -32,7 +32,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -90,7 +90,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -148,7 +148,7 @@
         "ctx": {
           "error": "death_time cannot be after discharge_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -206,7 +206,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -264,7 +264,7 @@
         "ctx": {
           "error": "ed_out_time must be after ed_reg_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -322,7 +322,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -380,7 +380,7 @@
         "ctx": {
           "error": "ed_out_time must be after ed_reg_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -438,7 +438,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -496,7 +496,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -554,7 +554,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -612,7 +612,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -670,7 +670,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -728,7 +728,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -786,7 +786,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -844,7 +844,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -902,7 +902,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -960,7 +960,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -1018,7 +1018,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -1076,7 +1076,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -1134,7 +1134,7 @@
         "ctx": {
           "error": "death_time cannot be after discharge_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -1192,7 +1192,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -1250,7 +1250,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -1308,7 +1308,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -1366,7 +1366,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -1424,7 +1424,7 @@
         "ctx": {
           "error": "death_time cannot be after discharge_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -1482,7 +1482,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -1540,7 +1540,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -1598,7 +1598,7 @@
         "ctx": {
           "error": "death_time cannot be after discharge_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -1656,7 +1656,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -1714,7 +1714,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -1772,7 +1772,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -1830,7 +1830,7 @@
         "ctx": {
           "error": "death_time cannot be after discharge_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -1888,7 +1888,7 @@
         "ctx": {
           "error": "death_time cannot be before admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -1946,7 +1946,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -2004,7 +2004,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -2062,7 +2062,7 @@
         "ctx": {
           "error": "death_time cannot be after discharge_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -2120,7 +2120,7 @@
         "ctx": {
           "error": "death_time cannot be before admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -2178,7 +2178,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -2236,7 +2236,7 @@
         "ctx": {
           "error": "death_time cannot be before admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -2294,7 +2294,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -2352,7 +2352,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -2410,7 +2410,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -2468,7 +2468,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -2526,7 +2526,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -2584,7 +2584,7 @@
         "ctx": {
           "error": "ed_out_time must be after ed_reg_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -2642,7 +2642,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -2700,7 +2700,7 @@
         "ctx": {
           "error": "death_time cannot be after discharge_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -2758,7 +2758,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -2816,7 +2816,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -2874,7 +2874,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -2932,7 +2932,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -2990,7 +2990,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -3048,7 +3048,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -3106,7 +3106,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -3164,7 +3164,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -3222,7 +3222,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -3280,7 +3280,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -3338,7 +3338,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -3396,7 +3396,7 @@
         "ctx": {
           "error": "ed_out_time must be after ed_reg_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -3454,7 +3454,7 @@
         "ctx": {
           "error": "ed_out_time must be after ed_reg_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -3512,7 +3512,7 @@
         "ctx": {
           "error": "death_time cannot be before admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -3570,7 +3570,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -3628,7 +3628,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -3686,7 +3686,7 @@
         "ctx": {
           "error": "death_time cannot be after discharge_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -3744,7 +3744,7 @@
         "ctx": {
           "error": "ed_out_time must be after ed_reg_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -3802,7 +3802,7 @@
         "ctx": {
           "error": "death_time cannot be after discharge_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -3860,7 +3860,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -3918,7 +3918,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -3976,7 +3976,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -4034,7 +4034,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -4092,7 +4092,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -4150,7 +4150,7 @@
         "ctx": {
           "error": "death_time cannot be after discharge_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -4208,7 +4208,7 @@
         "ctx": {
           "error": "death_time cannot be before admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -4266,7 +4266,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -4324,7 +4324,7 @@
         "ctx": {
           "error": "ed_out_time must be after ed_reg_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -4382,7 +4382,7 @@
         "ctx": {
           "error": "ed_out_time must be after ed_reg_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -4440,7 +4440,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -4498,7 +4498,7 @@
         "ctx": {
           "error": "ed_out_time must be after ed_reg_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -4556,7 +4556,7 @@
         "ctx": {
           "error": "death_time cannot be after discharge_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -4614,7 +4614,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -4672,7 +4672,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -4730,7 +4730,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -4788,7 +4788,7 @@
         "ctx": {
           "error": "death_time cannot be after discharge_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -4846,7 +4846,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -4904,7 +4904,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -4962,7 +4962,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -5020,7 +5020,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -5078,7 +5078,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -5136,7 +5136,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -5194,7 +5194,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -5252,7 +5252,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -5310,7 +5310,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -5368,7 +5368,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -5426,7 +5426,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -5484,7 +5484,7 @@
         "ctx": {
           "error": "death_time cannot be after discharge_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -5542,7 +5542,7 @@
         "ctx": {
           "error": "ed_out_time must be after ed_reg_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -5600,7 +5600,7 @@
         "ctx": {
           "error": "death_time cannot be after discharge_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -5658,7 +5658,7 @@
         "ctx": {
           "error": "ed_reg_time cannot be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -5716,7 +5716,7 @@
         "ctx": {
           "error": "discharge_time must be after admit_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {
@@ -5774,7 +5774,7 @@
         "ctx": {
           "error": "death_time cannot be after discharge_time"
         },
-        "url": "https://errors.pydantic.dev/2.12/v/value_error"
+        "url": "https://errors.pydantic.dev/2.11/v/value_error"
       }
     ],
     "data": {

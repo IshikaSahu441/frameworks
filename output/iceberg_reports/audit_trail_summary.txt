@@ -6,9 +6,9 @@ Tables Affected: 2
 Total Records Modified: 108976
 
 Users:
-  data_pipeline
-  data_scientist
   data_engineer
+  data_scientist
+  data_pipeline
 
 Operations by Type:
   INSERT: 1

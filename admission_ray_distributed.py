@@ -4,6 +4,8 @@ import numpy as np
 from typing import Dict, List, Tuple
 from datetime import datetime, timedelta
 import pickle
+import json
+import os
 from pydantic import BaseModel, Field
 from dataclasses import dataclass
 import daft
@@ -523,7 +525,7 @@ def process_admissions_distributed(df: pd.DataFrame, batch_size: int = 100):
     # ============================================================================
     # Results Summary
     # ============================================================================
-    return {
+    results = {
         'total_processed': len(records),
         'batches_processed': len(batches),
         'features_extracted': len(all_features),
@@ -531,6 +533,17 @@ def process_admissions_distributed(df: pd.DataFrame, batch_size: int = 100):
         'predictions': prediction_summary,
         'priority_scores': priority_scores,
     }
+    
+    # Save results to JSON for Streamlit dashboard
+    output_dir = "output/ray_predictions"
+    os.makedirs(output_dir, exist_ok=True)
+    
+    output_file = os.path.join(output_dir, "ray_results.json")
+    with open(output_file, 'w') as f:
+        json.dump(results, f, indent=2, default=str)
+    print(f"\n✓ Saved Ray predictions to: {output_file}")
+    
+    return results
 
 
 if __name__ == "__main__":

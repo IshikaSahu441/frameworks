@@ -1,5 +1,5 @@
 {
-  "validation_timestamp": "2025-12-24T13:55:23.447431",
+  "validation_timestamp": "2025-12-26T13:58:06.057298",
   "total_records_processed": 58976,
   "successfully_validated": 58731,
   "validation_errors": 245,
@@ -14,8 +14,8 @@
     "records_with_chart_events": 57162
   },
   "clinical_metrics": {
-    "avg_length_of_stay_days": 10.145767709273354,
-    "avg_ed_wait_time_hours": 5.777888218999511
+    "avg_length_of_stay_days": 10.145767709273276,
+    "avg_ed_wait_time_hours": 5.777888218999495
   },
   "distribution_statistics": {
     "admission_types": {
