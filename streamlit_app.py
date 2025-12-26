@@ -219,53 +219,7 @@ def main():
             
             with col4:
                 st.metric("Avg Length of Stay", f"{validation_data['clinical_metrics']['avg_length_of_stay_days']:.1f} days")
-            
-            # Add Anomaly and Risk Summary Metrics
-            if sample_data is not None:
-                st.markdown("---")
-                st.subheader("🔍 Anomaly & Risk Summary")
-                
-                anomaly_metrics = calculate_anomaly_metrics(sample_data)
-                risk_metrics = calculate_risk_scores(sample_data)
-                
-                col1, col2, col3, col4 = st.columns(4)
-                
-                with col1:
-                    if anomaly_metrics:
-                        st.metric(
-                            "Anomalies Detected", 
-                            f"{anomaly_metrics.get('unusual_los_count', 0):,}",
-                            delta="Unusual LOS",
-                            delta_color="inverse"
-                        )
-                
-                with col2:
-                    if anomaly_metrics:
-                        st.metric(
-                            "Off-Hours Admissions",
-                            f"{anomaly_metrics.get('off_hours_count', 0):,}",
-                            delta=f"{anomaly_metrics.get('off_hours_percentage', 0):.1f}%",
-                            delta_color="off"
-                        )
-                
-                with col3:
-                    if risk_metrics:
-                        st.metric(
-                            "Critical Risk Patients",
-                            f"{risk_metrics.get('critical_count', 0):,}",
-                            delta="High Priority",
-                            delta_color="inverse"
-                        )
-                
-                with col4:
-                    if risk_metrics:
-                        st.metric(
-                            "Avg Risk Score",
-                            f"{risk_metrics.get('average_risk_score', 0):.1f}",
-                            delta="Out of 100",
-                            delta_color="off"
-                        )
-            
+        
             # Charts
             st.subheader("Data Distributions")
             col1, col2 = st.columns(2)
@@ -301,14 +255,14 @@ def main():
         # Show Ray processing status
         if ray_results:
             st.success("✅ Ray Distributed Processing: Active")
-            col1, col2, col3, col4 = st.columns(4)
+            col1, col2, col3= st.columns(3)
             with col1:
                 st.metric("Total Processed (Ray)", f"{ray_results.get('total_processed', 0):,}")
+            # with col2:
+            #     st.metric("Features Extracted", f"{ray_results.get('features_extracted', 0):,}")
             with col2:
-                st.metric("Features Extracted", f"{ray_results.get('features_extracted', 0):,}")
-            with col3:
                 st.metric("Batches Processed", f"{ray_results.get('batches_processed', 0):,}")
-            with col4:
+            with col3:
                 anomalies = ray_results.get('anomalies', {}).get('summary_statistics', {})
                 total_anomalies = sum(anomalies.values()) if anomalies else 0
                 st.metric("Anomalies (Ray)", f"{total_anomalies:,}")
